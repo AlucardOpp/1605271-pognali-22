@@ -1,0 +1,26 @@
+.socials-menu {
+  list-style: none;
+  margin-top: 0;
+  padding: 0;
+  display: flex;
+  align-self: center;
+  width: 105px;
+  justify-content: space-between;
+
+  &--closed {
+    display: none;
+  }
+
+  &--opened,
+  &--nojs {
+    display: flex;
+  }
+}
+
+.socials-menu__item:hover {
+  opacity: 0.6;
+}
+
+.socials-menu__item:active {
+  opacity: 0.3;
+}

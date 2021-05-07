@@ -1,0 +1,290 @@
+.card__item {
+  border-radius: 10px;
+  min-height: 428px;
+  margin-bottom: 9px;
+  position: relative;
+
+  &:hover {
+    filter: drop-shadow(0 4px 9px $card-shadow);
+  }
+
+  &:last-child {
+    margin: 0 0 20px 0;
+  }
+}
+
+.card__item:hover .card__image .card__picture .card__img {
+  transform: scale(1.2);
+}
+
+.card__image {
+  position: relative;
+  border-radius: 10px 10px 0 0;
+  height: 270px;
+  width: 100%;
+  z-index: -1;
+  overflow: hidden;
+
+  & picture {
+    width: 100%;
+    border: none;
+  }
+}
+
+.card__img {
+  width: 100%;
+  transition: 0.5s;
+}
+
+.card__level {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: $black-60;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  left: 17px;
+  top: 17px;
+  box-sizing: border-box;
+
+  &--99 {
+    background-image: url("../img/99-level.svg");
+  }
+
+  &--80 {
+    background-image: url("../img/80-level.svg");
+  }
+}
+
+.card__level-number {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  color: $white;
+  height: 19px;
+  margin-bottom: 5px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    background-color: $white;
+    opacity: 0.3;
+    top: 23px;
+    right: -2px;
+  }
+}
+
+.card__level-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: $white;
+  height: 12px;
+}
+
+.card__information {
+  position: relative;
+  z-index: 2;
+  background-color: $white;
+  border-radius: 0 0 10px 10px;
+}
+
+.card__flags {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -13px;
+}
+
+.card__flag {
+  margin-right: 20px;
+  z-index: 2;
+  position: relative;
+
+  &:hover::after {
+    content: "";
+    position: absolute;
+    color: $white;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 56px;
+    width: 110px;
+    background-color: $card-tooltip;
+    border-radius: 4px;
+    top: 31px;
+    left: -38px;
+  }
+
+  &--sri-lanka:hover::after {
+    content: "Шри-Ланка";
+  }
+
+  &--thailand:hover::after {
+    content: "Таиланд";
+  }
+
+  &--seychelles:hover::after {
+    content: "Сейшелы";
+  }
+
+  &--belgium:hover::after {
+    content: "Бельгия";
+  }
+
+  &--czech:hover::after {
+    content: "Чехия";
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.card__initials {
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: 700;
+  color: $light-blue;
+  margin: -5px auto 15px auto;
+  padding: 0;
+  width: max-content;
+  position: relative;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--offline {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 6px;
+      height: 7px;
+      background-repeat: no-repeat;
+      background-image: url("../img/user-offline.svg");
+      left: -15px;
+      top: 8px;
+    }
+  }
+
+  &--online {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 6px;
+      height: 7px;
+      background-repeat: no-repeat;
+      background-image: url("../img/user-online.svg");
+      left: -15px;
+      top: 8px;
+    }
+  }
+}
+
+.card__tags {
+  text-align: center;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: $special-grey;
+  margin: 0 36px 17px 46px;
+}
+
+.card__means-of-transport {
+  list-style: none;
+  padding: 0 0 20px 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  width: 120px;
+  height: 25px;
+}
+
+.card__transport {
+  position: relative;
+  z-index: 3;
+
+  &:hover::before {
+    content: "";
+    width: 16px;
+    height: 10px;
+    background-image: url("../img/tooltip-arrow.svg");
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 27px;
+  }
+
+  &:hover::after {
+    content: "";
+    position: absolute;
+    color: $white;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 31px;
+    width: 110px;
+    background-color: $card-tooltip;
+    border-radius: 4px;
+    top: 34px;
+  }
+
+  &--bus:hover::before {
+    left: 1px;
+  }
+
+  &--bus:hover::after {
+    content: "Автотранспорт";
+    width: 170px;
+    left: -77px;
+  }
+
+  &--plane:hover::before {
+    left: 3px;
+  }
+
+  &--plane:hover::after {
+    content: "Авиаперелет";
+    width: 156px;
+    left: -68px;
+  }
+
+  &--bicycle:hover::before {
+    left: 5px;
+  }
+
+  &--bicycle:hover::after {
+    content: "Велосипед";
+    width: 130px;
+    left: -53px;
+  }
+
+  &--run:hover::before {
+    left: 3px;
+  }
+
+  &--run:hover::after {
+    content: "Пешком";
+    width: 110px;
+    left: -44px;
+  }
+}

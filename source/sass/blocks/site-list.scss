@@ -1,0 +1,45 @@
+.site-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 35px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.site-list__link {
+  text-decoration: none;
+  color: $site-list-black;
+  overflow: hidden;
+  height: 35px;
+  display: inline-block;
+}
+
+.site-list__link--current {
+  cursor: default;
+}
+
+.site-list__link span {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.site-list__link span::before {
+  position: absolute;
+  top: 100%;
+  content: attr(data-hover);
+  color: $yellow;
+  transform: translate3d(0, 0, 0);
+  white-space: nowrap;
+}
+
+.site-list__link:hover span {
+  transform: translateY(-100%);
+}
+
+.site-list__link:active span::before {
+  color: $yellow-30;
+}

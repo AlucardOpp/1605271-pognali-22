@@ -1,0 +1,213 @@
+.registration {
+  background-color: $site-list-black;
+  z-index: 2;
+  border-radius: 0 0 25px 25px;
+  position: relative;
+  margin-bottom: -23px;
+  padding-bottom: 44px;
+}
+
+.registration__title {
+  margin: 72px 0 19px 0;
+  text-align: center;
+}
+
+.registration__wrapper {
+  margin: 0 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.registration__suggestion {
+  margin: 0 30px 29px 30px;
+  padding: 0;
+  align-self: center;
+  text-align: center;
+  font-size: 16px;
+  line-height: 22px;
+  color: $white;
+  width: 210px;
+}
+
+.registration__authorize {
+  color: $yellow;
+
+  &:hover {
+    color: $special-orange;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.registration__form {
+  display: grid;
+  grid-template-columns: 1fr 60px;
+  height: 62px;
+  margin-bottom: 29px;
+  column-gap: 32px;
+}
+
+.registration__input {
+  color: $white;
+  width: 100%;
+  padding: 0 25px 0 25px;
+  font-weight: 700;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 18px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+
+  &::placeholder {
+    color: $special-grey;
+    opacity: 0.3;
+  }
+
+  &:hover {
+    background-color: $directions-white;
+
+    &::placeholder {
+      opacity: 0.5;
+    }
+  }
+
+  &:focus {
+    border: 4px solid $white;
+    background-color: inherit;
+  }
+
+  &:invalid {
+    border: none;
+    background-color: $white;
+    color: $registration-error;
+  }
+}
+
+.registration__button {
+  min-width: 60px;
+  border: none;
+  border-radius: 10px;
+  background-color: $yellow;
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $special-yellow-dark;
+  }
+
+  &:active {
+    &::after {
+      opacity: 0.3;
+    }
+  }
+
+  &::after {
+    content: "";
+    width: 13px;
+    height: 13px;
+    background-image: url("../img/button-arrow.svg");
+    position: absolute;
+    background-repeat: no-repeat;
+    top: 25px;
+    right: 22px;
+  }
+}
+
+.registration__span {
+  display: none;
+}
+
+.registration__questions {
+  margin: 0 27px 30px 27px;
+  padding: 0;
+  color: $white;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+}
+
+.registration__contacts-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
+.registration__contacts-item {
+  margin: 0 0 23px 61px;
+  position: relative;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.registration__contacts-link {
+  color: $yellow;
+  text-decoration: none;
+
+  &:hover {
+    color: $special-yellow-dark;
+  }
+
+  &:active {
+    color: $yellow-30;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    background-color: $contacts-dark;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    left: -60px;
+    top: -15px;
+  }
+
+  &--tel {
+    &::before {
+      background-image: url("../img/icon-telephone-contacts.svg");
+      background-size: 18px 17px;
+    }
+
+    &:hover {
+      &::before {
+        background-image: url("../img/icon-telephone-contacts-hover.svg");
+      }
+    }
+
+    &:active {
+      &::before {
+        background-image: url("../img/icon-telephone-contacts-active.svg");
+      }
+    }
+  }
+
+  &--mail {
+    &::before {
+      background-size: 23.5px 25px;
+      background-image: url("../img/icon-mail-contacts.svg");
+    }
+
+    &:hover {
+      &::before {
+        background-image: url("../img/icon-mail-contacts-hover.svg");
+      }
+    }
+
+    &:active {
+      &::before {
+        background-image: url("../img/icon-mail-contacts-active.svg");
+      }
+    }
+  }
+}
