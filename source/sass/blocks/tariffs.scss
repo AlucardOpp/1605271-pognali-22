@@ -1,0 +1,105 @@
+.tariffs {
+  position: relative;
+  min-height: 443px;
+  background-color: $white;
+  border-radius: 20px;
+  top: -1000px;
+  margin-top: -443px;
+  box-shadow: 0 2px 8px $tariffs-shadow;
+
+  &--closed {
+    top: -1000px;
+    animation: unbounce 1s;
+  }
+
+  &--opened {
+    display: block;
+    animation: bounce 0.5s;
+    z-index: 3;
+    top: 27px;
+  }
+}
+
+.tariffs__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 25px;
+}
+
+.tariffs__title {
+  margin: 30px 0 27px 0;
+  align-self: center;
+}
+
+.tariffs__list {
+  font-size: 16px;
+  line-height: 22px;
+  color: $special-grey;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid $tariffs-border;
+
+  &:first-of-type {
+    border-top: 1px solid $tariffs-border;
+  }
+
+  &:last-of-type {
+    margin-bottom: 34px;
+  }
+}
+
+.tariffs__term {
+  padding-top: 11px;
+}
+
+.tariffs__description {
+  margin: 0;
+  padding-bottom: 11px;
+}
+
+.tariffs__button {
+  background-color: $tariffs-button;
+  border: none;
+  border-radius: 0 0 20px 20px;
+  width: 100%;
+  min-height: 59px;
+  color: $light-blue;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-family: inherit;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $directions-white;
+  }
+
+  &:active {
+    color: $light-blue-30;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    top: -1000px;
+  }
+
+  50% {
+    top: 57px;
+  }
+
+  100% {
+    top: 27px;
+  }
+}
+
+@keyframes unbounce {
+  0% {
+    top: 27px;
+  }
+
+  100% {
+    top: -1000px;
+  }
+}

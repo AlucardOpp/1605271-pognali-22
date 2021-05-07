@@ -1,0 +1,41 @@
+.about-service {
+  border-radius: 25px;
+  position: relative;
+  margin-bottom: -45px;
+  background-color: $dark-blue;
+  z-index: 3;
+}
+
+.about-service__wrapper {
+  margin: 0 8px 0 20px;
+  background-image: url("../img/about-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 0;
+  background-color: inherit;
+  border-radius: 25px;
+}
+
+.about-service__title {
+  margin: 0 29px 19px 29px;
+  padding-top: 33px;
+}
+
+.about-service--companions,
+.about-service--congenial {
+  color: $white;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.about-service--companions {
+  margin: 0 52px 20px 29px;
+  min-height: 109px;
+}
+
+.about-service--congenial {
+  font-weight: 700;
+  min-height: 66px;
+  margin: 0 61px 0 29px;
+  padding-bottom: 82px;
+}

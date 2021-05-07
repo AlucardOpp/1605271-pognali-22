@@ -1,0 +1,131 @@
+.page-header {
+  padding-top: 19px;
+  width: 100%;
+
+  &--closed {
+    background-color: $dark-blue;
+  }
+
+  &--opened,
+  &--nojs {
+    background-color: $white;
+    padding-top: 27px;
+    position: absolute;
+  }
+
+  &--scrolled {
+    background-color: $white;
+  }
+}
+
+.page-header__wrapper {
+  min-width: 270px;
+  margin: 0 25px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.page-header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &--closed {
+    margin-bottom: 60px;
+  }
+
+  &--opened,
+  &--nojs {
+    margin-bottom: 76px;
+  }
+
+  &--scrolled {
+    margin-bottom: 32px;
+  }
+}
+
+.page-header__logo {
+  width: 96px;
+  height: 15px;
+  background-repeat: no-repeat;
+
+  &--closed {
+    background-image: url("../img/logo-closed-mobile.svg");
+  }
+
+  &--opened,
+  &--nojs,
+  &--scrolled {
+    width: 100px;
+    background-image: url("../img/logo-opened-mobile.svg");
+  }
+}
+
+.page-header__toggle {
+  border: none;
+  position: relative;
+  cursor: pointer;
+  width: 25px;
+  height: 11px;
+  background-color: inherit;
+  outline-offset: 7px;
+
+  &--nojs {
+    display: none;
+  }
+}
+
+.page-header__toggle--closed::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 3px;
+  background-color: $white;
+  border-radius: 1.5px;
+  box-shadow: 0 8px 0 0 $white;
+}
+
+.page-header__toggle--scrolled::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 3px;
+  background-color: $grey;
+  border-radius: 1.5px;
+  box-shadow: 0 8px 0 0 $grey;
+}
+
+.page-header__toggle--opened::before,
+.page-header__toggle--opened::after,
+.page-header__toggle--nojs::before,
+.page-header__toggle--nojs::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background-color: $grey;
+  box-shadow: none;
+  border-radius: 0;
+  top: auto;
+}
+
+.page-header__toggle--opened::before,
+.page-header__toggle--nojs::before {
+  transform: rotate(46deg);
+}
+
+.page-header__toggle--opened::after,
+.page-header__toggle--nojs::after {
+  transform: rotate(-46deg);
+}
+
+.page-header__socials {
+  margin-bottom: 41px;
+}

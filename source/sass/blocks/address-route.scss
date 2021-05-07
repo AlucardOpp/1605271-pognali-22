@@ -1,0 +1,58 @@
+.address-route {
+  background-color: $yellow;
+  z-index: 1;
+  padding-bottom: 35px;
+  border-radius: 0 0 25px 25px;
+  position: relative;
+  margin-bottom: -24px;
+}
+
+.address-route__wrapper {
+  margin: 0 25px;
+}
+
+.address-route__street {
+  margin: 0 66px 32px 61px;
+  padding: 56px 0 0 0;
+  font-weight: 700;
+  color: $light-blue;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: uppercase;
+  min-height: 44px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    background-image: url("../img/address-route-mark.svg");
+    background-repeat: no-repeat;
+    left: -60px;
+  }
+}
+
+.address-route__button {
+  border: 3px solid $site-list-black;
+
+  &:hover {
+    background-color: $site-list-black;
+    border: none;
+    color: $white;
+    padding-left: 26px;
+
+    &::after {
+      width: 13px;
+      height: 13px;
+      background-image: url("../img/button-arrow-white.svg");
+      right: 23px;
+      top: 26px;
+      background-size: 13px 13px;
+    }
+  }
+
+  &:active {
+    color: $white-30;
+  }
+}

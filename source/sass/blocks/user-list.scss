@@ -1,0 +1,97 @@
+.user-list {
+  display: flex;
+  margin-bottom: 51px;
+
+  &--closed {
+    display: flex;
+    position: relative;
+    top: 405px;
+    margin: -40px auto 0 auto;
+  }
+
+  &--opened,
+  &--nojs {
+    position: static;
+    flex-direction: column;
+    margin: 0 0 51px 0;
+  }
+}
+
+.user-list__link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--tel {
+    background-color: $special-orange;
+    background-image: url("../img/icon-call-menu.svg");
+    background-size: 18px 18px;
+
+    &:hover {
+      background-color: $orange;
+    }
+
+    &:active {
+      background-image: url("../img/icon-call-menu-active.svg");
+    }
+
+    &-closed {
+      display: block;
+    }
+
+    &-opened,
+    &-nojs {
+      display: none;
+    }
+  }
+
+  &--mail {
+    background-color: $special-yellow-dark;
+    background-image: url("../img/icon-mail-menu.svg");
+    background-size: 18px 15.75px;
+
+    &:hover {
+      background-color: $special-orange;
+    }
+
+    &:active {
+      background-image: url("../img/icon-mail-menu-active.svg");
+    }
+
+    &-closed {
+      display: block;
+    }
+
+    &-opened,
+    &-nojs {
+      display: none;
+    }
+  }
+
+  &--auth {
+    height: auto;
+    font-size: 17px;
+    line-height: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $dark-blue;
+    font-weight: 700;
+    width: auto;
+    min-width: 190px;
+    border-radius: 25px;
+    background-color: $yellow;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px 0 10px 0;
+
+    &:hover {
+      background-color: $special-yellow-dark;
+    }
+
+    &:active {
+      color: $dark-blue-30;
+    }
+  }
+}

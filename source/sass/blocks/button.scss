@@ -1,0 +1,39 @@
+.button {
+  height: 62px;
+  border-radius: 10px;
+  background-color: $yellow;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: $light-blue;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+  padding-left: 23px;
+  position: relative;
+  box-sizing: border-box;
+
+  &::after {
+    content: "";
+    width: 13px;
+    height: 13px;
+    background-image: url("../img/button-arrow.svg");
+    position: absolute;
+    background-repeat: no-repeat;
+    right: 19px;
+    top: 23px;
+  }
+
+  &:hover {
+    background-color: $special-yellow-dark;
+  }
+
+  &:active {
+    color: $light-blue-30;
+
+    &::after {
+      opacity: 0.3;
+    }
+  }
+}
