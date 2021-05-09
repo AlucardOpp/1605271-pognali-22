@@ -211,3 +211,101 @@
     }
   }
 }
+
+@media (min-width: $tablet-width) {
+  .registration {
+    border-radius: 0 0 35px 35px;
+    margin-bottom: -32px;
+    padding-bottom: 77px;
+  }
+
+  .registration__wrapper {
+    margin: 0 75px;
+  }
+
+  .registration__title {
+    margin: 76px 0 59px 0;
+  }
+
+  .registration__suggestion {
+    font-size: 28px;
+    line-height: 32px;
+    width: auto;
+    margin: 0 0 65px 0;
+  }
+
+  .registration__it-br {
+    display: none;
+  }
+
+  .registration__it {
+    margin-left: 5px;
+  }
+
+  .registration__form {
+    grid-template-columns: 1fr 80px;
+    height: 80px;
+    margin-bottom: 60px;
+    column-gap: 71px;
+  }
+
+  .registration__input {
+    font-size: 24px;
+    line-height: 24px;
+    border-radius: 20px 0 0 20px;
+    padding: 0 36px;
+  }
+
+  .registration__button {
+    border-radius: 0 20px 20px 0;
+
+    &::after {
+      top: 34px;
+      right: 31px;
+    }
+  }
+
+  .registration__questions {
+    font-size: 28px;
+    line-height: 30px;
+    margin: 0 0 64px 0;
+
+    br {
+      display: none;
+    }
+  }
+
+  .registration__contacts-list {
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  .registration__contacts-item {
+    margin-bottom: 39px;
+  }
+
+  .registration__we {
+    margin-left: 5px;
+  }
+
+  .registration__contacts-link {
+    &::before {
+      width: 68px;
+      height: 68px;
+      left: -89px;
+      top: -20px;
+    }
+
+    &--tel {
+      &::before {
+        background-size: 27px 26px;
+      }
+    }
+
+    &--mail {
+      &::before {
+        background-size: 36px 38px;
+      }
+    }
+  }
+}

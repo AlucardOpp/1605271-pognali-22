@@ -6,6 +6,7 @@
   align-self: center;
   width: 105px;
   justify-content: space-between;
+  align-items: center;
 
   &--closed {
     display: none;
@@ -23,4 +24,28 @@
 
 .socials-menu__item:active {
   opacity: 0.3;
+}
+
+@media (min-width: $tablet-width) {
+  .socials-menu {
+    align-self: start;
+  }
+
+  .socials-menu__svg {
+
+    &--facebook {
+      width: 14px;
+      height: 28px;
+    }
+
+    &--vkontakte {
+      width: 31px;
+      height: 16px;
+    }
+
+    &--instagram {
+      width: 24px;
+      height: 24px;
+    }
+  }
 }

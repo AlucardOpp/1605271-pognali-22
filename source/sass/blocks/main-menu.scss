@@ -1,4 +1,4 @@
-.main-menu {
+.main-menu__wrapper {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -14,5 +14,15 @@
   &--opened,
   &--nojs {
     display: block;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .main-menu__wrapper {
+    margin: 0 57px;
+  }
+
+  .main-menu__nav {
+    margin-bottom: 139px;
   }
 }

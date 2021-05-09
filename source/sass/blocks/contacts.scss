@@ -96,3 +96,64 @@
     }
   }
 }
+
+@media (min-width: $tablet-width) {
+  .contacts {
+    font-size: 28px;
+    line-height: 28px;
+    justify-content: left;
+    margin-bottom: 146px;
+  }
+
+  .contacts__item {
+    margin: 0 0 36px 127px;
+  }
+
+  .contacts__link {
+
+    &::before {
+      width: 68px;
+      height: 68px;
+      left: -89px;
+      top: -20px;
+    }
+
+    &--tel {
+      &::before {
+        background-image: url("../img/icon-telephone-contacts.svg");
+        background-size: 27px 26px;
+      }
+
+      &:hover {
+        &::before {
+          background-image: url("../img/icon-telephone-contacts-hover.svg");
+        }
+      }
+
+      &:active {
+        &::before {
+          background-image: url("../img/icon-telephone-contacts-active.svg");
+        }
+      }
+    }
+
+    &--mail {
+      &::before {
+        background-size: 35.5px 38px;
+        background-image: url("../img/icon-mail-contacts.svg");
+      }
+
+      &:hover {
+        &::before {
+          background-image: url("../img/icon-mail-contacts-hover.svg");
+        }
+      }
+
+      &:active {
+        &::before {
+          background-image: url("../img/icon-mail-contacts-active.svg");
+        }
+      }
+    }
+  }
+}

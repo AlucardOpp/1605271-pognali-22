@@ -9,12 +9,12 @@
 
   &--closed {
     top: -1000px;
-    animation: unbounce 1s;
+    animation: unbounce-mobile 1s;
   }
 
   &--opened {
     display: block;
-    animation: bounce 0.5s;
+    animation: bounce-mobile 0.5s;
     z-index: 3;
     top: 27px;
   }
@@ -80,7 +80,57 @@
   }
 }
 
-@keyframes bounce {
+@media (min-width: $tablet-width) {
+  .tariffs {
+    min-height: 526px;
+    margin-top: -511px;
+    top: -1000px;
+
+    &--closed {
+      top: -1000px;
+      animation: unbounce-table 1s;
+    }
+
+    &--opened {
+      display: block;
+      animation: bounce-table 0.5s;
+      z-index: 3;
+      top: 42px;
+    }
+
+    .tariffs__wrapper {
+      margin: 0 92px 0 90px;
+    }
+
+    .tariffs__title {
+      margin: 54px 0 47px 0;
+    }
+
+    .tariffs__list {
+      font-size: 22px;
+      line-height: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &:last-of-type {
+        margin-bottom: 52px;
+      }
+    }
+
+    .tariffs__description,
+    .tariffs__term {
+      padding: 14px 0 13px 0;
+    }
+
+    .tariffs__button {
+      min-height: 108px;
+      font-size: 24px;
+    }
+  }
+}
+
+@keyframes bounce-mobile {
   0% {
     top: -1000px;
   }
@@ -94,9 +144,33 @@
   }
 }
 
-@keyframes unbounce {
+@keyframes unbounce-mobile {
   0% {
     top: 27px;
+  }
+
+  100% {
+    top: -1000px;
+  }
+}
+
+@keyframes bounce-table {
+  0% {
+    top: -1000px;
+  }
+
+  50% {
+    top: 72px;
+  }
+
+  100% {
+    top: 42px;
+  }
+}
+
+@keyframes unbounce-table {
+  0% {
+    top: 42px;
   }
 
   100% {

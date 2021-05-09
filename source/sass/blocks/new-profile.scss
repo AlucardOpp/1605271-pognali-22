@@ -110,3 +110,91 @@
     opacity: 0.3;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .new-profile {
+    padding-top: 102px;
+    background-image: url("../img/rates-mobile.png"), url("../img/new-profile-background-tablet.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom 48px right 85px, right 40px top 179px;
+    background-color: $directions-white;
+    padding-bottom: 66px;
+    border-radius: 0 0 35px 35px;
+  }
+
+  .new-profile__wrapper {
+    // margin: 0 75px 0 130px;
+    margin: 0 40px;
+  }
+
+  .new-profile__title {
+    padding-top: 0;
+    margin: 0 0 73px 0;
+    text-align: center;
+    width: auto;
+  }
+
+  .new-profile__list {
+    margin-bottom: 59px;
+  }
+
+  .new-profile__item {
+    font-size: 28px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 15px 0 90px;
+
+    &::after {
+      font-size: 28px;
+      line-height: 28px;
+      width: 68px;
+      height: 68px;
+      right: auto;
+      left: -90px;
+      top: 0;
+    }
+
+    &:nth-child(2) {
+      &::after {
+        top: 1px;
+      }
+    }
+
+    &:nth-child(3) {
+      &::after {
+        top: 2px;
+      }
+    }
+  }
+
+  .new-profile__offer {
+    padding: 20px 0 18px 0;
+    margin: 0;
+  }
+
+  .new-profile__price {
+    padding: 20px 0 18px 0;
+  }
+
+  .new-profile__button {
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+    margin: 0 0 0 90px;
+    position: relative;
+    width: 274px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 68px;
+      height: 68px;
+      background-image: url("../img/new-profile-business-icon-tablet.svg");
+      background-repeat: no-repeat;
+      top: -25px;
+      left: -88px;
+    }
+  }
+}

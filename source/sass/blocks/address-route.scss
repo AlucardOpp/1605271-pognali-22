@@ -35,12 +35,13 @@
 
 .address-route__button {
   border: 3px solid $site-list-black;
+  padding-left: 22px;
 
   &:hover {
     background-color: $site-list-black;
     border: none;
     color: $white;
-    padding-left: 26px;
+    padding-left: 25px;
 
     &::after {
       width: 13px;
@@ -54,5 +55,54 @@
 
   &:active {
     color: $white-30;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .address-route {
+    border-radius: 0 0 35px 35px;
+    margin-bottom: -32px;
+    padding: 98px 0 84px 0;
+  }
+
+  .address-route__wrapper {
+    margin: 0 75px;
+  }
+
+  .address-route__street {
+    padding-top: 0;
+    font-size: 28px;
+    line-height: 28px;
+    margin: 0 94px 62px 94px;
+
+    &::before {
+      width: 68px;
+      height: 68px;
+      background-image: url("../img/address-route-mark.svg");
+      background-repeat: no-repeat;
+      background-size: 68px 68px;
+      left: -92px;
+      top: -20px;
+    }
+  }
+
+  .address-route__button {
+    padding-left: 38px;
+
+    &::after {
+      top: 32.5px;
+    }
+
+    &:hover {
+      padding-left: 41px;
+
+      &::after {
+        width: 14px;
+        height: 14px;
+        right: 35px;
+        top: 35.5px;
+        background-size: 14px 14px;
+      }
+    }
   }
 }

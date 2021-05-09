@@ -30,3 +30,20 @@
     top: 13px;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .academy {
+    padding: 0;
+    border: none;
+  }
+
+  .academy__link {
+    font-size: 20px;
+    line-height: 20px;
+    margin-right: 52px;
+
+    &::after {
+      top: -3px;
+    }
+  }
+}

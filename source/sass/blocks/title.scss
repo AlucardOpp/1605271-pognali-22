@@ -24,3 +24,15 @@
 .title--size-additional-index {
   color: $special-orange;
 }
+
+@media (min-width: $tablet-width) {
+  .title--size-main-index {
+    font-size: 60px;
+    line-height: 70px;
+  }
+
+  .title--size-additional {
+    font-size: 45px;
+    line-height: 45px;
+  }
+}

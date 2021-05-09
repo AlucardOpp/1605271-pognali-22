@@ -52,6 +52,7 @@
 .promo__quote {
   margin-bottom: 18px;
   width: 151px;
+  min-height: 44px;
 
   @media (min-width: 340px) {
     width: auto;
@@ -64,6 +65,7 @@
   font-style: normal;
   width: 161px;
   display: block;
+  min-height: 66px;
 
   @media (min-width: 340px) {
     width: auto;
@@ -129,4 +131,114 @@
   margin: 22px 0 0 24px;
   width: 150px;
   color: $dark-blue;
+}
+
+@media (min-width: $tablet-width) {
+  .promo {
+    background-image: url("../img/traveller-illustration-tablet.png"), url("../img/promo-background-tablet.png");
+    background-position: right 112px top 243px, 0 221px;
+    background-repeat: no-repeat;
+    background-size: auto, contain;
+
+    &--opened,
+    &--nojs {
+      padding-top: 132px;
+    }
+  }
+
+  .promo__title {
+    margin: 30px 185px 86px 185px;
+    width: auto;
+    min-width: 0;
+    min-height: 210px;
+  }
+
+  .promo__blockquote {
+    margin: 0 0 211px 0;
+    padding: 0;
+    width: 264px;
+    background-color: inherit;
+    color: $white;
+  }
+
+  .promo__quote,
+  .promo__author {
+    min-width: 0;
+    margin: 0;
+    padding: 0 0 0 72px;
+  }
+
+  .promo__quote {
+    margin-bottom: 45px;
+    width: 264px;
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  .promo__author {
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 25px;
+    font-style: normal;
+    width: 251px;
+    display: block;
+  }
+
+  .promo__list {
+    padding: 0 40px;
+    margin-bottom: 96px;
+    background-color: inherit;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-image: url("../img/promo-background-light.png");
+    background-position: 0 140px;
+    z-index: 0;
+  }
+
+  .promo__item {
+    height: 140px;
+    margin: 0;
+    font-size: 24px;
+    line-height: 24px;
+    border-radius: 0;
+
+    &::after {
+      font-size: 30px;
+      line-height: 30px;
+      top: auto;
+      right: auto;
+      bottom: 22px;
+      left: 34px;
+    }
+
+    &:nth-child(4n + 1) {
+      border-radius: 20px 20px 0 0;
+    }
+
+    &:nth-child(4n + 2) {
+      border-radius: 20px 20px 0 0;
+    }
+
+    &:nth-child(4n + 3) {
+      border-radius: 0 0 20px 20px;
+    }
+
+    &:nth-child(4n + 4) {
+      border-radius: 0 0 20px 20px;
+    }
+
+    &:nth-child(odd) {
+      margin-right: -35px;
+    }
+
+    &:last-child {
+      height: 140px;
+    }
+  }
+
+  .promo__text {
+    margin: 30px 0 0 33px;
+    width: 190px;
+    color: $dark-blue;
+  }
 }

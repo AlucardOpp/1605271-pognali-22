@@ -39,3 +39,77 @@
   margin: 0 61px 0 29px;
   padding-bottom: 82px;
 }
+
+.about-service__br {
+  &--travel {
+    display: none;
+  }
+}
+
+.about-service__and {
+  margin-left: 5px;
+}
+
+.about-service__link {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .about-service {
+    border-radius: 0 0 35px 35px;
+    background-color: $page-header-tablet;
+    padding-bottom: 89px;
+    margin-bottom: -55px;
+  }
+
+  .about-service__wrapper {
+    margin: 0 8px 0 40px;
+    background-image: url("../img/about-tablet.png");
+    background-color: transparent;
+    border-radius: 25px;
+  }
+
+  .about-service__title {
+    margin: 0 34px 40px 34px;
+    padding-top: 41px;
+  }
+
+  .about-service--companions {
+    margin: 0 34px 31px 34px;
+    font-size: 28px;
+    line-height: 33px;
+    width: 302px;
+  }
+
+  .about-service--congenial {
+    margin: 0 34px 52px 34px;
+    padding-bottom: 0;
+    font-size: 21px;
+    line-height: 25px;
+    width: 265px;
+  }
+
+  .about-service__br {
+    &--fun {
+      display: none;
+    }
+
+    &--travel {
+      display: block;
+    }
+  }
+
+  .about-service__c {
+    margin-left: 8px;
+  }
+
+  .about-service__and {
+    margin-left: 0;
+  }
+
+  .about-service__link {
+    display: flex;
+    margin: 0 34px;
+    width: 276px;
+  }
+}

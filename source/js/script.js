@@ -13,6 +13,7 @@ let promo = document.querySelector(".promo");
 let newProfileButton = document.querySelector(".new-profile__button");
 let tariffs = document.querySelector(".tariffs");
 let tariffsButton = document.querySelector(".tariffs__button");
+let userLinkAuth = document.querySelector(".user-list__link--auth");
 
 pageHeader.classList.remove("page-header--nojs");
 pageHeaderContainer.classList.remove("page-header__container--nojs");
@@ -26,6 +27,7 @@ mainMenuNav.classList.remove("main-menu__nav--nojs");
 contacts.classList.remove("contacts--nojs");
 socialsMenu.classList.remove("socials-menu--nojs");
 promo.classList.remove("promo--nojs");
+userLinkAuth.classList.remove("user-list__link--auth-nojs");
 
 pageHeaderToggle.addEventListener("click", function() {
   pageHeader.classList.toggle("page-header--opened");
@@ -50,6 +52,8 @@ pageHeaderToggle.addEventListener("click", function() {
   socialsMenu.classList.toggle("socials-menu--closed");
   promo.classList.toggle("promo--opened");
   promo.classList.toggle("promo--closed");
+  userLinkAuth.classList.toggle("user-list__link--auth-opened");
+  userLinkAuth.classList.toggle("user-list__link--auth-closed");
 });
 
 newProfileButton.addEventListener("click", function(evt) {
@@ -62,3 +66,18 @@ tariffsButton.addEventListener("click", function() {
   tariffs.classList.toggle("tariffs--closed");
   tariffs.classList.toggle("tariffs--opened");
 });
+
+window.onscroll = function() {
+  sTop = (this.pageYOffset || document.documentElement) - (document.documentElement.clientTop || 0);
+  if (sTop > 70 && !pageHeader.classList.contains("page-header--opened") && !pageHeader.classList.contains("page-header--nojs")) {
+    pageHeader.classList.add("page-header--scrolled");
+    pageHeaderContainer.classList.add("page-header__container--scrolled");
+    pageHeaderLogo.classList.add("page-header__logo--scrolled");
+    pageHeaderToggle.classList.add("page-header__toggle--scrolled");
+  } else {
+    pageHeader.classList.remove("page-header--scrolled");
+    pageHeaderContainer.classList.remove("page-header__container--scrolled");
+    pageHeaderLogo.classList.remove("page-header__logo--scrolled");
+    pageHeaderToggle.classList.remove("page-header__toggle--scrolled");
+  }
+};

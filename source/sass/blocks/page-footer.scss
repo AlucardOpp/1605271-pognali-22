@@ -28,8 +28,11 @@
   height: 15px;
   background-repeat: no-repeat;
   background-image: url("../img/logo-opened-mobile.svg");
-  align-self: center;
   margin-bottom: 40px;
+}
+
+.page-footer__logo-link {
+  align-self: center;
 }
 
 .page-footer__link {
@@ -52,4 +55,52 @@
 .page-footer__svg {
   align-self: center;
   fill: $site-list-black;
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer {
+    margin-top: -32px;
+    border-radius: 35px 35px 0 0;
+    padding: 46px 0 32px 0;
+  }
+
+  .page-footer__wrapper {
+    margin: 0 40px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .page-footer__logo {
+    margin: 0;
+    width: 164px;
+    height: 42px;
+    background-image: url("../img/logo-opened-tablet.svg");
+  }
+
+  .page-footer__link {
+    width: 62px;
+    height: 62px;
+  }
+
+  .page-footer__svg {
+    &--facebook {
+      width: 14px;
+      height: 26px;
+    }
+
+    &--vkontakte {
+      width: 28px;
+      height: 18px;
+    }
+
+    &--instagram {
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  .page-footer__socials {
+    margin: 0;
+  }
 }

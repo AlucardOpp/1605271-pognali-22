@@ -43,3 +43,16 @@
 .site-list__link:active span::before {
   color: $yellow-30;
 }
+
+@media (min-width: $tablet-width) {
+  .site-list {
+    font-size: 60px;
+    line-height: 71px;
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+  .site-list__link {
+    height: 60px;
+  }
+}

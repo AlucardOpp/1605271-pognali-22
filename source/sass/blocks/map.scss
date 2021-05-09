@@ -11,4 +11,12 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-color: $map-background;
+}
+
+
+@media (min-width: $tablet-width) {
+  .map__map {
+    background-image: url("../img/background-map-tablet.png");
+  }
 }
