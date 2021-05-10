@@ -126,7 +126,41 @@
     .tariffs__button {
       min-height: 108px;
       font-size: 24px;
+      text-transform: none;
     }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .tariffs {
+    width: 750px;
+    left: 233px;
+    border-radius: 25px;
+
+    &--closed {
+      top: -1000px;
+      animation: unbounce-desktop 1s;
+    }
+
+    &--opened {
+      display: block;
+      animation: bounce-desktop 0.5s;
+      z-index: 3;
+      top: 48px;
+    }
+  }
+
+  .tariffs__title {
+    margin-bottom: 46px;
+  }
+
+  .tariffs__description,
+  .tariffs__term {
+    padding: 12px 0 15px 0;
+  }
+
+  .tariffs__button {
+    border-radius: 0 0 25px 25px;
   }
 }
 
@@ -170,7 +204,31 @@
 
 @keyframes unbounce-table {
   0% {
-    top: 42px;
+    top: 48px;
+  }
+
+  100% {
+    top: -1000px;
+  }
+}
+
+@keyframes bounce-desktop {
+  0% {
+    top: -1000px;
+  }
+
+  50% {
+    top: 78px;
+  }
+
+  100% {
+    top: 48px;
+  }
+}
+
+@keyframes unbounce-desktop {
+  0% {
+    top: 48px;
   }
 
   100% {

@@ -5,6 +5,7 @@
 
 .map__map {
   width: 100%;
+  height: 100%;
   object-fit: cover;
   border: none;
   background-image: url("../img/background-map-mobile.png");
@@ -12,11 +13,37 @@
   background-repeat: no-repeat;
   background-position: center;
   background-color: $map-background;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/background-map-mobile@2x.png");
+  }
 }
 
 
 @media (min-width: $tablet-width) {
+  .map {
+    height: 581px;
+  }
+
   .map__map {
     background-image: url("../img/background-map-tablet.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background-map-tablet@2x.png");
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .map {
+    height: 584px;
+  }
+
+  .map__map {
+    background-image: url("../img/background-map-desktop.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background-map-desktop@2x.png");
+    }
   }
 }

@@ -56,3 +56,30 @@
     height: 60px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .site-list {
+    font-size: 20px;
+    line-height: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .site-list__link {
+    height: 20px;
+    color: $white;
+
+    &--scrolled {
+      color: $site-list-black;
+    }
+  }
+
+  .site-list__item {
+    margin-right: 33px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

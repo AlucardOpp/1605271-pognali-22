@@ -14,6 +14,8 @@ let newProfileButton = document.querySelector(".new-profile__button");
 let tariffs = document.querySelector(".tariffs");
 let tariffsButton = document.querySelector(".tariffs__button");
 let userLinkAuth = document.querySelector(".user-list__link--auth");
+let siteListLink = document.querySelectorAll(".site-list__link");
+let registrationButton = document.querySelector(".registration__button");
 
 pageHeader.classList.remove("page-header--nojs");
 pageHeaderContainer.classList.remove("page-header__container--nojs");
@@ -74,10 +76,20 @@ window.onscroll = function() {
     pageHeaderContainer.classList.add("page-header__container--scrolled");
     pageHeaderLogo.classList.add("page-header__logo--scrolled");
     pageHeaderToggle.classList.add("page-header__toggle--scrolled");
+    for(let i = 0; i < siteListLink.length; i++) {
+      siteListLink[i].classList.add("site-list__link--scrolled");
+    }
   } else {
     pageHeader.classList.remove("page-header--scrolled");
     pageHeaderContainer.classList.remove("page-header__container--scrolled");
     pageHeaderLogo.classList.remove("page-header__logo--scrolled");
     pageHeaderToggle.classList.remove("page-header__toggle--scrolled");
+    for(let i = 0; i < siteListLink.length; i++) {
+      siteListLink[i].classList.remove("site-list__link--scrolled");
+    }
   }
 };
+
+registrationButton.addEventListener("click", function(evt) {
+evt.preventDefault();
+});

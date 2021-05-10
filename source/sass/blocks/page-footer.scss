@@ -104,3 +104,22 @@
     margin: 0;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .page-footer {
+    padding: 47px 0 43px 0;
+    margin-top: -42px;
+    border-radius: 45px 45px 0 0;
+  }
+
+  .page-footer__logo {
+    width: 200px;
+    height: 55px;
+    background-image: url("../img/logo-opened-desktop.svg");
+  }
+
+  .page-footer__wrapper {
+    width: 1320px;
+    margin: 0 auto;
+  }
+}

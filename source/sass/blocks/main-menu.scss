@@ -26,3 +26,24 @@
     margin-bottom: 139px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .main-menu__wrapper {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 542px 288px;
+    column-gap: 145px;
+    align-items: center;
+  }
+
+  .main-menu__nav {
+    display: block;
+    margin: 0;
+  }
+
+  &--opened,
+  &--nojs,
+  &--closed {
+    display: block;
+  }
+}

@@ -3,9 +3,14 @@
   background-image: url("../img/rates-mobile.png");
   background-repeat: no-repeat;
   background-position: top 59px right 25px;
+  background-size: 100px 100px;
   padding-bottom: 38px;
   border-radius: 0 0 25px 25px;
   z-index: 3;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/rates-mobile@2x.png");
+  }
 }
 
 .new-profile__wrapper {
@@ -117,13 +122,17 @@
     background-image: url("../img/rates-mobile.png"), url("../img/new-profile-background-tablet.png");
     background-repeat: no-repeat, no-repeat;
     background-position: bottom 48px right 85px, right 40px top 179px;
+    background-size: 100px 100px, 198px 285px;
     background-color: $directions-white;
     padding-bottom: 66px;
     border-radius: 0 0 35px 35px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/rates-mobile@2x.png"), url("../img/new-profile-background-tablet@2x.png");
+    }
   }
 
   .new-profile__wrapper {
-    // margin: 0 75px 0 130px;
     margin: 0 40px;
   }
 
@@ -196,5 +205,47 @@
       top: -25px;
       left: -88px;
     }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .new-profile {
+    padding: 142px 0 169px 0;
+    background-image: none;
+    border-radius: 0 0 45px 45px;
+  }
+
+  .new-profile__title {
+    margin-bottom: 134px;
+  }
+
+  .new-profile__wrapper {
+    width: 1177px;
+    margin: 0 auto;
+    background-image: url("../img/rates-desktop.png"), url("../img/new-profile-background-desktop.png");
+    background-repeat: no-repeat;
+    background-position: top 183px right 0, top 131px right 111px;
+    background-size: 198px 198px, 446px 300px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/rates-mobile@2x.png"), url("../img/new-profile-background-desktop@2x.png");
+    }
+  }
+
+  .new-profile__list {
+    margin: 0 272px 59px 0;
+  }
+
+  .new-profile__item {
+    margin-right: 0;
+  }
+
+  .new-profile__offer,
+  .new-profile__price {
+    padding: 19px 0;
+  }
+
+  .new-profile__button {
+    margin-left: 90px;
   }
 }

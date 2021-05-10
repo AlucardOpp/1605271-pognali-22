@@ -192,3 +192,34 @@
     }
   }
 }
+
+
+@media (min-width: $desktop-width) {
+  .user-list {
+    top: 0;
+    right: 0;
+    margin: 0;
+    position: static;
+  }
+
+  .user-list__link--tel {
+    background-color: $special-orange;
+
+    &-opened,
+    &-closed,
+    &-nojs {
+      display: block;
+    }
+  }
+
+  .user-list__link--mail {
+    background-color: $special-yellow-dark;
+    background-size: 16px 14px;
+
+    &-opened,
+    &-closed,
+    &-nojs {
+      display: block;
+    }
+  }
+}

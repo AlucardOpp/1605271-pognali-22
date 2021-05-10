@@ -309,3 +309,78 @@
     }
   }
 }
+
+@media (min-width: $desktop-width) {
+  .registration {
+    padding-bottom: 132px;
+    border-radius: 0 0 45px 45px;
+    margin-bottom: -40px;
+  }
+
+  .registration__wrapper {
+    width: 1174px;
+    margin: 0 auto;
+  }
+
+  .registration__title {
+    margin: 109px 0 57px 0;
+  }
+
+  .registration__suggestion {
+    margin-bottom: 60px;
+  }
+
+  .registration__form {
+    grid-template-columns: 1fr 324px;
+    margin-bottom: 70px;
+  }
+
+  .registration__span {
+    display: block;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 700;
+    font-family: "Blogger Sans", "Arial", sans-serif;
+    color: $light-blue;
+    text-align: left;
+    padding-left: 30px;
+  }
+
+  .registration__questions {
+    margin-bottom: 77px;
+  }
+
+  .registration__contacts-list {
+    display: flex;
+    margin: 0 153px 0 276px;
+  }
+
+  .registration__contacts-item {
+    margin: 0 229px 0 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .registration__contacts-link {
+    &::before {
+      width: 90px;
+      height: 90px;
+      left: -121px;
+      top: -32px;
+    }
+
+    &--tel {
+      &::before {
+        background-size: 36px 34px;
+      }
+    }
+
+    &--mail {
+      &::before {
+        background-size: 47px 50px;
+      }
+    }
+  }
+}

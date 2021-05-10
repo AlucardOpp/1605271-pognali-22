@@ -6,6 +6,14 @@
   <title>HTML Academy: Погнали</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="В путешествие с крутыми попутчиками - Погнали">
+  <link rel="preload" href="./fonts/bloggersans-light.woff2" as="font" crossorigin>
+  <link rel="preload" href="./fonts/bloggersans-lightitalic.woff2" as="font" crossorigin>
+  <link rel="preload" href="./fonts/bloggersans.woff2" as="font" crossorigin>
+  <link rel="preload" href="./fonts/bloggersans-italic.woff2" as="font" crossorigin>
+  <link rel="preload" href="./fonts/bloggersans-medium.woff2" as="font" crossorigin>
+  <link rel="preload" href="./fonts/bloggersans-mediumitalic.woff2" as="font" crossorigin>
+  <link rel="preload" href="./fonts/bloggersans-bold.woff2" as="font" crossorigin>
+  <link rel="preload" href="./fonts/bloggersans-bolditalic.woff2" as="font" crossorigin>
   <link rel="preload" href="./img/icon-telephone-contacts-hover.svg" as="image">
   <link rel="preload" href="./img/icon-mail-contacts-hover.svg" as="image">
   <link rel="preload" href="./img/icon-telephone-contacts-active.svg" as="image">
@@ -34,17 +42,17 @@
                 <a class="site-list__link site-list__link--current"><span data-hover="О сервисе">О сервисе</span></a>
               </li>
               <li class="site-list__item">
-                <a class="site-list__link" href="./form.html" aria-label="Ссылка на страницу формы"><span data-hover="Направления">Направления</span></a>
+                <a class="site-list__link" href="./form.html" aria-label="Ссылка на страницу формы" target="_blank"><span data-hover="Направления">Направления</span></a>
               </li>
               <li class="site-list__item">
-                <a class="site-list__link" href="./catalog.html" aria-label="Ссылка на страницу каталога"><span data-hover="Попутчики">Попутчики</span></a>
+                <a class="site-list__link" href="./catalog.html" aria-label="Ссылка на страницу каталога" target="_blank"><span data-hover="Попутчики">Попутчики</span></a>
               </li>
             </ul>
           </nav>
           <div class="user-list user-list--closed user-list--nojs">
             <a class="user-list__link user-list__link--tel user-list__link--tel-closed user-list__link--tel-nojs" href="tel:+78005558628"></a>
             <a class="user-list__link user-list__link--mail user-list__link--mail-closed user-list__link--mail-nojs" href="mailto:mail@htmlacademy.ru"></a>
-            <a class="user-list__link user-list__link--auth user-list__link--auth-closed user-list__link--auth-nojs" href="./authorization.html">Авторизация</a>
+            <a class="user-list__link user-list__link--auth user-list__link--auth-closed user-list__link--auth-nojs" href="./authorization.html" target="_blank">Авторизация</a>
           </div>
           <div class="contacts contacts--closed contacts--nojs">
             <ul class="contacts__list">
@@ -87,25 +95,26 @@
   <main class="page-main">
     <h1 class="visually-hidden">Погнали - сервис по поиску попутчиков</h1>
     <section class="promo promo--closed promo--nojs">
-      <h2 class="promo__title title title--size-main-index">В путешествие с крутыми попутчиками!</h2>
-      <blockquote class="promo__blockquote">
-        <p class="promo__quote">«Лучшее приложение, что я видел в жизни!»</p>
-        <cite class="promo__author">Мурат Эльтазин <br> главный редактор газеты «гаджетлайф»</cite>
-      </blockquote>
-      <ol class="promo__list">
-        <li class="promo__item promo__item--direction">
-          <p class="promo__text">Выберите направление</p>
-        </li>
-        <li class="promo__item promo__item--travellers">
-          <p class="promo__text">Изучите идеи путешественников</p>
-        </li>
-        <li class="promo__item promo__item--like-you">
-          <p class="promo__text">Находите тех, кто похож на вас</p>
-        </li>
-        <li class="promo__item promo__item--together">
-          <p class="promo__text">Путешествуйте вместе!</p>
-        </li>
-      </ol>
+      <div class="promo__wrapper">
+        <h2 class="promo__title title title--size-main-index">В путешествие с крутыми попутчиками!</h2>
+        <blockquote class="promo__blockquote">
+          <p class="promo__quote">«Лучшее приложение, что я видел в жизни!»</p>
+          <cite class="promo__author">Мурат Эльтазин <br> главный редактор газеты «гаджетлайф»</cite>
+        </blockquote>
+        <ol class="promo__list">
+          <li class="promo__item promo__item--direction">
+            <p class="promo__text">Выберите направление</p>
+          </li>
+          <li class="promo__item promo__item--travellers">
+            <p class="promo__text">Изучите идеи путешественников</p>
+          </li>
+          <li class="promo__item promo__item--like-you">
+            <p class="promo__text">Находите тех, кто похож на вас</p>
+          </li>
+          <li class="promo__item promo__item--together">
+            <p class="promo__text">Путешествуйте вместе!</p>
+          </li>
+        </ol>
       </div>
     </section>
     <section class="about-service">
@@ -113,23 +122,31 @@
         <h2 class="about-service__title title title--size-additional title--size-additional-index">О сервисе</h2>
         <p class="about-service--companions">Любое путешествие веселее <br class="about-service__br about-service__br--fun"> <span class="about-service__c">с</span> попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий <br class="about-service__br about-service__br--travel"> <span class="about-service__and">и</span> черпайте вдохновение в чужих.</p>
         <p class="about-service--congenial"><b>А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</b></p>
-        <a class="about-service__link button">Подробнее</a>
+        <a class="about-service__link button" href="#">Подробнее</a>
       </div>
     </section>
     <section class="directions">
       <div class="directions__wrapper">
-        <h2 class="directions__title title title--size-additional title--size-additional-index">Направления</h2>
-        <p class="directions__text">Мы не продаем туры <br> и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
+        <div class="directions__container">
+          <h2 class="directions__title title title--size-additional title--size-additional-index">Направления</h2>
+          <p class="directions__text">Мы не продаем туры <br> и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
+        </div>
         <ul class="directions__list">
           <li class="directions__item">
             <picture class="directions__image">
-              <source media="(min-width: 768px)" srcset="./img/thailand-tablet.png">
-              <img src="./img/thailand-mobile.png" width="270" height="110">
+              <source type="image/webp" media="(min-width: 768px)" srcset="./img/thailand-tablet.webp 1x, ./img/thailand-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="./img/thailand-mobile.webp 1x, ./img/thailand-mobile@2x.webp 2x">
+
+              <source media="(min-width: 768px)" srcset="./img/thailand-tablet.png, ./img/thailand-tablet@2x.png 2x">
+              <img src="./img/thailand-mobile.png" srcset="./img/thailand-mobile@2x.png 2x" width="270" height="110" alt="Один из островов Таиланда">
             </picture>
             <div class="directions__info">
               <picture class="directions__flag">
-                <source media="(min-width: 768px)" srcset="./img/directions-thailand-tablet.png">
-                <img src="./img/directions-thailand-mobile.png" width="35" height="24">
+                <source type="image/webp" media="(min-width: 768px)" srcset="./img/directions-thailand-tablet.webp 1x, ./img/directions-thailand-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="./img/directions-thailand-mobile.webp 1x, ./img/directions-thailand-mobile@2x.webp 2x">
+
+                <source media="(min-width: 768px)" srcset="./img/directions-thailand-tablet.png, ./img/directions-thailand-tablet@2x.png 2x">
+                <img src="./img/directions-thailand-mobile.png" srcset="./img/directions-thailand-mobile@2x.png 2x" width="35" height="24" alt="Флаг Таиланда">
               </picture>
               <h3 class="directions__country">Таиланд</h3>
               <p class="directions__tagline directions__tagline--thailand">Джунгли зовут!</p>
@@ -138,13 +155,19 @@
           </li>
           <li class="directions__item">
             <picture class="directions__image">
-              <source media="(min-width: 768px)" srcset="./img/france-tablet.png">
-              <img src="./img/france-mobile.png" width="270" height="110">
+              <source type="image/webp" media="(min-width: 768px)" srcset="./img/france-tablet.webp 1x, ./img/france-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="./img/france-mobile.webp 1x, ./img/france-mobile@2x.webp 2x">
+
+              <source media="(min-width: 768px)" srcset="./img/france-tablet.png, ./img/france-tablet@2x.png 2x">
+              <img src="./img/france-mobile.png" width="270" height="110" alt="Одно из зданий франции">
             </picture>
             <div class="directions__info">
               <picture class="directions__flag">
-                <source media="(min-width: 768px)" srcset="./img/directions-france-tablet.png">
-                <img src="./img/directions-france-mobile.png" width="35" height="24">
+                <source type="image/webp" media="(min-width: 768px)" srcset="./img/directions-france-tablet.webp 1x, ./img/directions-france-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="./img/directions-france-mobile.webp 1x, ./img/directions-france-mobile@2x.webp 2x">
+
+                <source media="(min-width: 768px)" srcset="./img/directions-france-tablet.png, ./img/directions-france-tablet@2x.png 2x">
+                <img src="./img/directions-france-mobile.png" srcset="./img/directions-france-mobile@2x.png 2x" width="35" height="24" alt="Флаг Франции">
               </picture>
               <h3 class="directions__country">Франция</h3>
               <p class="directions__tagline directions__tagline--france">Трэ бьен, манифик!</p>
@@ -153,13 +176,19 @@
           </li>
           <li class="directions__item">
             <picture class="directions__image">
-              <source media="(min-width: 768px)" srcset="./img/czech-tablet.png">
-              <img src="./img/czech-mobile.png" width="270" height="110">
+              <source type="image/webp" media="(min-width: 768px)" srcset="./img/czech-tablet.webp 1x, ./img/czech-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="./img/czech-mobile.webp 1x, ./img/czech-mobile@2x.webp 2x">
+
+              <source media="(min-width: 768px)" srcset="./img/czech-tablet.png, ./img/czech-tablet@2x.png 2x">
+              <img src="./img/czech-mobile.png" srcset="./img/czech-mobile@2x.png 2x" width="270" height="110" alt="Виды Чехии">
             </picture>
             <div class="directions__info">
               <picture class="directions__flag">
-                <source media="(min-width: 768px)" srcset="./img/directions-czech-tablet.png">
-                <img src="./img/directions-czech-mobile.png" width="35" height="24">
+                <source type="image/webp" media="(min-width: 768px)" srcset="./img/directions-czech-tablet.webp 1x, ./img/directions-czech-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="./img/directions-czech-mobile.webp 1x, ./img/directions-czech-mobile@2x.webp 2x">
+
+                <source media="(min-width: 768px)" srcset="./img/directions-czech-tablet.png, ./img/directions-czech-tablet@2x.png 2x">
+                <img src="./img/directions-czech-mobile.png" srcset="./img/directions-czech-mobile@2x.png 2x" width="35" height="24" alt="Флаг Чехии">
               </picture>
               <h3 class="directions__country">Чехия</h3>
               <p class="directions__tagline directions__tagline--czech">Закоулки старой Европы</p>
@@ -167,20 +196,25 @@
             </div>
           </li>
         </ul>
-        <a class="directions__button button" href="./catalog.html">Показать все</a>
+        <a class="directions__button button" href="./catalog.html" target="_blank">Показать все</a>
       </div>
     </section>
     <section class="companions">
       <div class="companions__wrapper">
-        <h2 class="companions__title title title--size-additional title--size-additional-index">Попутчики</h2>
-        <p class="companions__individual">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, <br> <span class="companions__a">а</span> другому маршрут для хайкинга.</p>
-        <p class="companions__confederate"><b>Теперь можно легко <br> <span class="companions__find">найти</span> единомышленников!</b></p>
+        <div class="companions__container">
+          <h2 class="companions__title title title--size-additional title--size-additional-index">Попутчики</h2>
+          <p class="companions__individual">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, <br> <span class="companions__a">а</span> другому маршрут для хайкинга.</p>
+          <p class="companions__confederate"><b>Теперь можно легко <br> <span class="companions__find">найти</span> единомышленников!</b></p>
+        </div>
         <ul class="companions__list card">
           <li class="companions__card card__item">
             <div class="card__image">
               <picture class="card__picture">
-                <source media="(min-width: 768px)" srcset="./img/card-firsova-tablet.png">
-                <img class="card__img" src="./img/card-firsova-mobile.png" width="270" height="270">
+                <source type="image/webp" media="(min-width: 768px)" srcset="./img/card-firsova-tablet.webp 1x, ./img/card-firsova-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="./img/card-firsova-mobile.webp 1x, ./img/card-firsova-mobile@2x.webp 2x">
+
+                <source media="(min-width: 768px)" srcset="./img/card-firsova-tablet.png, ./img/card-firsova-tablet@2x.png 2x">
+                <img class="card__img" src="./img/card-firsova-mobile.png" srcset="./img/card-firsova-mobile@2x.png 2x" width="270" height="270" alt="Девушка в бассейне">
               </picture>
               <div class="card__level card__level--99">
                 <span class="card__level-number">99</span>
@@ -190,13 +224,22 @@
             <div class="card__information">
               <ul class="card__flags">
                 <li class="card__flag card__flag--sri-lanka">
-                  <img src="./img/companions-sri-lanka.png" width="35" height="25">
+                  <picture>
+                    <source type="image/webp" srcset="./img/companions-sri-lanka.webp 1x, ./img/companions-sri-lanka@2x.webp 2x">
+                    <img src="./img/companions-sri-lanka.png" srcset="./img/companions-sri-lanka@2x.png 2x" width="35" height="25" alt="Флаг Шри-Ланки">
+                  </picture>
                 </li>
                 <li class="card__flag card__flag--thailand">
-                  <img src="./img/companions-thailand.png" width="35" height="25">
+                  <picture>
+                    <source type="image/webp" srcset="./img/companions-thailand.webp 1x, ./img/companions-thailand@2x.webp 2x">
+                    <img src="./img/companions-thailand.png" srcset="./img/companions-thailand@2x.png 2x" width="35" height="25" alt="Флаг Таиланда">
+                  </picture>
                 </li>
                 <li class="card__flag card__flag--seychelles">
-                  <img src="./img/companions-seychelles.png" width="35" height="25">
+                  <picture>
+                    <source type="image/webp" srcset="./img/companions-seychelles.webp 1x, ./img/companions-seychelles@2x.webp 2x">
+                    <img src="./img/companions-seychelles.png" srcset="./img/companions-seychelles@2x.png 2x" width="35" height="25" alt="Флаг Сейшел">
+                  </picture>
                 </li>
               </ul>
               <h3 class="card__initials card__initials--offline">Таня Фирсова</h3>
@@ -228,7 +271,11 @@
           <li class="companions__card card__item">
             <div class="card__image">
               <picture class="card__picture">
-                <img class="card__img" src="./img/card-demin-mobile.png" width="270" height="270">
+                <source type="image/webp" media="(min-width: 768px)" srcset="./img/card-demin-tablet.webp 1x, ./img/card-demin-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="./img/card-demin-mobile.webp 1x, ./img/card-demin-mobile@2x.webp 2x">
+
+                <source media="(min-width: 768px)" srcset="./img/card-demin-tablet.png, ./img/card-demin-tablet@2x.png 2x">
+                <img class="card__img" src="./img/card-demin-mobile.png" srcset="./img/card-demin-mobile@2x.png 2x" width="270" height="270" alt="Мужчина в очках, шапке и с бородой">
               </picture>
               <div class="card__level card__level--80">
                 <span class="card__level-number">80</span>
@@ -238,11 +285,17 @@
             <div class="card__information">
               <ul class="card__flags">
                 <li class="card__flag card__flag--belgium">
-                  <img src="./img/companions-belgium.png" width="35" height="25">
+                  <picture>
+                    <source type="image/webp" srcset="./img/companions-belgium.webp 1x, ./img/companions-belgium@2x.webp 2x">
+                    <img src="./img/companions-belgium.png" srcset="./img/companions-belgium@2x.png 2x" width="35" height="25" alt="Флаг Бельгии">
+                  </picture>
                 </li>
                 <li class="card__flag card__flag--czech">
-                  <img src="./img/companions-czech.png" width="35" height="25">
-                </li class="card__flag">
+                  <picture>
+                    <source type="image/webp" srcset="./img/companions-czech.webp 1x, ./img/companions-czech@2x.webp 2x">
+                    <img src="./img/companions-czech.png" srcset="./img/companions-czech@2x.png 2x" width="35" height="25" alt="Флаг Чехии">
+                  </picture>
+                </li>
               </ul>
               <h3 class="card__initials card__initials--online">Петя Демин</h3>
               <p class="card__tags">#бургер #бар #футбол #концерт #крафт</p>
@@ -271,7 +324,7 @@
             </div>
           </li>
         </ul>
-        <a class="companions__button button" href="./catalog.html">Показать всех</a>
+        <a class="companions__button button" href="./catalog.html" target="_blank">Показать всех</a>
       </div>
     </section>
     <section class="new-profile">
@@ -291,7 +344,7 @@
             <span class="new-profile__price">59 руб./мес</span>
           </li>
         </ol>
-        <a href="./tariffs.html" class="new-profile__button" type="button">Показать тарифы для бизнеса</a>
+        <a href="./tariffs.html" class="new-profile__button">Показать тарифы для бизнеса</a>
         <div class="tariffs">
           <div class="tariffs__wrapper">
             <h3 class="tariffs__title title title--size-additional title--size-additional-index ">Бизнес-тарифы</h3>
@@ -320,7 +373,7 @@
       <div class="registration__wrapper">
         <h2 class="visually-hidden">Форма регистрации</h2>
         <p class="registration__title title title--size-additional title--size-additional-index"><b>Заинтересовались?</b></p>
-        <p class="registration__suggestion">Зарегистрируйтесь, <br class="registration__it-br"> <span class="registration__it">это</span> быстро и бесплатно! <br class="registration__already"> <span class="">Уже</span> зарегистрированы? Тогда скорее <a class="registration__authorize" href="./authorization.html">авторизуйтесь</a>.</p>
+        <p class="registration__suggestion">Зарегистрируйтесь, <br class="registration__it-br"> <span class="registration__it">это</span> быстро и бесплатно! <br class="registration__already"> <span class="">Уже</span> зарегистрированы? Тогда скорее <a class="registration__authorize" href="./authorization.html" target="_blank">авторизуйтесь</a>.</p>
         <form class="registration__form" action="https://echo.htmlacademy.ru" method="post">
           <input class="registration__input" type="email" id="email" name="email" placeholder="E-mail">
           <button class="registration__button" type="submit"><span class="registration__span">Регистрация</span></button>
@@ -340,7 +393,7 @@
       <div class="address-route__wrapper">
         <h2 class="visually-hidden">Адрес и маршрут</h2>
         <p class="address-route__street">ул. Большая Конюшенная, 19/8</p>
-        <a class="address-route__button button" href="#">Проложить маршрут</a>
+        <a class="address-route__button button" href="https://www.google.com/maps/dir/Большая+Конюшенная+ул.,+Санкт-Петербург,+191186/Университетская+наб.,+Санкт-Петербург,+199034/@59.9393417,30.3061207,16z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x4696310fb661d55f:0xd0cc7f055debe430!2m2!1d30.3232983!2d59.938456!1m5!1m1!1s0x4696311886d14a9f:0x1965ccb860fb513f!2m2!1d30.2976978!2d59.9390303?hl=ru" target="_blank">Проложить маршрут</a>
       </div>
     </section>
     <section class="map">
@@ -377,7 +430,7 @@
         </li>
       </ul>
       <div class="academy">
-        <a href="https://htmlacademy.ru/intensive/adaptive" class="academy__link">Разработано</a>
+        <a href="https://htmlacademy.ru/intensive/adaptive" class="academy__link" target="_blank">Разработано</a>
       </div>
     </div>
   </footer>

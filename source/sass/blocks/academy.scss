@@ -47,3 +47,13 @@
     }
   }
 }
+
+@media (min-width: $desktop-width) {
+  .academy {
+    padding-bottom: 5px;
+  }
+
+  .academy__link {
+    margin-right: 95px;
+  }
+}
