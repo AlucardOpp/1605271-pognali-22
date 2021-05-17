@@ -14,6 +14,23 @@
   position: relative;
   box-sizing: border-box;
   cursor: pointer;
+  border: none;
+
+  &--form {
+    border-radius: 20px;
+    height: 40px;
+    font-size: 17px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: $light-blue;
+    font-family: inherit;
+    justify-content: center;
+    padding: 0;
+
+    &::after {
+      display: none;
+    }
+  }
 
   &::after {
     content: "";
@@ -22,8 +39,8 @@
     background-image: url("../img/button-arrow.svg");
     position: absolute;
     background-repeat: no-repeat;
-    right: 19px;
-    top: 23px;
+    right: 20px;
+    top: 25px;
   }
 
   &:hover {

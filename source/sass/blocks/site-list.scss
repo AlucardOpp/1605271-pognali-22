@@ -9,6 +9,10 @@
   text-align: center;
 }
 
+.site-list__item {
+  height: 35px;
+}
+
 .site-list__link {
   text-decoration: none;
   color: $site-list-black;
@@ -52,6 +56,10 @@
     text-align: left;
   }
 
+  .site-list__item {
+    height: 71px;
+  }
+
   .site-list__link {
     height: 60px;
   }
@@ -64,6 +72,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    margin-top: 7px;
   }
 
   .site-list__link {
@@ -76,7 +85,8 @@
   }
 
   .site-list__item {
-    margin-right: 33px;
+    margin-right: 34px;
+    height: auto;
 
     &:last-child {
       margin-right: 0;

@@ -1,0 +1,38 @@
+.new-plan {
+  background-color: $new-plan-background;
+  border-radius: 30px 30px 0 0;
+  margin-top: -20px;
+  padding: 28px 0 66px 0;
+}
+
+.new-plan__wrapper {
+  margin: 0 25px;
+}
+
+.new-plan__steps {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 31px;
+  align-items: center;
+}
+
+.new-plan__list {
+  padding: 0;
+  margin: 0 18px 0 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 47px;
+}
+
+.new-plan__step {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: $light-blue;
+  opacity: 0.3;
+
+  &--current {
+    opacity: 1;
+  }
+}

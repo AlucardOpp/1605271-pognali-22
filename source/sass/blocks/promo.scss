@@ -1,6 +1,6 @@
 .promo {
   background-image: url("../img/traveller-illustration-mobile.png"), url("../img/promo-background-mobile.png");
-  background-position: center 132px, 0 -93px;
+  background-position: 80px 131px, 0 -91px;
   background-repeat: no-repeat;
   background-size: 192px 255px, contain;
 
@@ -17,19 +17,19 @@
     padding-top: 94px;
   }
 
-  @media (min-width: 400px) {
-    background-position: center 132px, 0 -220px;
+  @media (min-width: 375px) {
+    background-position: center 131px, 0 -220px;
     background-size: 192px 255px, cover;
   }
 
   @media (min-width: 560px) {
-    background-position: center 132px, 0 -330px;
+    background-position: center 131px, 0 -330px;
   }
 }
 
 .promo__title {
   text-align: center;
-  margin: 0 41px 265px 41px;
+  margin: 0 41px 266px 41px;
   width: 238px;
   min-height: 120px;
 
@@ -41,7 +41,7 @@
 
 .promo__blockquote {
   margin: 0;
-  padding: 48px 0 49px 0;
+  padding: 47px 0 48px 0;
   background-color: $dark-blue;
   font-size: 16px;
   line-height: 22px;
@@ -136,15 +136,19 @@
 }
 
 .promo__text {
-  margin: 22px 0 0 24px;
+  margin: 21px 0 0 24px;
   width: 150px;
   color: $dark-blue;
+
+  &--like-you {
+    width: 143px;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .promo {
     background-image: url("../img/traveller-illustration-tablet.png"), url("../img/promo-background-tablet.png");
-    background-position: right 112px top 243px, 0 221px;
+    background-position: right 111px top 245px, 0 224px;
     background-repeat: no-repeat;
     background-size: 372px 451px, contain;
 
@@ -159,14 +163,14 @@
   }
 
   .promo__title {
-    margin: 30px 185px 86px 185px;
+    margin: 26px 185px 86px 185px;
     width: auto;
     min-width: 0;
     min-height: 210px;
   }
 
   .promo__blockquote {
-    margin: 0 0 211px 0;
+    margin: 0 0 213px 0;
     padding: 0;
     width: 264px;
     background-color: inherit;
@@ -177,11 +181,11 @@
   .promo__author {
     min-width: 0;
     margin: 0;
-    padding: 0 0 0 72px;
+    padding: 0 0 0 73px;
   }
 
   .promo__quote {
-    margin-bottom: 45px;
+    margin-bottom: 46px;
     width: 264px;
     font-size: 28px;
     line-height: 33px;
@@ -203,7 +207,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-image: url("../img/promo-background-light.png");
-    background-position: 0 140px;
+    background-position: 0 139px;
     z-index: 0;
 
     @media (min-resolution: 2dppx) {
@@ -223,8 +227,8 @@
       line-height: 30px;
       top: auto;
       right: auto;
-      bottom: 22px;
-      left: 34px;
+      bottom: 23px;
+      left: 33px;
     }
 
     &:nth-child(4n + 1) {
@@ -253,9 +257,13 @@
   }
 
   .promo__text {
-    margin: 30px 0 0 33px;
+    margin: 29px 0 0 33px;
     width: 190px;
     color: $dark-blue;
+
+    &--like-you {
+      width: 190px;
+    }
   }
 }
 
@@ -263,10 +271,10 @@
 @media (min-width: $desktop-width) {
   .promo {
     background-image: url("../img/promo-background-desktop.png");
-    background-position: left -5px bottom -3px;
+    background-position: left -8px bottom 1px;
     background-repeat: no-repeat;
     background-size: 1440px 750px;
-    margin-bottom: 70px;
+    margin-bottom: 0;
     border-radius: 0 0 45px 45px;
     background-color: $dark-blue;
 
@@ -283,7 +291,7 @@
     justify-content: space-between;
     background-image: url("../img/traveller-illustration-desktop.png");
     background-repeat: no-repeat;
-    background-position: top 5px right 345px;
+    background-position: top 1px right 345px;
     background-size: 431px 640px;
 
     @media (min-resolution: 2dppx) {
@@ -292,14 +300,14 @@
   }
 
   .promo__title {
-    margin: 91px 0 101px 67px;
+    margin: 96px 0 101px 67px;
     width: 418px;
     text-align: left;
     min-height: 0;
   }
 
   .promo__blockquote {
-    margin: 107px 0 120px 0;
+    margin: 110px 21px 120px 0;
   }
 
   .promo__quote {
@@ -363,5 +371,10 @@
     &:last-child {
       height: 107px;
     }
+  }
+
+  .promo__text {
+    margin-top: 26px;
+    margin-left: 32px;
   }
 }

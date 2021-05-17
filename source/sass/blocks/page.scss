@@ -9,4 +9,8 @@
   font-family: "Blogger Sans", "Arial", sans-serif;
   background-color: $site-list-black;
   min-height: 100%;
+
+  &--form {
+    background-color: $form-page-background;
+  }
 }

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Направления</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="В путешествие с крутыми попутчиками - Погнали">
+  <link rel="preload" href="./fonts/bloggersans-light.woff2" as="font" crossorigin>
+  <link rel="preload" href="./fonts/bloggersans-lightitalic.woff2" as="font" crossorigin>
+  <link rel="preload" href="./fonts/bloggersans.woff2" as="font" crossorigin>
+  <link rel="preload" href="./fonts/bloggersans-italic.woff2" as="font" crossorigin>
+  <link rel="preload" href="./fonts/bloggersans-medium.woff2" as="font" crossorigin>
+  <link rel="preload" href="./fonts/bloggersans-mediumitalic.woff2" as="font" crossorigin>
+  <link rel="preload" href="./fonts/bloggersans-bold.woff2" as="font" crossorigin>
+  <link rel="preload" href="./fonts/bloggersans-bolditalic.woff2" as="font" crossorigin>
+  <link rel="preload" href="./img/icon-check-mark-disabled.svg" as="image">
+  <link rel="icon" href="./favicon.ico">
+  <link rel="icon" href="./img/icon.svg" type="image/svg+xml">
+  <link href="./css/style.min.css" rel="stylesheet">
+</head>
+
+<body class="page__body page__body--others page__body--form">
+  <header class="page-header page-header--form page-header--closed page-header--nojs">
+    <div class="page-header__wrapper">
+      <div class="page-header__container page-header__container--closed page-header__container--nojs">
+        <a href="./index.html">
+          <div class="page-header__logo page-header__logo--closed page-header__logo--nojs"></div>
+        </a>
+        <button class="page-header__toggle page-header__toggle--closed page-header__toggle--nojs" type="button">
+          <span class="visually-hidden">Открыть меню навигации</span>
+        </button>
+      </div>
+      <div class="main-menu">
+        <div class="main-menu__wrapper">
+          <nav class="main-menu__nav main-menu__nav--closed main-menu__nav--nojs">
+            <ul class="main-menu__list site-list">
+              <li class="site-list__item">
+                <a class="site-list__link" href="./index.html" aria-label="Ссылка на главную страницу"><span data-hover="О сервисе">О сервисе</span></a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link site-list__link--current" aria-label="Ссылка на страницу формы"><span data-hover="Направления">Направления</span></a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="./catalog.html" aria-label="Ссылка на страницу каталога"><span data-hover="Попутчики">Попутчики</span></a>
+              </li>
+            </ul>
+          </nav>
+          <div class="user-list user-list--closed user-list--nojs user-list--form">
+            <a class="user-list__link user-list__link--tel user-list__link--tel-closed user-list__link--tel-nojs" href="tel:+78005558628"></a>
+            <a class="user-list__link user-list__link--mail user-list__link--mail-closed user-list__link--mail-nojs" href="mailto:mail@htmlacademy.ru"></a>
+            <a class="user-list__link user-list__link--auth user-list__link--auth-closed user-list__link--auth-nojs" href="./authorization.html" target="_blank">Авторизация</a>
+          </div>
+          <div class="contacts contacts--closed contacts--nojs">
+            <ul class="contacts__list">
+              <li class="contacts__item">
+                <a class="contacts__link contacts__link--tel" href="tel:+78005558628">8 800 555-86-28</a>
+              </li>
+              <li class="contacts__item">
+                <a class="contacts__link contacts__link--mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+              </li>
+            </ul>
+          </div>
+          <ul class="socials-menu socials-menu--closed socials-menu--nojs">
+            <li class="socials-menu__item">
+              <a href="#">
+                <svg class="socials-menu__svg socials-menu__svg--facebook" width="11" height="21">
+                  <use xlink:href="./img/sprite.svg#icon-facebook-main"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="socials-menu__item">
+              <a href="#">
+                <svg class="socials-menu__svg socials-menu__svg--vkontakte" width="23" height="12">
+                  <use xlink:href="./img/sprite.svg#icon-vkontakte-main"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="socials-menu__item">
+              <a href="#">
+                <svg class="socials-menu__svg socials-menu__svg--instagram" width="18" height="18">
+                  <use xlink:href="./img/sprite.svg#icon-instagram-main"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <h1 class="page-header__title page-header__title--closed page-header__title--nojs title title--size-main-others">Направления</h1>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <section class="profile-form profile-form--closed profile-form--nojs">
+      <h2 class="visually-hidden">Профиль</h2>
+      <div class="profile-form__wrapper">
+        <div class="profile-form__level">
+          <span class="profile-form__number">80</span>
+          <span class="profile-form__text">level</span>
+        </div>
+        <img class="profile-form__image" src="./img/card-demin-tablet.png" width="100" height="100" alt="Мужчина в очках, шапке и с бородой">
+        <button class="profile-form__change-photo button button--form" type="button">Сменить фото</button>
+        <div class="profile-form__tags">
+          <label class="profile-form__header" for="tags">Тэги</label>
+          <textarea class="profile-form__textarea" id="tags" name="tags" placeholder="#бургер #бар #футбол #концерт #крафт"></textarea>
+        </div>
+        <div class="profile-form__transport">
+          <p class="profile-form__header profile-form__header--transport">Транспорт</p>
+          <ul class="profile-form__transport-list">
+            <li><button class="profile-form__transport-button profile-form__transport-button--plane profile-form__transport-button--plane-active" type="button"><span class="visually-hidden">Выбрать самолёт для используемого транспорта</span></button></li>
+            <li><button class="profile-form__transport-button profile-form__transport-button--bus profile-form__transport-button--bus-active" type="button"><span class="visually-hidden">Выбрать автобус для используемого транспорта</span></button></li>
+            <li><button class="profile-form__transport-button profile-form__transport-button--bicycle profile-form__transport-button--bicycle-inactive" type="button"><span class="visually-hidden">Выбрать велосипед для используемого транспорта</span></button></li>
+            <li><button class="profile-form__transport-button profile-form__transport-button--run profile-form__transport-button--run-active" type="button"><span class="visually-hidden">Выбрать самолёт для используемого транспорта</span></button></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="my-plans">
+      <div class="my-plans__wrapper">
+        <h2 class="my-plans__title title title--size-additional title--size-additional-form">Мои планы:</h2>
+        <ol class="my-plans__list">
+          <li class="my-plans__item">
+            <h3 class="my-plans__destination">Франция, Италия</h3>
+            <div class="my-plans__information">
+              <p class="my-plans__companions">3 попутчика</p>
+              <p class="my-plans__date">26 мар — 29 мар</p>
+              <a href="./change-plan.html" class="my-plans__change">Изменить</a>
+            </div>
+          </li>
+          <li class="my-plans__item">
+            <h3 class="my-plans__destination">Таиланд, Индонезия</h3>
+            <div class="my-plans__information">
+              <p class="my-plans__companions">1 попутчик</p>
+              <p class="my-plans__date">1 июл — 15 июл</p>
+              <a href="./change-plan.html" class="my-plans__change">Изменить</a>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+    <section class="new-plan">
+      <div class="new-plan__wrapper">
+        <div class="new-plan__steps">
+          <h2 class="new-plan__title title title--size-additional title--size-additional-form">Добавить план:</h2>
+          <ol class="new-plan__list">
+            <li class="new-plan__step new-plan__step--current"></li>
+            <li class="new-plan__step"></li>
+            <li class="new-plan__step"></li>
+          </ol>
+        </div>
+        <form class="new-plan__form form" action="https://echo.htmlacademy.ru" method="post">
+          <section id="stay-dates" class="form__stay-dates stay-dates">
+            <div class="stay-dates__wrapper">
+              <h3 class="stay-dates__title title title--size-steps">Шаг 1.<br> Даты пребывания</h3>
+              <p class="stay-dates__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
+              <div class="stay-dates__companions">
+                <label class="stay-dates__label" for="companions">ищу попутчиков: <span class="stay-dates__label-span">чел.</span></label>
+                <div class="stay-dates__choice">
+                  <input class="stay-dates__number" placeholder="2" type="number" id="companions" name="companions">
+                  <button class="stay-dates__minus" type="button"></button>
+                  <button class="stay-dates__plus" type="button"></button>
+                </div>
+              </div>
+              <div class="stay-dates__duration">
+                <label class="stay-dates__label" for="duration">длительность: <span class="stay-dates__label-span">дн.</span></label>
+                <div class="stay-dates__choice">
+                  <input class="stay-dates__number" placeholder="3" type="number" id="duration" name="duration">
+                  <button class="stay-dates__minus" type="button"></button>
+                  <button class="stay-dates__plus" type="button"></button>
+                </div>
+              </div>
+              <div class="stay-dates__children">
+                <input class="stay-dates__checkbox visually-hidden" checked type="checkbox" id="children" name="children">
+                <label class="stay-dates__can-with" for="children">Можно с детьми</label>
+              </div>
+              <div class="stay-dates__calendar-section">
+                <div class="stay-dates__month-of-calendar">
+                  <button class="stay-dates__month-previous" type="button">
+                    <svg class="stay-dates__arrow stay-dates__arrow--left" width="15" height="18">
+                      <use xlink:href="./img/sprite.svg#arrow-left"></use>
+                    </svg>
+                  </button>
+                  <p class="stay-dates__month">Март 2019</p>
+                  <button class="stay-dates__month-next" type="button">
+                    <svg class="stay-dates__arrow stay-dates__arrow--right" width="15" height="18">
+                      <use xlink:href="./img/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="stay-dates__calendar">
+                  <ol class="stay-dates__list-of-days">
+                    <li class="stay-dates__day-of-calendar stay-dates__day-of-calendar--monday"><button type="button" class="stay-dates__day-button" disabled>23</button></li>
+                    <li class="stay-dates__day-of-calendar stay-dates__day-of-calendar--tuesday"><button type="button" class="stay-dates__day-button" disabled>24</button></li>
+                    <li class="stay-dates__day-of-calendar stay-dates__day-of-calendar--wednesday"><button type="button" class="stay-dates__day-button" disabled>25</button></li>
+                    <li class="stay-dates__day-of-calendar stay-dates__day-of-calendar--thursday"><button type="button" class="stay-dates__day-button" disabled>26</button></li>
+                    <li class="stay-dates__day-of-calendar stay-dates__day-of-calendar--friday"><button type="button" class="stay-dates__day-button" disabled>27</button></li>
+                    <li class="stay-dates__day-of-calendar stay-dates__day-of-calendar--saturday"><button type="button" class="stay-dates__day-button" disabled>28</button></li>
+                    <li class="stay-dates__day-of-calendar stay-dates__day-of-calendar--sunday"><button type="button" class="stay-dates__day-button" disabled>1</button></li>
+                    <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button" disabled>2</button></li>
+                    <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button" disabled>3</button></li>
+                    <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button" disabled>4</button></li>
+                    <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button" disabled>5</button></li>
+                    <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button" disabled>6</button></li>
+                    <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button" disabled>7</button></li>
+                    <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button" disabled>8</button></li>
+                    <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button" disabled>9</button></li>
+                    <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button" disabled>10</button></li>
+                    <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button" disabled>11</button></li>
+                    <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button" disabled>12</button></li>
+                    <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button" disabled>13</button></li>
+                    <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button" disabled>14</button></li>
+                    <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button" disabled>15</button></li>
+                    <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button" disabled>16</button></li>
+                    <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button" disabled>17</button></li>
+                    <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button" disabled>18</button></li>
+                    <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button" disabled>19</button></li>
+                    <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button" disabled>20</button></li>
+                    <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button" disabled>21</button></li>
+                    <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button" disabled>22</button></li>
+                    <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button" disabled>23</button></li>
+                    <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button" disabled>24</button></li>
+                    <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button" disabled>25</button></li>
+                    <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button stay-dates__day-button--active stay-dates__day-button--current">26</button></li>
+                    <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button stay-dates__day-button--active">27</button></li>
+                    <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button stay-dates__day-button--active">28</button></li>
+                    <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button">29</button></li>
+                    <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button">30</button></li>
+                    <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button">31</button></li>
+                    <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button">1</button></li>
+                    <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button">2</button></li>
+                    <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button">3</button></li>
+                    <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button">4</button></li>
+                    <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button">5</button></li>
+                  </ol>
+                </div>
+              </div>
+              <a href="#route" class="stay-dates__button-next button button--form">Следующий шаг</a>
+            </div>
+          </section>
+          <section id="route" class="form__route route">
+            <div class="route__wrapper">
+              <h3 class="route__title title title--size-steps">Шаг 2.<br> Маршрут</h3>
+              <p class="route__text">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
+              <ul class="route__list">
+                <li class="route__item route__item--chosen route__item--dropdown-closed">
+                  <button class="route__choose-button route__choose-button--dropdown-closed" type="button">Босния и герцеговина</button>
+                  <div class="route__flag route__flag--dropdown-closed">
+                    <picture class="route__picture">
+                      <source type="image/webp" srcset="./img/route-bosnia-and-Herzegovina-mobile.webp 1x, ./img/route-bosnia-and-Herzegovina-mobile@2x.webp 2x">
+                      <img src="./img/route-bosnia-and-Herzegovina-mobile.png" srcset="./img/route-bosnia-and-Herzegovina-mobile@2x.png" width="35" height="24" alt="Флаг Боснии и Герцоговины">
+                    </picture>
+                  </div>
+                  <button class="route__remove route__remove--dropdown-closed" type="button"></button>
+                  <button class="route__close-dropdown" type="button"></button>
+                  <div class="route__dropdown route__dropdown--dropdown-closed">
+                    <ol class="route__letters">
+                      <li class="route__letter route__letter--active"><button type="button" class="route__letter-button">А</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">Б</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">В</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">Г</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">Д</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">Е</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">З</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">И</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">К</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">Л</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">М</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">Н</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">О</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">П</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">Р</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">С</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">Т</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">У</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">Ф</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">Х</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">Ч</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">Ш</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">Э</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">Ю</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">Я</button></li>
+                    </ol>
+                    <ul class="route__countries">
+                      <li class="route__country"><button class="route__country-button" type="button">Австралия</button></li>
+                      <li class="route__country"><button class="route__country-button" type="button">Австрия</button></li>
+                      <li class="route__country"><button class="route__country-button" type="button">Азербайджан</button></li>
+                      <li class="route__country"><button class="route__country-button" type="button">Албания</button></li>
+                      <li class="route__country"><button class="route__country-button" type="button">Алжир</button></li>
+                      <li class="route__country"><button class="route__country-button" type="button">Ангола</button></li>
+                      <li class="route__country"><button class="route__country-button" type="button">Андорра</button></li>
+                      <li class="route__country"><button class="route__country-button" type="button">Антигуа и Барбуда</button></li>
+                      <li class="route__country"><button class="route__country-button" type="button">Аргентина</button></li>
+                      <li class="route__country"><button class="route__country-button" type="button">Армения</button></li>
+                      <li class="route__country"><button class="route__country-button" type="button">Афганистан</button></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="route__item route__item--chosen route__item--dropdown-closed">
+                  <button class="route__choose-button route__choose-button--dropdown-closed" type="button">Чехия</button>
+                  <div class="route__flag route__flag--dropdown-closed">
+                    <picture class="route__picture">
+                      <source type="image/webp" srcset="./img/directions-czech-mobile.webp 1x, ./img/directions-czech-mobile@2x.webp 2x">
+                      <img src="./img/directions-czech-mobile.png" srcset="./img/directions-czech-mobile@2x.png" width="35" height="24" alt="Флаг Чехии">
+                    </picture>
+                  </div>
+                  <button class="route__remove route__remove--dropdown-closed" type="button"></button>
+                  <button class="route__close-dropdown" type="button"></button>
+                  <div class="route__dropdown route__dropdown--dropdown-closed">
+                    <ol class="route__letters">
+                      <li class="route__letter route__letter--active"><button type="button" class="route__letter-button">А</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">Б</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">В</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">Г</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">Д</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">Е</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">З</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">И</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">К</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">Л</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">М</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">Н</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">О</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">П</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">Р</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">С</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">Т</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">У</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">Ф</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">Х</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">Ч</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">Ш</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">Э</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">Ю</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">Я</button></li>
+                    </ol>
+                    <ul class="route__countries">
+                      <li class="route__country"><button class="route__country-button" type="button">Австралия</button></li>
+                      <li class="route__country"><button class="route__country-button" type="button">Австрия</button></li>
+                      <li class="route__country"><button class="route__country-button" type="button">Азербайджан</button></li>
+                      <li class="route__country"><button class="route__country-button" type="button">Албания</button></li>
+                      <li class="route__country"><button class="route__country-button" type="button">Алжир</button></li>
+                      <li class="route__country"><button class="route__country-button" type="button">Ангола</button></li>
+                      <li class="route__country"><button class="route__country-button" type="button">Андорра</button></li>
+                      <li class="route__country"><button class="route__country-button" type="button">Антигуа и Барбуда</button></li>
+                      <li class="route__country"><button class="route__country-button" type="button">Аргентина</button></li>
+                      <li class="route__country"><button class="route__country-button" type="button">Армения</button></li>
+                      <li class="route__country"><button class="route__country-button" type="button">Афганистан</button></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="route__item route__item--dropdown-closed">
+                  <button class="route__choose-button route__choose-button--dropdown-closed" type="button">Выберите страну</button>
+                  <button class="route__remove route__remove--dropdown-closed" type="button"></button>
+                  <button class="route__close-dropdown" type="button"></button>
+                  <div class="route__dropdown route__dropdown--dropdown-closed">
+                    <ol class="route__letters">
+                      <li class="route__letter route__letter--active"><button type="button" class="route__letter-button">А</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">Б</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">В</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">Г</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">Д</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">Е</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">З</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">И</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">К</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">Л</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">М</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">Н</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">О</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">П</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">Р</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">С</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">Т</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">У</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">Ф</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">Х</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">Ч</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">Ш</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">Э</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">Ю</button></li>
+                      <li class="route__letter"><button type="button" class="route__letter-button">Я</button></li>
+                    </ol>
+                    <ul class="route__countries">
+                      <li class="route__country"><button class="route__country-button" type="button">Австралия</button></li>
+                      <li class="route__country"><button class="route__country-button" type="button">Австрия</button></li>
+                      <li class="route__country"><button class="route__country-button" type="button">Азербайджан</button></li>
+                      <li class="route__country"><button class="route__country-button" type="button">Албания</button></li>
+                      <li class="route__country"><button class="route__country-button" type="button">Алжир</button></li>
+                      <li class="route__country"><button class="route__country-button" type="button">Ангола</button></li>
+                      <li class="route__country"><button class="route__country-button" type="button">Андорра</button></li>
+                      <li class="route__country"><button class="route__country-button" type="button">Антигуа и Барбуда</button></li>
+                      <li class="route__country"><button class="route__country-button" type="button">Аргентина</button></li>
+                      <li class="route__country"><button class="route__country-button" type="button">Армения</button></li>
+                      <li class="route__country"><button class="route__country-button" type="button">Афганистан</button></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="route__item route__item--add">
+                  <button class="route__choose-button route__choose-button--add" type="button">Добавить страну</button>
+                  <button class="route__remove route__remove--add" type="button"></button>
+                </li>
+              </ul>
+              <a href="#entertainment" class="route__button-next button button--form">Следующий шаг</a>
+              <a href="#stay-dates" class="route__button-previous">На шаг назад</a>
+            </div>
+          </section>
+          <section id="entertainment" class="form__entertainment entertainment">
+            <div class="entertainment__wrapper">
+              <h3 class="entertainment__title title title--size-steps">Шаг 3. <br> Развлечения</h3>
+              <p class="entertainment__text">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+              <ul class="entertainment__list">
+                <li class="entertainment__item">
+                  <h4 class="entertainment__country"><label for="bosnia-and-herzegovina">Босния и Герцеговина</label></h4>
+                  <picture class="entertainment__flag">
+                    <source type="image/webp" srcset="./img/route-bosnia-and-Herzegovina-mobile.webp 1x, ./img/route-bosnia-and-Herzegovina-mobile@2x.webp 2x">
+                    <img src="./img/route-bosnia-and-Herzegovina-mobile.png" srcset="./img/route-bosnia-and-Herzegovina-mobile@2x.png" width="35" height="24" alt="Флаг Боснии и Герцоговины">
+                  </picture>
+                  <textarea class="entertainment__textarea" id="bosnia-and-herzegovina" name="bosnia-and-herzegovina" placeholder="План действий"></textarea>
+                </li>
+                <li class="entertainment__item">
+                  <h4 class="entertainment__country"><label for="czech">Чехия</label></h4>
+                  <picture class="entertainment__flag">
+                    <source type="image/webp" srcset="./img/directions-czech-mobile.webp 1x, ./img/directions-czech-mobile@2x.webp 2x">
+                    <img src="./img/directions-czech-mobile.png" srcset="./img/directions-czech-mobile@2x.png" width="35" height="24" alt="Флаг Боснии и Герцоговины">
+                  </picture>
+                  <textarea class="entertainment__textarea" id="czech" name="czech">Пить пиво и лазить         по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                </li>
+              </ul>
+              <button class="entertainment__submit button button--form" type="submit">Отправить</button>
+              <a href="#route" class="entertainment__button-previous">На шаг назад</a>
+            </div>
+          </section>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer page-footer--form">
+    <div class="page-footer__wrapper">
+      <a class="page-footer__logo-link" href="./index.html">
+        <div class="page-footer__logo"></div>
+      </a>
+      <ul class="page-footer__socials">
+        <li class="page-footer__item">
+          <a class="page-footer__link" href="#">
+            <svg class="page-footer__svg page-footer__svg--facebook" width="11" height="21">
+              <use xlink:href="./img/sprite.svg#icon-facebook-footer"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="page-footer__item">
+          <a class="page-footer__link" href="#">
+            <svg class="page-footer__svg page-footer__svg--vkontakte" width="23" height="12">
+              <use xlink:href="./img/sprite.svg#icon-vkontakte-footer"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="page-footer__item">
+          <a class="page-footer__link" href="#">
+            <svg class="page-footer__svg page-footer__svg--instagram" width="18" height="18">
+              <use xlink:href="./img/sprite.svg#icon-instagram-footer"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <div class="academy">
+        <a href="https://htmlacademy.ru/intensive/adaptive" class="academy__link" target="_blank">Разработано</a>
+      </div>
+    </div>
+  </footer>
+  <script src="./js/script.min.js"></script>
+</body>
+
+</html>

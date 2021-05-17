@@ -2,10 +2,10 @@
   background-color: $new-profile-white;
   background-image: url("../img/rates-mobile.png");
   background-repeat: no-repeat;
-  background-position: top 59px right 25px;
+  background-position: top 62px right 25px;
   background-size: 100px 100px;
-  padding-bottom: 38px;
-  border-radius: 0 0 25px 25px;
+  padding-bottom: 39px;
+  border-radius: 0 0 30px 30px;
   z-index: 3;
 
   @media (min-resolution: 2dppx) {
@@ -18,7 +18,7 @@
 }
 
 .new-profile__title {
-  padding-top: 72px;
+  padding-top: 76px;
   margin: 0 25px 44px 25px;
   width: 107px;
 }
@@ -37,7 +37,7 @@
   line-height: 16px;
   color: $special-grey;
   position: relative;
-  margin: 0 25px;
+  margin: 0 24px;
 
   &:first-child {
     border-top: 1px solid $new-profile-border;
@@ -118,14 +118,14 @@
 
 @media (min-width: $tablet-width) {
   .new-profile {
-    padding-top: 102px;
+    padding-top: 124px;
     background-image: url("../img/rates-mobile.png"), url("../img/new-profile-background-tablet.png");
     background-repeat: no-repeat, no-repeat;
-    background-position: bottom 48px right 85px, right 40px top 179px;
+    background-position: bottom 45px right 85px, right 40px top 205px;
     background-size: 100px 100px, 198px 285px;
     background-color: $directions-white;
-    padding-bottom: 66px;
-    border-radius: 0 0 35px 35px;
+    padding-bottom: 72px;
+    border-radius: 0 0 60px 60px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/rates-mobile@2x.png"), url("../img/new-profile-background-tablet@2x.png");
@@ -138,13 +138,13 @@
 
   .new-profile__title {
     padding-top: 0;
-    margin: 0 0 73px 0;
+    margin: 0 0 76px 0;
     text-align: center;
     width: auto;
   }
 
   .new-profile__list {
-    margin-bottom: 59px;
+    margin-bottom: 58px;
   }
 
   .new-profile__item {
@@ -179,12 +179,12 @@
   }
 
   .new-profile__offer {
-    padding: 20px 0 18px 0;
+    padding: 16px 0 20px 0;
     margin: 0;
   }
 
   .new-profile__price {
-    padding: 20px 0 18px 0;
+    padding: 19px 0 18px 0;
   }
 
   .new-profile__button {
@@ -202,21 +202,21 @@
       height: 68px;
       background-image: url("../img/new-profile-business-icon-tablet.svg");
       background-repeat: no-repeat;
-      top: -25px;
-      left: -88px;
+      top: -24px;
+      left: -90px;
     }
   }
 }
 
 @media (min-width: $desktop-width) {
   .new-profile {
-    padding: 142px 0 169px 0;
+    padding: 143px 0 174px 0;
     background-image: none;
-    border-radius: 0 0 45px 45px;
+    border-radius: 0 0 40px 40px;
   }
 
   .new-profile__title {
-    margin-bottom: 134px;
+    margin-bottom: 137px;
   }
 
   .new-profile__wrapper {
@@ -224,7 +224,7 @@
     margin: 0 auto;
     background-image: url("../img/rates-desktop.png"), url("../img/new-profile-background-desktop.png");
     background-repeat: no-repeat;
-    background-position: top 183px right 0, top 131px right 111px;
+    background-position: top 184px right 1px, top 132px right 112px;
     background-size: 198px 198px, 446px 300px;
 
     @media (min-resolution: 2dppx) {
@@ -233,7 +233,7 @@
   }
 
   .new-profile__list {
-    margin: 0 272px 59px 0;
+    margin: 0 272px 60px 0;
   }
 
   .new-profile__item {
@@ -242,7 +242,7 @@
 
   .new-profile__offer,
   .new-profile__price {
-    padding: 19px 0;
+    padding: 18px 0;
   }
 
   .new-profile__button {

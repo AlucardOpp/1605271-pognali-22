@@ -16,7 +16,7 @@
     display: block;
     animation: bounce-mobile 0.5s;
     z-index: 3;
-    top: 27px;
+    top: 21px;
   }
 }
 
@@ -27,7 +27,7 @@
 }
 
 .tariffs__title {
-  margin: 30px 0 27px 0;
+  margin: 32px 0 29px 0;
   align-self: center;
 }
 
@@ -49,7 +49,7 @@
 }
 
 .tariffs__term {
-  padding-top: 11px;
+  padding-top: 10px;
 }
 
 .tariffs__description {
@@ -97,37 +97,41 @@
       z-index: 3;
       top: 42px;
     }
+  }
 
-    .tariffs__wrapper {
-      margin: 0 92px 0 90px;
+  .tariffs__wrapper {
+    margin: 0 92px 0 90px;
+  }
+
+  .tariffs__title {
+    margin: 50px 0;
+  }
+
+  .tariffs__list {
+    font-size: 22px;
+    line-height: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:last-of-type {
+      margin-bottom: 52px;
     }
+  }
 
-    .tariffs__title {
-      margin: 54px 0 47px 0;
-    }
+  .tariffs__description,
+  .tariffs__term {
+    padding: 13px 0;
+  }
 
-    .tariffs__list {
-      font-size: 22px;
-      line-height: 28px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+  .tariffs__description {
+    margin-right: 3px;
+  }
 
-      &:last-of-type {
-        margin-bottom: 52px;
-      }
-    }
-
-    .tariffs__description,
-    .tariffs__term {
-      padding: 14px 0 13px 0;
-    }
-
-    .tariffs__button {
-      min-height: 108px;
-      font-size: 24px;
-      text-transform: none;
-    }
+  .tariffs__button {
+    min-height: 108px;
+    font-size: 24px;
+    text-transform: none;
   }
 }
 
@@ -146,17 +150,25 @@
       display: block;
       animation: bounce-desktop 0.5s;
       z-index: 3;
-      top: 48px;
+      top: 49px;
     }
   }
 
+  .tariffs__wrapper {
+    margin: 0 63px 0 57px;
+  }
+
   .tariffs__title {
-    margin-bottom: 46px;
+    margin-bottom: 49px;
   }
 
   .tariffs__description,
   .tariffs__term {
-    padding: 12px 0 15px 0;
+    padding: 11px 0 15px 0;
+  }
+
+  .tariffs__description {
+    margin-right: 0;
   }
 
   .tariffs__button {
@@ -174,13 +186,13 @@
   }
 
   100% {
-    top: 27px;
+    top: 21px;
   }
 }
 
 @keyframes unbounce-mobile {
   0% {
-    top: 27px;
+    top: 21px;
   }
 
   100% {
@@ -204,7 +216,7 @@
 
 @keyframes unbounce-table {
   0% {
-    top: 48px;
+    top: 42px;
   }
 
   100% {
@@ -222,13 +234,13 @@
   }
 
   100% {
-    top: 48px;
+    top: 49px;
   }
 }
 
 @keyframes unbounce-desktop {
   0% {
-    top: 48px;
+    top: 49px;
   }
 
   100% {

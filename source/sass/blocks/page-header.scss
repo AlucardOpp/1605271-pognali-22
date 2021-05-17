@@ -1,9 +1,18 @@
 .page-header {
   padding-top: 19px;
   width: 100%;
+  z-index: 3;
 
   &--closed {
     background-color: $dark-blue;
+  }
+
+  &--form {
+    background-color: $yellow;
+    background-image: url("../img/page-header-background-form-mobile.png");
+    background-size: 100% 143px;
+    background-repeat: no-repeat;
+    padding-top: 20px;
   }
 
   &--opened,
@@ -11,10 +20,12 @@
     background-color: $white;
     padding-top: 27px;
     position: absolute;
+    background-image: none;
   }
 
   &--scrolled {
     background-color: $white;
+    background-image: none;
   }
 }
 
@@ -33,12 +44,12 @@
   align-items: center;
 
   &--closed {
-    margin-bottom: 60px;
+    margin-bottom: 57px;
   }
 
   &--opened,
   &--nojs {
-    margin-bottom: 76px;
+    margin-bottom: 73px;
   }
 
   &--scrolled {
@@ -126,14 +137,24 @@
   transform: rotate(-46deg);
 }
 
-.page-header__socials {
-  margin-bottom: 41px;
-}
+.page-header__title {
+  &--closed {
+    display: block;
+  }
 
+  &--opened,
+  &--nojs {
+    display: none;
+  }
+
+  &--scrolled {
+    color: $dark-blue;
+  }
+}
 
 @media (min-width: $tablet-width) {
   .page-header {
-    padding-top: 40px;
+    padding-top: 41px;
 
     &--closed {
       background-color: $page-header-tablet;
@@ -141,7 +162,7 @@
 
     &--opened,
     &--nojs {
-      padding-top: 40px;
+      padding-top: 41px;
       z-index: 2;
       background-color: $white;
     }
@@ -167,7 +188,7 @@
 
     &--opened,
     &--nojs {
-      margin-bottom: 95px;
+      margin-bottom: 90px;
     }
 
     &--scrolled {
@@ -198,22 +219,18 @@
       display: none;
     }
   }
-
-  .page-header__socials {
-    margin-bottom: 91px;
-  }
 }
 
 @media (min-width: $desktop-width) {
   .page-header {
-    padding: 46px 0 11px 0;
+    padding: 48px 0 11px 0;
     background-color: $dark-blue;
     z-index: 5;
 
     &--scrolled {
       background-color: $white;
       position: relative;
-      top: 746px;
+      top: 750px;
       margin-bottom: 19px;
       padding: 21px 0 19px 0;
     }
@@ -249,7 +266,7 @@
       height: 2px;
       border-top: 2px solid $white;
       right: -100px;
-      top: 26px;
+      top: 27px;
     }
 
     &--scrolled {

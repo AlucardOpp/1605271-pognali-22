@@ -1,0 +1,253 @@
+.profile-form {
+  padding-top: 20px;
+  z-index: 0;
+  padding-bottom: 34px;
+
+  &--closed {
+    padding-top: 20px;
+  }
+
+  &--opened,
+  &--nojs {
+    padding-top: 167px;
+  }
+}
+
+.profile-form__wrapper {
+  margin: 0 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.profile-form__level {
+  width: 100px;
+  height: 100px;
+  background-color: inherit;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background-image: url("../img/form-level.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.profile-form__number {
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 38px;
+  color: $dark-blue;
+  margin-bottom: 8px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 51px;
+    height: 1px;
+    background-color: $special-grey;
+    opacity: 0.3;
+    bottom: -3px;
+    left: -5px;
+  }
+}
+
+.profile-form__text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  color: $special-grey;
+  margin-bottom: 6px;
+}
+
+.profile-form__image {
+  border-radius: 50%;
+}
+
+.profile-form__change-photo {
+  width: 100%;
+  background-color: $special-light-blue;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 18px;
+  color: $dark-blue;
+  margin: 18px 0 0 0;
+
+  &:hover {
+    background-color: $profile-form-change-photo-hover;
+  }
+
+  &:active {
+    background-color: $special-light-blue-30;
+    color: $dark-blue-30;
+  }
+}
+
+.profile-form__tags {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px 0 7px 0;
+}
+
+.profile-form__textarea {
+  height: 89px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 1px solid $profile-form-border;
+  resize: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: $special-grey;
+  padding: 24px 28px 27px 24px;
+  font-family: inherit;
+  outline: none;
+
+  &::placeholder {
+    color: $special-grey-60;
+  }
+
+  &:hover {
+    border-color: $profile-form-tags-hover;
+  }
+
+  &:focus {
+    border-color: $dark-blue;
+  }
+}
+
+.profile-form__header {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $light-blue;
+  width: 70px;
+  text-align: center;
+  position: relative;
+  top: 10px;
+  z-index: 2;
+  background-color: $form-page-background;
+  margin: 0;
+  padding: 0;
+
+  &--transport {
+    width: 110px;
+  }
+}
+
+.profile-form__transport {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-form__transport-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  height: 63px;
+  width: 100%;
+  align-items: center;
+  box-sizing: border-box;
+  border: 1px solid $profile-form-border;
+  border-radius: 10px;
+}
+
+.profile-form__transport-button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: $white;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 17px 16px;
+  padding: 0;
+  cursor: pointer;
+
+  &:hover {
+    filter: drop-shadow(0 2px 6px $profile-form-transport-button-shadow);
+  }
+
+  &:active {
+    filter: none;
+    background-color: $profile-form-transport-button-active;
+    opacity: 0.3;
+  }
+
+  &--plane-active {
+    background-image: url("../img/icon-plane-active.svg");
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &--plane-inactive {
+    background-image: url("../img/icon-plane-inactive.svg");
+
+    &:hover {
+      background-image: url("../img/icon-plane-hover.svg");
+    }
+  }
+
+  &--bus-active {
+    background-image: url("../img/icon-bus-active.svg");
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &--bus-inactive {
+    background-image: url("../img/icon-bus-inactive.svg");
+
+    &:hover {
+      background-image: url("../img/icon-bus-hover.svg");
+    }
+  }
+
+  &--bicycle-active {
+    background-image: url("../img/icon-bicycle-active.svg");
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &--bicycle-inactive {
+    background-image: url("../img/icon-bicycle-inactive.svg");
+
+    &:hover {
+      background-image: url("../img/icon-bicycle-hover.svg");
+      background-size: 17px 16px;
+    }
+  }
+
+  &--run-active {
+    background-image: url("../img/icon-run-active.svg");
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &--run-inactive {
+    background-image: url("../img/icon-run-inactive.svg");
+
+    &:hover {
+      background-image: url("../img/icon-run-hover.svg");
+    }
+  }
+}

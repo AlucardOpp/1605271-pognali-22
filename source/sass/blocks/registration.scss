@@ -1,14 +1,14 @@
 .registration {
   background-color: $site-list-black;
   z-index: 2;
-  border-radius: 0 0 25px 25px;
+  border-radius: 0 0 30px 30px;
   position: relative;
-  margin-bottom: -23px;
-  padding-bottom: 44px;
+  margin-bottom: -25px;
+  padding-bottom: 40px;
 }
 
 .registration__title {
-  margin: 72px 0 19px 0;
+  margin: 70px 0 20px 0;
   text-align: center;
 }
 
@@ -169,8 +169,8 @@
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 50%;
-    left: -60px;
-    top: -15px;
+    left: -61px;
+    top: -12px;
   }
 
   &--tel {
@@ -214,9 +214,9 @@
 
 @media (min-width: $tablet-width) {
   .registration {
-    border-radius: 0 0 35px 35px;
-    margin-bottom: -32px;
-    padding-bottom: 77px;
+    border-radius: 0 0 60px 60px;
+    margin-bottom: -53px;
+    padding-bottom: 79px;
   }
 
   .registration__wrapper {
@@ -224,14 +224,14 @@
   }
 
   .registration__title {
-    margin: 76px 0 59px 0;
+    margin: 72px 0 62px 0;
   }
 
   .registration__suggestion {
     font-size: 28px;
     line-height: 32px;
     width: auto;
-    margin: 0 0 65px 0;
+    margin: 0 0 66px 0;
   }
 
   .registration__it-br {
@@ -245,7 +245,7 @@
   .registration__form {
     grid-template-columns: 1fr 80px;
     height: 80px;
-    margin-bottom: 60px;
+    margin-bottom: 58px;
     column-gap: 71px;
   }
 
@@ -282,6 +282,7 @@
 
   .registration__contacts-item {
     margin-bottom: 39px;
+    margin-left: 90px;
   }
 
   .registration__we {
@@ -312,8 +313,8 @@
 
 @media (min-width: $desktop-width) {
   .registration {
-    padding-bottom: 132px;
-    border-radius: 0 0 45px 45px;
+    padding-bottom: 134px;
+    border-radius: 0 0 40px 40px;
     margin-bottom: -40px;
   }
 
@@ -323,7 +324,7 @@
   }
 
   .registration__title {
-    margin: 109px 0 57px 0;
+    margin: 105px 0 59px 0;
   }
 
   .registration__suggestion {
@@ -332,7 +333,7 @@
 
   .registration__form {
     grid-template-columns: 1fr 324px;
-    margin-bottom: 70px;
+    margin-bottom: 69px;
   }
 
   .registration__span {
@@ -347,7 +348,7 @@
   }
 
   .registration__questions {
-    margin-bottom: 77px;
+    margin-bottom: 76px;
   }
 
   .registration__contacts-list {

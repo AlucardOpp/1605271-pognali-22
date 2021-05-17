@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>HTML Academy: Погнали</title>
+  <title>О сервисе</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="В путешествие с крутыми попутчиками - Погнали">
   <link rel="preload" href="./fonts/bloggersans-light.woff2" as="font" crossorigin>
@@ -23,7 +23,7 @@
   <link href="./css/style.min.css" rel="stylesheet">
 </head>
 
-<body class="page__body">
+<body class="page__body page__body--main">
   <header class="page-header page-header--closed page-header--nojs">
     <div class="page-header__wrapper">
       <div class="page-header__container page-header__container--closed page-header__container--nojs">
@@ -42,10 +42,10 @@
                 <a class="site-list__link site-list__link--current"><span data-hover="О сервисе">О сервисе</span></a>
               </li>
               <li class="site-list__item">
-                <a class="site-list__link" href="./form.html" aria-label="Ссылка на страницу формы" target="_blank"><span data-hover="Направления">Направления</span></a>
+                <a class="site-list__link" href="./form.html" aria-label="Ссылка на страницу формы"><span data-hover="Направления">Направления</span></a>
               </li>
               <li class="site-list__item">
-                <a class="site-list__link" href="./catalog.html" aria-label="Ссылка на страницу каталога" target="_blank"><span data-hover="Попутчики">Попутчики</span></a>
+                <a class="site-list__link" href="./catalog.html" aria-label="Ссылка на страницу каталога"><span data-hover="Попутчики">Попутчики</span></a>
               </li>
             </ul>
           </nav>
@@ -64,7 +64,7 @@
               </li>
             </ul>
           </div>
-          <ul class="page-header__socials socials-menu socials-menu--closed socials-menu--nojs">
+          <ul class="socials-menu socials-menu--closed socials-menu--nojs">
             <li class="socials-menu__item">
               <a href="#">
                 <svg class="socials-menu__svg socials-menu__svg--facebook" width="11" height="21">
@@ -109,7 +109,7 @@
             <p class="promo__text">Изучите идеи путешественников</p>
           </li>
           <li class="promo__item promo__item--like-you">
-            <p class="promo__text">Находите тех, кто похож на вас</p>
+            <p class="promo__text promo__text--like-you">Находите тех, кто похож на вас</p>
           </li>
           <li class="promo__item promo__item--together">
             <p class="promo__text">Путешествуйте вместе!</p>
@@ -196,7 +196,7 @@
             </div>
           </li>
         </ul>
-        <a class="directions__button button" href="./catalog.html" target="_blank">Показать все</a>
+        <a class="directions__button button" href="./form.html" target="_blank">Показать все</a>
       </div>
     </section>
     <section class="companions">
@@ -361,7 +361,7 @@
               <dd class="tariffs__description">от 20 коп./лайк</dd>
             </dl>
             <dl class="tariffs__list">
-              <dt class="tariffs__term">Ваш продукт-плейсмент</dt>
+              <dt class="tariffs__term">Ваш продакт-плейсмент</dt>
               <dd class="tariffs__description">Индивидуально</dd>
             </dl>
           </div>
@@ -401,6 +401,7 @@
       <iframe class="map__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d840.380634906059!2d30.32149105063772!3d59.935904482717056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469631057d105877%3A0x91c16b0cf63dfa74!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQu9C40YbQsA!5e0!3m2!1sru!2sru!4v1620414646562!5m2!1sru!2sru" width="320" height="424" allowfullscreen="" loading="lazy"></iframe>
     </section>
   </main>
+
   <footer class="page-footer">
     <div class="page-footer__wrapper">
       <a class="page-footer__logo-link">
@@ -434,7 +435,6 @@
       </div>
     </div>
   </footer>
-
   <script src="./js/script.min.js"></script>
 </body>
 

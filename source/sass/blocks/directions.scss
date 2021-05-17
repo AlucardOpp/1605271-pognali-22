@@ -2,9 +2,9 @@
   background-color: $directions-white;
   position: relative;
   padding-bottom: 34px;
-  border-radius: 25px;
+  border-radius: 30px;
   margin-bottom: -15px;
-  z-index: 2;
+  z-index: 3;
 }
 
 .directions__wrapper {
@@ -12,12 +12,12 @@
 }
 
 .directions__title {
-  margin: 0 45px 19px 25px;
-  padding-top: 114px;
+  margin: 0 45px 20px 25px;
+  padding-top: 116px;
 }
 
 .directions__text {
-  margin: 0 45px 60px 25px;
+  margin: 0 45px 61px 25px;
   font-size: 16px;
   line-height: 22px;
   color: $special-grey;
@@ -32,10 +32,10 @@
 
 .directions__item {
   height: 188px;
-  margin-bottom: 10px;
+  margin-bottom: 11px;
 
   &:last-child {
-    margin-bottom: 27px;
+    margin-bottom: 26px;
   }
 }
 
@@ -45,6 +45,7 @@
 
   & img {
     width: 100%;
+    aspect-ratio: 16/9;
   }
 }
 
@@ -62,7 +63,7 @@
 
 .directions__flag {
   position: absolute;
-  top: -12px;
+  top: -13px;
   left: 25px;
 }
 
@@ -130,16 +131,18 @@
 
 @media (min-width: $tablet-width) {
   .directions {
-    padding: 123px 0 80px 0;
-    border-radius: 0 0 35px 35px;
+    padding: 124px 0 80px 0;
+    border-radius: 0 0 60px 60px;
     margin-bottom: 0;
+    z-index: 2;
   }
 
   .directions__wrapper {
     margin: 0 40px;
     background-image: url("../img/directions-background-tablet.png");
-    background-position: 0 15px;
+    background-position: center 11px;
     background-repeat: no-repeat;
+    background-size: 688px 574px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/directions-background-tablet@2x.png");
@@ -147,12 +150,12 @@
   }
 
   .directions__title {
-    margin: 0 33px 57px 33px;
+    margin: 0 33px 59px 33px;
     padding-top: 0;
   }
 
   .directions__text {
-    margin: 0 35px 104px 35px;
+    margin: 0 35px 106px 35px;
     width: 351px;
     font-size: 28px;
     line-height: 33px;
@@ -168,7 +171,7 @@
     grid-template-columns: 1fr 559px;
 
     &:last-child {
-      margin-bottom: 46px;
+      margin-bottom: 45px;
     }
   }
 
@@ -197,7 +200,7 @@
     height: 47px;
     left: auto;
     top: 17px;
-    right: -35px;
+    right: -37px;
 
     & img {
       width: 100%;
@@ -208,7 +211,7 @@
   .directions__country {
     font-size: 24px;
     line-height: 24px;
-    margin: 28px 30px 7px 30px;
+    margin: 28px 29px 8px 29px;
   }
 
   .directions__tagline,
@@ -218,7 +221,7 @@
   }
 
   .directions__tagline {
-    margin: 0 0 0 30px;
+    margin: 0 0 0 29px;
 
     &--thailand,
     &--france {
@@ -238,8 +241,8 @@
     &::before {
       width: 24px;
       height: 24px;
-      top: -2px;
-      left: -31px;
+      top: -1px;
+      left: -32px;
       background-size: 24px 24px;
     }
   }
@@ -256,7 +259,7 @@
 
 @media (min-width: $desktop-width) {
   .directions {
-    border-radius: 0 0 45px 45px;
+    border-radius: 0 0 40px 40px;
     padding: 127px 0 0 0;
   }
 
@@ -268,6 +271,7 @@
     flex-wrap: wrap;
     background-position: 0 0;
     padding-bottom: 149px;
+    background-size: 1320px 575px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/directions-background-desktop@2x.png");
@@ -278,8 +282,12 @@
     order: 1;
   }
 
+  .directions__info {
+    z-index: 0;
+  }
+
   .directions__title {
-    margin: 75px 0 58px 0;
+    margin: 75px 0 60px 0;
   }
 
   .directions__text {
@@ -288,12 +296,29 @@
 
   .directions__list {
     order: 0;
-    margin: 75px 172px 0 70px;
+    margin: 74px 172px 0 70px;
   }
 
   .directions__item {
+    margin-bottom: 10px;
+
     &:last-child {
+      position: relative;
       margin-bottom: 0;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 81px;
+        background-image: url("../img/directions-fade.png");
+        background-repeat: no-repeat;
+        top: 59px;
+      }
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/directions-fade@2x.png");
+      }
     }
   }
 
@@ -303,7 +328,29 @@
     height: 80px;
     position: relative;
     margin-bottom: -80px;
-    top: -65px;
-    left: 766px;
+    top: -69px;
+    left: 768px;
+  }
+
+  .directions__flag {
+    top: 23px;
+    right: -35px;
+  }
+
+  .directions__country {
+    margin: 22px 30px 7px 30px;
+  }
+
+  .directions__tagline {
+    margin-left: 31px;
+    margin-bottom: 26px;
+
+    &--czech {
+      width: auto;
+    }
+  }
+
+  .directions__count {
+    margin-left: 61px;
   }
 }

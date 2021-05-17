@@ -6,6 +6,7 @@
 
 // Blocks
 
+@import "blocks/title.scss";
 @import "blocks/page.scss";
 @import "blocks/page-header.scss";
 @import "blocks/main-menu.scss";
@@ -13,7 +14,6 @@
 @import "blocks/user-list.scss";
 @import "blocks/contacts.scss";
 @import "blocks/socials-menu.scss";
-@import "blocks/title.scss";
 @import "blocks/button.scss";
 @import "blocks/promo.scss";
 @import "blocks/about-service.scss";
@@ -27,3 +27,10 @@
 @import "blocks/map.scss";
 @import "blocks/page-footer.scss";
 @import "blocks/academy.scss";
+@import "blocks/profile-form.scss";
+@import "blocks/my-plans.scss";
+@import "blocks/new-plan.scss";
+@import "blocks/form.scss";
+@import "blocks/stay-dates.scss";
+@import "blocks/route.scss";
+@import "blocks/entertainment.scss";

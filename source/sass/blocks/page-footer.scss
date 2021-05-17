@@ -1,9 +1,13 @@
 .page-footer {
   background-color: $white;
-  border-radius: 25px 25px 0 0;
+  border-radius: 30px 30px 0 0;
   margin-top: -24px;
   position: relative;
   padding-top: 37px;
+}
+
+.page-footer--form {
+  margin-top: -23px;
 }
 
 .page-footer__wrapper {
@@ -59,8 +63,8 @@
 
 @media (min-width: $tablet-width) {
   .page-footer {
-    margin-top: -32px;
-    border-radius: 35px 35px 0 0;
+    margin-top: -55px;
+    border-radius: 60px 60px 0 0;
     padding: 46px 0 32px 0;
   }
 
@@ -109,7 +113,7 @@
   .page-footer {
     padding: 47px 0 43px 0;
     margin-top: -42px;
-    border-radius: 45px 45px 0 0;
+    border-radius: 40px 40px 0 0;
   }
 
   .page-footer__logo {
