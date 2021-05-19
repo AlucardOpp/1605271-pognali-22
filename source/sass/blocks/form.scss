@@ -2,3 +2,13 @@
 .form__route {
   margin-bottom: 10px;
 }
+
+@media (min-width: $tablet-width) {
+  .form__stay-dates {
+    margin-bottom: 39px;
+  }
+
+  .form__route {
+    margin-bottom: 51px;
+  }
+}

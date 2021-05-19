@@ -107,6 +107,10 @@
   .page-footer__socials {
     margin: 0;
   }
+
+  .page-footer--form {
+    border-radius: 55px 55px 0 0;
+  }
 }
 
 @media (min-width: $desktop-width) {

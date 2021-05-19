@@ -98,7 +98,10 @@
           <span class="profile-form__number">80</span>
           <span class="profile-form__text">level</span>
         </div>
+        <picture class="profile-form__picture">
+        <source type="image/webp" srcset="./img/card-demin-tablet.webp 1x, ./img/card-demin-tablet@2x.webp 2x">
         <img class="profile-form__image" src="./img/card-demin-tablet.png" width="100" height="100" alt="Мужчина в очках, шапке и с бородой">
+      </picture>
         <button class="profile-form__change-photo button button--form" type="button">Сменить фото</button>
         <div class="profile-form__tags">
           <label class="profile-form__header" for="tags">Тэги</label>
@@ -246,7 +249,10 @@
                   <button class="route__choose-button route__choose-button--dropdown-closed" type="button">Босния и герцеговина</button>
                   <div class="route__flag route__flag--dropdown-closed">
                     <picture class="route__picture">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="./img/route-bosnia-and-Herzegovina-tablet.webp 1x, ./img/route-bosnia-and-Herzegovina-tablet@2x.webp 2x">
                       <source type="image/webp" srcset="./img/route-bosnia-and-Herzegovina-mobile.webp 1x, ./img/route-bosnia-and-Herzegovina-mobile@2x.webp 2x">
+
+                      <source media="(min-width: 768px)" srcset="./img/route-bosnia-and-Herzegovina-tablet.png, ./img/route-bosnia-and-Herzegovina-tablet@2x.png 2x">
                       <img src="./img/route-bosnia-and-Herzegovina-mobile.png" srcset="./img/route-bosnia-and-Herzegovina-mobile@2x.png" width="35" height="24" alt="Флаг Боснии и Герцоговины">
                     </picture>
                   </div>
@@ -299,7 +305,10 @@
                   <button class="route__choose-button route__choose-button--dropdown-closed" type="button">Чехия</button>
                   <div class="route__flag route__flag--dropdown-closed">
                     <picture class="route__picture">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="./img/directions-czech-tablet.webp 1x, ./img/directions-czech-tablet@2x.webp 2x">
                       <source type="image/webp" srcset="./img/directions-czech-mobile.webp 1x, ./img/directions-czech-mobile@2x.webp 2x">
+
+                      <source media="(min-width: 768px)" srcset="./img/directions-czech-tablet.png, ./img/directions-czech-tablet@2x.png 2x">
                       <img src="./img/directions-czech-mobile.png" srcset="./img/directions-czech-mobile@2x.png" width="35" height="24" alt="Флаг Чехии">
                     </picture>
                   </div>
@@ -400,8 +409,10 @@
                   <button class="route__remove route__remove--add" type="button"></button>
                 </li>
               </ul>
+              <div class="route__navigation">
               <a href="#entertainment" class="route__button-next button button--form">Следующий шаг</a>
               <a href="#stay-dates" class="route__button-previous">На шаг назад</a>
+            </div>
             </div>
           </section>
           <section id="entertainment" class="form__entertainment entertainment">
@@ -412,7 +423,10 @@
                 <li class="entertainment__item">
                   <h4 class="entertainment__country"><label for="bosnia-and-herzegovina">Босния и Герцеговина</label></h4>
                   <picture class="entertainment__flag">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="./img/route-bosnia-and-Herzegovina-tablet.webp 1x, ./img/route-bosnia-and-Herzegovina-tablet@2x.webp 2x">
                     <source type="image/webp" srcset="./img/route-bosnia-and-Herzegovina-mobile.webp 1x, ./img/route-bosnia-and-Herzegovina-mobile@2x.webp 2x">
+
+                    <source media="(min-width: 768px)" srcset="./img/route-bosnia-and-Herzegovina-tablet.png, ./img/route-bosnia-and-Herzegovina-tablet@2x.png 2x">
                     <img src="./img/route-bosnia-and-Herzegovina-mobile.png" srcset="./img/route-bosnia-and-Herzegovina-mobile@2x.png" width="35" height="24" alt="Флаг Боснии и Герцоговины">
                   </picture>
                   <textarea class="entertainment__textarea" id="bosnia-and-herzegovina" name="bosnia-and-herzegovina" placeholder="План действий"></textarea>
@@ -420,14 +434,19 @@
                 <li class="entertainment__item">
                   <h4 class="entertainment__country"><label for="czech">Чехия</label></h4>
                   <picture class="entertainment__flag">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="./img/directions-czech-tablet.webp 1x, ./img/directions-czech-tablet@2x.webp 2x">
                     <source type="image/webp" srcset="./img/directions-czech-mobile.webp 1x, ./img/directions-czech-mobile@2x.webp 2x">
-                    <img src="./img/directions-czech-mobile.png" srcset="./img/directions-czech-mobile@2x.png" width="35" height="24" alt="Флаг Боснии и Герцоговины">
+
+                    <source media="(min-width: 768px)" srcset="./img/directions-czech-tablet.png, ./img/directions-czech-tablet@2x.png 2x">
+                    <img src="./img/directions-czech-mobile.png" srcset="./img/directions-czech-mobile@2x.png" width="35" height="24" alt="Флаг Чехии">
                   </picture>
                   <textarea class="entertainment__textarea" id="czech" name="czech">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
                 </li>
               </ul>
+              <div class="route__navigation">
               <button class="entertainment__submit button button--form" type="submit">Отправить</button>
               <a href="#route" class="entertainment__button-previous">На шаг назад</a>
+            </div>
             </div>
           </section>
         </form>

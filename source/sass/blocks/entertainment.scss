@@ -116,7 +116,7 @@
   color: $special-grey;
   font-size: 16px;
   line-height: 22px;
-  padding: 9px 14px;
+  padding: 8px 14px 8px 14px;
   font-family: inherit;
 
   &::placeholder {
@@ -150,5 +150,118 @@
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .entertainment {
+    border-radius: 30px;
+    padding: 44px 0 53px 0;
+  }
+
+  .entertainment__wrapper {
+    margin: 0 43px;
+  }
+
+  .entertainment__title {
+    margin: 0 0 35px 0;
+  }
+
+  .entertainment__text {
+    font-size: 20px;
+    line-height: 24px;
+    min-height: 48px;
+    margin: 0 0 35px 0;
+    width: 505px;
+  }
+
+  .entertainment__flag {
+    width: 70px;
+    height: 47px;
+    top: -7px;
+    right: 0;
+
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .entertainment__country {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 30px;
+    margin: 0 0 40px -2px;
+  }
+
+  .entertainment__textarea {
+    font-size: 20px;
+    line-height: 23px;
+    padding: 16px 115px 16px 18px;
+    height: 142px;
+
+    &::placeholder {
+      line-height: 20px;
+    }
+  }
+
+  .entertainment__list {
+    border-top: 1px solid $new-profile-border;
+    padding-top: 34px;
+    margin: 0 0 43px 0;
+  }
+
+  .entertainment__item {
+    margin: 0 30px 45px 2px;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 14px;
+      height: 274px;
+      background-image: url("../../img/entertainment-line-tablet.png");
+      background-size: 14px 274px;
+      right: -33px;
+      top: 11px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/entertainment-line-tablet@2x.png");
+      }
+    }
+
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  .entertainment__submit {
+    width: 286px;
+    margin: 0;
+  }
+
+  .entertainment__button-previous {
+    font-size: 24px;
+    line-height: 22px;
+    letter-spacing: 0;
+    text-transform: none;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      background-image: url("../img/arrow-previous.svg");
+      background-repeat: no-repeat;
+      background-size: 14px 14px;
+      left: -35px;
+      top: 3px;
+    }
   }
 }

@@ -14,7 +14,6 @@
   color: $white;
   font-size: 36px;
   line-height: 36px;
-  margin-bottom: 19px;
   width: min-content;
   position: relative;
 
@@ -27,6 +26,10 @@
     height: 5px;
     left: 0;
     bottom: -17px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("./img/title-underline@2x.png");
+    }
   }
 }
 
@@ -58,5 +61,27 @@
   .title--size-additional {
     font-size: 45px;
     line-height: 45px;
+
+    &-form {
+      font-size: 36px;
+      line-height: 36px;
+    }
+  }
+
+  .title--size-main-others {
+    font-size: 60px;
+    line-height: 60px;
+
+    &::after {
+      background-size: 100% 8px;
+      height: 8px;
+      left: 0;
+      bottom: -74px;
+    }
+  }
+
+  .title--size-steps {
+    font-size: 36px;
+    line-height: 36px;
   }
 }

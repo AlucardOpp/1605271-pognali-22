@@ -140,6 +140,7 @@
 .page-header__title {
   &--closed {
     display: block;
+    margin-bottom: 19px;
   }
 
   &--opened,
@@ -158,17 +159,19 @@
 
     &--closed {
       background-color: $page-header-tablet;
+      border-radius: 0 0 60px 60px;
     }
 
     &--opened,
     &--nojs {
       padding-top: 41px;
-      z-index: 2;
+      z-index: 3;
       background-color: $white;
     }
 
     &--scrolled {
       background-color: $white;
+      border-radius: 0 0 60px 60px;
     }
   }
 
@@ -218,6 +221,10 @@
     &--nojs {
       display: none;
     }
+  }
+
+  .page-header__title {
+    margin: 87px 0 70px 35px;
   }
 }
 
