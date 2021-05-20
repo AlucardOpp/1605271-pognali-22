@@ -98,36 +98,36 @@ if (pageBody.classList.contains("page__body--main")) {
   });
 }
 
-// window.onscroll = function() {
-//   sTop = (this.pageYOffset || document.documentElement) - (document.documentElement.clientTop || 0);
-//   if (sTop > 70 && !pageHeader.classList.contains("page-header--opened") && !pageHeader.classList.contains("page-header--nojs")) {
-//     pageHeader.classList.add("page-header--scrolled");
-//     pageHeaderContainer.classList.add("page-header__container--scrolled");
-//     pageHeaderLogo.classList.add("page-header__logo--scrolled");
-//     pageHeaderToggle.classList.add("page-header__toggle--scrolled");
-//     for (let i = 0; i < siteListLink.length; i++) {
-//       siteListLink[i].classList.add("site-list__link--scrolled");
-//     }
-//     if (pageBody.classList.contains("page__body--form"))
-//       pageHeaderTitle.classList.add("page-header__title--scrolled");
-//   } else {
-//     pageHeader.classList.remove("page-header--scrolled");
-//     pageHeaderContainer.classList.remove("page-header__container--scrolled");
-//     pageHeaderLogo.classList.remove("page-header__logo--scrolled");
-//     pageHeaderToggle.classList.remove("page-header__toggle--scrolled");
-//     for (let i = 0; i < siteListLink.length; i++) {
-//       siteListLink[i].classList.remove("site-list__link--scrolled");
-//     }
-//     if (pageBody.classList.contains("page__body--form"))
-//       pageHeaderTitle.classList.remove("page-header__title--scrolled");
-//   }
-// };
 
-
-if (pageBody.classList.contains("page__body--main"))
+if (pageBody.classList.contains("page__body--main")) {
   registrationButton.addEventListener("click", function(evt) {
     evt.preventDefault();
   });
+  window.onscroll = function() {
+    sTop = (this.pageYOffset || document.documentElement) - (document.documentElement.clientTop || 0);
+    if (sTop > 70 && !pageHeader.classList.contains("page-header--opened") && !pageHeader.classList.contains("page-header--nojs")) {
+      pageHeader.classList.add("page-header--scrolled");
+      pageHeaderContainer.classList.add("page-header__container--scrolled");
+      pageHeaderLogo.classList.add("page-header__logo--scrolled");
+      pageHeaderToggle.classList.add("page-header__toggle--scrolled");
+      for (let i = 0; i < siteListLink.length; i++) {
+        siteListLink[i].classList.add("site-list__link--scrolled");
+      }
+      if (pageBody.classList.contains("page__body--form"))
+        pageHeaderTitle.classList.add("page-header__title--scrolled");
+    } else {
+      pageHeader.classList.remove("page-header--scrolled");
+      pageHeaderContainer.classList.remove("page-header__container--scrolled");
+      pageHeaderLogo.classList.remove("page-header__logo--scrolled");
+      pageHeaderToggle.classList.remove("page-header__toggle--scrolled");
+      for (let i = 0; i < siteListLink.length; i++) {
+        siteListLink[i].classList.remove("site-list__link--scrolled");
+      }
+      if (pageBody.classList.contains("page__body--form"))
+        pageHeaderTitle.classList.remove("page-header__title--scrolled");
+    }
+  };
+}
 
 if (pageBody.classList.contains("page__body--form")) {
   profileFormButtonPlane.addEventListener("click", function() {
@@ -182,28 +182,4 @@ if (pageBody.classList.contains("page__body--form")) {
   entertainmentSubmit.addEventListener("click", function(evt) {
     evt.preventDefault();
   });
-  // window.onscroll = function() {
-  //   sTop = (this.pageYOffset || document.documentElement) - (document.documentElement.clientTop || 0);
-  //   if (sTop > 95 && !pageHeader.classList.contains("page-header--opened") && !pageHeader.classList.contains("page-header--nojs")) {
-  //     pageHeader.classList.add("page-header--scrolled");
-  //     pageHeaderContainer.classList.add("page-header__container--scrolled");
-  //     pageHeaderLogo.classList.add("page-header__logo--scrolled");
-  //     pageHeaderToggle.classList.add("page-header__toggle--scrolled");
-  //     for (let i = 0; i < siteListLink.length; i++) {
-  //       siteListLink[i].classList.add("site-list__link--scrolled");
-  //     }
-  //     if (pageBody.classList.contains("page__body--form"))
-  //       pageHeaderTitle.classList.add("page-header__title--scrolled");
-  //   } else {
-  //     pageHeader.classList.remove("page-header--scrolled");
-  //     pageHeaderContainer.classList.remove("page-header__container--scrolled");
-  //     pageHeaderLogo.classList.remove("page-header__logo--scrolled");
-  //     pageHeaderToggle.classList.remove("page-header__toggle--scrolled");
-  //     for (let i = 0; i < siteListLink.length; i++) {
-  //       siteListLink[i].classList.remove("site-list__link--scrolled");
-  //     }
-  //     if (pageBody.classList.contains("page__body--form"))
-  //       pageHeaderTitle.classList.remove("page-header__title--scrolled");
-  //   }
-  // };
 }

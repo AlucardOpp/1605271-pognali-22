@@ -252,7 +252,7 @@
 
   .page-header--scrolled.page-header--form {
     margin-bottom: 260px;
-    top: 785px;
+    top: 948px;
   }
 
   .page-header__wrapper {
@@ -262,6 +262,7 @@
     grid-template-columns: 200px 1fr;
     column-gap: 145px;
     align-items: center;
+    position: relative;
   }
 
   .page-header__toggle {
@@ -308,8 +309,8 @@
 
     &--scrolled {
       position: absolute;
-      top: -687px;
-      left: 51px;
+      top: -871px;
+      left: 0;
     }
   }
 }
