@@ -152,3 +152,60 @@
     }
   }
 }
+
+@media (min-width: $desktop-width) {
+  .my-plans {
+    padding: 51px 0 114px 0;
+    border-radius: 60px 60px 0 0;
+  }
+
+  .my-plans__wrapper {
+    margin: 0 auto;
+    width: 1258px;
+  }
+
+  .my-plans__title {
+    margin: 0 0 52px 39px;
+  }
+
+  .my-plans__list {
+    margin: 0 -32px 0 32px;
+  }
+
+  .my-plans__destination {
+    margin: 35px 0 0 95px;
+    width: 533px;
+  }
+
+  .my-plans__information {
+    border: none;
+    width: 587px;
+    padding: 0;
+    margin: 38px 28px 0 0;
+  }
+
+  .my-plans__item {
+    min-height: 98px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+
+    &:first-child {
+      min-height: 97px;
+    }
+
+    &::before {
+      right: auto;
+      left: 43px;
+      top: 37px;
+    }
+  }
+
+  .my-plans__date {
+    margin-right: 96px;
+  }
+
+  .my-plans__change {
+    letter-spacing: 0.08em;
+  }
+}

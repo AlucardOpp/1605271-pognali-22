@@ -250,7 +250,7 @@
   display: flex;
   flex-direction: column;
   align-self: center;
-  width: 220px;
+  width: 100%;
 }
 
 .stay-dates__month-of-calendar {
@@ -402,6 +402,14 @@
   }
 }
 
+.stay-dates__calendar {
+  align-self: center;
+}
+
+.stay-dates__list {
+  display: none;
+}
+
 @media (min-width: $tablet-width) {
   .stay-dates {
     border-radius: 30px;
@@ -423,7 +431,7 @@
     width: 505px;
     min-height: 72px;
     margin-bottom: 39px;
-    order: 1;
+    order: 0;
   }
 
   .stay-dates__label {
@@ -512,7 +520,6 @@
 
   .stay-dates__calendar-section {
     order: 5;
-    width: 100%;
     margin-bottom: 47px;
   }
 
@@ -540,10 +547,6 @@
   .stay-dates__month-of-calendar {
     padding: 24px 0 25px 0;
     margin-bottom: 66px;
-  }
-
-  .stay-dates__calendar {
-    align-self: center;
   }
 
   .stay-dates__list-of-days {
@@ -617,5 +620,313 @@
       min-width: 79px;
       min-height: 71px;
     }
+  }
+
+  .stay-dates__form {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .stay-dates {
+    border-radius: 60px;
+    padding: 98px 0 106px 0;
+  }
+
+  .stay-dates__wrapper {
+    width: 1000px;
+    margin: 0 160px;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .stay-dates__title {
+    margin-bottom: 34px;
+
+    br {
+      display: none;
+    }
+  }
+
+  .stay-dates__date {
+    margin-left: 10px;
+  }
+
+  .stay-dates__container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .stay-dates__list {
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $black-60;
+    position: absolute;
+    right: 45px;
+    top: 7px;
+  }
+
+  .stay-dates__item {
+    margin-bottom: 20px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: $light-blue;
+      opacity: 0.3;
+      left: -42px;
+      top: 8px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &--current {
+      color: $black;
+      letter-spacing: 0.11em;
+
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+
+  .stay-dates__text {
+    width: 581px;
+    margin-bottom: 32px;
+
+    br {
+      display: block;
+    }
+  }
+
+  .stay-dates__number {
+    width: 180px;
+    height: 70px;
+    margin-left: 58px;
+    position: relative;
+    top: -2px;
+  }
+
+  .stay-dates__companions {
+    width: 600px;
+    padding-top: 32px;
+    order: 2;
+    display: flex;
+    align-items: center;
+    border: none;
+    margin-bottom: 14px;
+  }
+
+  .stay-dates__children {
+    width: 400px;
+    order: 3;
+    text-align: end;
+    margin-top: 54px;
+    margin-bottom: 0;
+  }
+
+  .stay-dates__duration {
+    order: 4;
+    border: none;
+    width: 600px;
+    display: flex;
+    align-items: center;
+    padding-top: 0;
+    margin-bottom: 0;
+  }
+
+  .stay-dates__label {
+    letter-spacing: 0;
+    position: relative;
+    margin-bottom: 6px;
+  }
+
+  .stay-dates__label-span {
+    position: absolute;
+    right: -316px;
+    color: $light-blue;
+    letter-spacing: 0;
+
+    &--day {
+      right: -328px;
+    }
+  }
+
+  .stay-dates__plus {
+    top: -2px;
+    right: 0;
+
+    &::after {
+      left: 34px;
+      top: 25px;
+    }
+
+    &::before {
+      left: 27px;
+      top: 34px;
+    }
+  }
+
+  .stay-dates__minus {
+    left: 59px;
+    top: -2px;
+
+    &::before {
+      left: 19px;
+      top: 34px;
+    }
+  }
+
+  .stay-dates__can-with {
+    right: -3px;
+
+    &::before {
+      left: -59px;
+    }
+  }
+
+  .stay-dates__form {
+    width: 1000px;
+    border-top: 1px solid $new-profile-border;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+
+  .stay-dates__choice {
+    margin-bottom: 0;
+
+    &--day {
+      margin-left: 22px;
+    }
+  }
+
+  .stay-dates__month-of-calendar {
+    padding: 25px 0 24px 0;
+    margin-bottom: 56px;
+  }
+
+  .stay-dates__arrow {
+    width: 35px;
+    height: 30px;
+  }
+
+  .stay-dates__month-next {
+    margin-right: -24px;
+  }
+
+  .stay-dates__month-previous {
+    margin-left: -24px;
+  }
+
+  .stay-dates__list-of-days {
+    grid-template-columns: 142px repeat(5, 143px) 142px;
+    grid-template-rows: repeat(6, 71px);
+  }
+
+  .stay-dates__day-of-calendar {
+    &::before {
+      left: 17px;
+      top: -39px;
+    }
+  }
+
+  .stay-dates__day-button {
+    padding: 0 95px 28px 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+
+    &--current,
+    &:hover:not(:disabled) {
+      min-width: 148px;
+      min-height: 77px;
+    }
+
+    &--first-march {
+      padding-right: 72px;
+
+      &::after {
+        position: relative;
+        content: "мар";
+        width: 30px;
+        height: 18px;
+        left: 5px;
+      }
+    }
+
+    &--first-april {
+      padding-right: 72px;
+
+      &::after {
+        position: relative;
+        content: "апр";
+        width: 30px;
+        height: 18px;
+        left: 5px;
+      }
+    }
+
+    &--26-april {
+      &::after {
+        position: absolute;
+        content: "Заезд";
+        line-height: 20px;
+        width: 43px;
+        height: 20px;
+        bottom: 12px;
+        left: 14px;
+        font-weight: 400;
+      }
+
+      &:hover {
+        &::after {
+          left: 14px;
+        }
+      }
+    }
+
+    &--28-april {
+      &::after {
+        position: absolute;
+        content: "Выезд";
+        line-height: 20px;
+        width: 43px;
+        height: 20px;
+        bottom: 12px;
+        left: 15px;
+        font-weight: 400;
+      }
+
+      &:hover {
+        &::after {
+          left: 14px;
+        }
+      }
+    }
+  }
+
+  .stay-dates__calendar-section {
+    margin-bottom: 57px;
+  }
+
+  .stay-dates__button-next {
+    width: 286px;
   }
 }

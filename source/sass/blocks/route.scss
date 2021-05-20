@@ -14,6 +14,10 @@
   margin-bottom: 16px;
 }
 
+.route__nav {
+  display: none;
+}
+
 .route__text {
   font-weight: 400;
   font-size: 16px;
@@ -368,6 +372,11 @@
 
   &:hover {
     border-color: $stay-dates-checkbox-hover;
+  }
+
+  &:active {
+    background-color: $light-blue;
+    color: $white;
   }
 }
 
@@ -734,5 +743,201 @@
       z-index: 2;
       margin-top: -1px;
     }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .route {
+    border-radius: 60px;
+    padding: 95px 0 105px 0;
+  }
+
+  .route__wrapper {
+    width: 1002px;
+    margin: 0 159px;
+    position: relative;
+  }
+
+  .route__title {
+    margin-bottom: 36px;
+
+    br {
+      display: none;
+    }
+  }
+
+  .route__route {
+    margin-left: 10px;
+  }
+
+  .route__container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .route__nav {
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $black-60;
+    position: absolute;
+    right: 47px;
+    top: 9px;
+  }
+
+  .route__nav-item {
+    margin-bottom: 20px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: $light-blue;
+      opacity: 0.3;
+      left: -41px;
+      top: 8px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &--current {
+      color: $black;
+      letter-spacing: 0.11em;
+
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+
+  .route__text {
+    margin-bottom: 56px;
+  }
+
+  .route__list {
+    padding-top: 62px;
+    margin-bottom: 57px;
+    margin-left: 1px;
+  }
+
+  .route__item {
+    grid-template-columns: 730px 1fr;
+
+    &::before {
+      right: 219px;
+      pointer-events: visible;
+    }
+
+    &::after {
+      right: 226px;
+      top: -45px;
+      height: 156px;
+      background-size: 1px 156px;
+    }
+
+    &:first-child {
+      &::after {
+        top: -62px;
+      }
+    }
+
+    &:last-child {
+      &::before {
+        top: 25px;
+      }
+
+      &::after {
+        background-image: url("../img/route-line-tablet.png");
+        right: 226px;
+        height: 182px;
+        background-size: 1px 182px;
+
+        @media (min-resolution: 2dppx) {
+          background-image: url("../img/route-line-shadow@2x.png");
+        }
+      }
+    }
+  }
+
+  .route__flag {
+    padding-left: 86px;
+  }
+
+  .route__remove {
+    right: -15px;
+  }
+
+  .route__button-previous {
+    margin: 0 5px 4px 0;
+  }
+
+  .route__close-dropdown {
+    right: 271px;
+
+    &::after,
+    &::before {
+      height: 25px;
+    }
+
+    &::after {
+      top: 20px;
+      left: 42px;
+    }
+
+    &::before {
+      top: 20px;
+      right: 45px;
+    }
+  }
+
+  .route__letters {
+    grid-template-columns: repeat(5, 60px);
+    grid-template-rows: repeat(5, 70px);
+    column-gap: 15px;
+    row-gap: 14px;
+    border: none;
+    margin: 35px 103px 37px 27px;
+  }
+
+  .route__letter {
+    border: 1px solid $profile-form-border;
+    border-radius: 4px;
+  }
+
+  .route__dropdown {
+    width: 730px;
+    border-radius: 0 0 4px 4px;
+  }
+
+  .route__countries {
+    padding-left: 25px;
+  }
+
+  .route__choose-button {
+    padding-left: 24px;
+
+    &::after {
+      width: 22px;
+      height: 24px;
+      background-size: 22px 24px;
+      right: 23px;
+      top: 24px;
+    }
+  }
+
+  .route__button-next {
+    margin-left: 1px;
   }
 }

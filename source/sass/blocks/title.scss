@@ -85,3 +85,12 @@
     line-height: 36px;
   }
 }
+
+
+@media (min-width: $desktop-width) {
+  .title--size-main-others {
+    &::after {
+      bottom: -75px;
+    }
+  }
+}

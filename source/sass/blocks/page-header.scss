@@ -233,6 +233,12 @@
     padding: 48px 0 11px 0;
     background-color: $dark-blue;
     z-index: 5;
+    border-radius: 0;
+
+    &--form {
+      background-color: $page-header-tablet;
+      border-radius: 0 0 60px 60px;
+    }
 
     &--scrolled {
       background-color: $white;
@@ -240,7 +246,13 @@
       top: 750px;
       margin-bottom: 19px;
       padding: 21px 0 19px 0;
+      border-radius: 0;
     }
+  }
+
+  .page-header--scrolled.page-header--form {
+    margin-bottom: 260px;
+    top: 785px;
   }
 
   .page-header__wrapper {
@@ -286,8 +298,18 @@
         border-top: 2px solid $site-list-black;
         width: 44px;
         right: -101px;
-        top: 27px;
+        top: 30px;
       }
+    }
+  }
+
+  .page-header__title {
+    margin: 122px 0 60px 64px;
+
+    &--scrolled {
+      position: absolute;
+      top: -687px;
+      left: 51px;
     }
   }
 }

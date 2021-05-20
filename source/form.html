@@ -99,10 +99,10 @@
           <span class="profile-form__text">level</span>
         </div>
         <picture class="profile-form__picture">
-        <source type="image/webp" srcset="./img/card-demin-tablet.webp 1x, ./img/card-demin-tablet@2x.webp 2x">
-        <img class="profile-form__image" src="./img/card-demin-tablet.png" width="100" height="100" alt="Мужчина в очках, шапке и с бородой">
-      </picture>
-        <button class="profile-form__change-photo button button--form" type="button">Сменить фото</button>
+          <source type="image/webp" srcset="./img/card-demin-tablet.webp 1x, ./img/card-demin-tablet@2x.webp 2x">
+          <img class="profile-form__image" src="./img/card-demin-tablet.png" width="100" height="100" alt="Мужчина в очках, шапке и с бородой">
+        </picture>
+        <button class="profile-form__change-photo button button--form" type="button"></button>
         <div class="profile-form__tags">
           <label class="profile-form__header" for="tags">Тэги</label>
           <textarea class="profile-form__textarea" id="tags" name="tags" placeholder="#бургер #бар #футбол #концерт #крафт"></textarea>
@@ -154,8 +154,16 @@
         <form class="new-plan__form form" action="https://echo.htmlacademy.ru" method="post">
           <section id="stay-dates" class="form__stay-dates stay-dates">
             <div class="stay-dates__wrapper">
-              <h3 class="stay-dates__title title title--size-steps">Шаг 1.<br> Даты пребывания</h3>
-              <p class="stay-dates__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
+              <div class="stay-dates__container">
+              <h3 class="stay-dates__title title title--size-steps">Шаг 1.<br> <span class="stay-dates__date">Даты пребывания</span></h3>
+              <ul class="stay-dates__list">
+                <li class="stay-dates__item stay-dates__item--current">Даты</li>
+                <li class="stay-dates__item">Маршрут</li>
+                <li class="stay-dates__item">Развлечения</li>
+              </ul>
+            </div>
+              <p class="stay-dates__text">Укажите предпочтительное количество попутчиков, которых <br> вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
+              <div class="stay-dates__form">
               <div class="stay-dates__companions">
                 <label class="stay-dates__label" for="companions">ищу попутчиков: <span class="stay-dates__label-span">чел.</span></label>
                 <div class="stay-dates__choice">
@@ -165,8 +173,8 @@
                 </div>
               </div>
               <div class="stay-dates__duration">
-                <label class="stay-dates__label" for="duration">длительность: <span class="stay-dates__label-span">дн.</span></label>
-                <div class="stay-dates__choice">
+                <label class="stay-dates__label" for="duration">длительность: <span class="stay-dates__label-span stay-dates__label-span--day">дн.</span></label>
+                <div class="stay-dates__choice stay-dates__choice--day">
                   <input class="stay-dates__number" placeholder="3" type="number" id="duration" name="duration">
                   <button class="stay-dates__minus" type="button"></button>
                   <button class="stay-dates__plus" type="button"></button>
@@ -176,6 +184,7 @@
                 <input class="stay-dates__checkbox visually-hidden" checked type="checkbox" id="children" name="children">
                 <label class="stay-dates__can-with" for="children">Можно с детьми</label>
               </div>
+            </div>
               <div class="stay-dates__calendar-section">
                 <div class="stay-dates__month-of-calendar">
                   <button class="stay-dates__month-previous" type="button">
@@ -198,7 +207,7 @@
                     <li class="stay-dates__day-of-calendar stay-dates__day-of-calendar--thursday"><button type="button" class="stay-dates__day-button" disabled>26</button></li>
                     <li class="stay-dates__day-of-calendar stay-dates__day-of-calendar--friday"><button type="button" class="stay-dates__day-button" disabled>27</button></li>
                     <li class="stay-dates__day-of-calendar stay-dates__day-of-calendar--saturday"><button type="button" class="stay-dates__day-button" disabled>28</button></li>
-                    <li class="stay-dates__day-of-calendar stay-dates__day-of-calendar--sunday"><button type="button" class="stay-dates__day-button" disabled>1</button></li>
+                    <li class="stay-dates__day-of-calendar stay-dates__day-of-calendar--sunday"><button type="button" class="stay-dates__day-button stay-dates__day-button--first-march" disabled>1</button></li>
                     <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button" disabled>2</button></li>
                     <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button" disabled>3</button></li>
                     <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button" disabled>4</button></li>
@@ -223,13 +232,13 @@
                     <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button" disabled>23</button></li>
                     <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button" disabled>24</button></li>
                     <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button" disabled>25</button></li>
-                    <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button stay-dates__day-button--active stay-dates__day-button--current">26</button></li>
+                    <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button stay-dates__day-button--active stay-dates__day-button--current stay-dates__day-button--26-april">26</button></li>
                     <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button stay-dates__day-button--active">27</button></li>
-                    <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button stay-dates__day-button--active">28</button></li>
+                    <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button stay-dates__day-button--active stay-dates__day-button--28-april">28</button></li>
                     <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button">29</button></li>
                     <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button">30</button></li>
                     <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button">31</button></li>
-                    <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button">1</button></li>
+                    <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button stay-dates__day-button--first-april">1</button></li>
                     <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button">2</button></li>
                     <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button">3</button></li>
                     <li class="stay-dates__day-of-calendar"><button type="button" class="stay-dates__day-button">4</button></li>
@@ -242,7 +251,14 @@
           </section>
           <section id="route" class="form__route route">
             <div class="route__wrapper">
-              <h3 class="route__title title title--size-steps">Шаг 2.<br> Маршрут</h3>
+              <div class="route__container">
+              <h3 class="route__title title title--size-steps">Шаг 2.<br> <span class="route__route">Маршрут</span></h3>
+              <ul class="route__nav">
+                <li class="route__nav-item">Даты</li>
+                <li class="route__nav-item route__nav-item--current">Маршрут</li>
+                <li class="route__nav-item">Развлечения</li>
+              </ul>
+              </div>
               <p class="route__text">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
               <ul class="route__list">
                 <li class="route__item route__item--chosen route__item--dropdown-closed">
@@ -410,14 +426,21 @@
                 </li>
               </ul>
               <div class="route__navigation">
-              <a href="#entertainment" class="route__button-next button button--form">Следующий шаг</a>
-              <a href="#stay-dates" class="route__button-previous">На шаг назад</a>
-            </div>
+                <a href="#entertainment" class="route__button-next button button--form">Следующий шаг</a>
+                <a href="#stay-dates" class="route__button-previous">На шаг назад</a>
+              </div>
             </div>
           </section>
           <section id="entertainment" class="form__entertainment entertainment">
             <div class="entertainment__wrapper">
-              <h3 class="entertainment__title title title--size-steps">Шаг 3. <br> Развлечения</h3>
+              <div class="entertainment__container">
+              <h3 class="entertainment__title title title--size-steps">Шаг 3. <br> <span class="entertainment__enjoys">Развлечения</span></h3>
+              <ul class="entertainment__nav">
+                <li class="entertainment__nav-item">Даты</li>
+                <li class="entertainment__nav-item">Маршрут</li>
+                <li class="entertainment__nav-item entertainment__nav-item--current">Развлечения</li>
+              </ul>
+              </div>
               <p class="entertainment__text">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
               <ul class="entertainment__list">
                 <li class="entertainment__item">
@@ -429,7 +452,10 @@
                     <source media="(min-width: 768px)" srcset="./img/route-bosnia-and-Herzegovina-tablet.png, ./img/route-bosnia-and-Herzegovina-tablet@2x.png 2x">
                     <img src="./img/route-bosnia-and-Herzegovina-mobile.png" srcset="./img/route-bosnia-and-Herzegovina-mobile@2x.png" width="35" height="24" alt="Флаг Боснии и Герцоговины">
                   </picture>
-                  <textarea class="entertainment__textarea" id="bosnia-and-herzegovina" name="bosnia-and-herzegovina" placeholder="План действий"></textarea>
+                  <div class="entertainment__field">
+                    <textarea class="entertainment__textarea" id="bosnia-and-herzegovina" name="bosnia-and-herzegovina" placeholder="План действий"></textarea>
+                    <p class="entertainment__invalid">Это поле должно быть заполнено</p>
+                  </div>
                 </li>
                 <li class="entertainment__item">
                   <h4 class="entertainment__country"><label for="czech">Чехия</label></h4>
@@ -440,17 +466,20 @@
                     <source media="(min-width: 768px)" srcset="./img/directions-czech-tablet.png, ./img/directions-czech-tablet@2x.png 2x">
                     <img src="./img/directions-czech-mobile.png" srcset="./img/directions-czech-mobile@2x.png" width="35" height="24" alt="Флаг Чехии">
                   </picture>
+                  <div class="entertainment__field"></div>
                   <textarea class="entertainment__textarea" id="czech" name="czech">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                  <p class="entertainment__invalid">Это поле должно быть заполнено</p>
                 </li>
               </ul>
               <div class="route__navigation">
-              <button class="entertainment__submit button button--form" type="submit">Отправить</button>
-              <a href="#route" class="entertainment__button-previous">На шаг назад</a>
+                <button class="entertainment__submit button button--form" type="submit">Отправить</button>
+                <a href="#route" class="entertainment__button-previous">На шаг назад</a>
+              </div>
             </div>
-            </div>
-          </section>
-        </form>
       </div>
+    </section>
+    </form>
+    </div>
     </section>
   </main>
 
@@ -483,7 +512,7 @@
         </li>
       </ul>
       <div class="academy">
-        <a href="https://htmlacademy.ru/intensive/adaptive" class="academy__link" target="_blank">Разработано</a>
+        <a href="https://htmlacademy.ru/intensive/adaptive" class="academy__link academy__link--form" target="_blank">Разработано</a>
       </div>
     </div>
   </footer>

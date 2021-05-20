@@ -76,6 +76,7 @@
   color: $dark-blue;
   margin: 14px 0 0 0;
   padding-left: 0;
+  position: relative;
 
   &:hover {
     background-color: $profile-form-change-photo-hover;
@@ -84,6 +85,17 @@
   &:active {
     background-color: $special-light-blue-30;
     color: $dark-blue-30;
+  }
+
+  &::after {
+    content: "Сменить фото";
+    position: relative;
+    display: block;
+    background-image: none;
+    width: 135px;
+    height: 15px;
+    right: 0;
+    top: -4px;
   }
 }
 
@@ -310,11 +322,19 @@
     letter-spacing: 0.09em;
     border-radius: 10px;
     justify-content: center;
-    font-weight: 700;
     text-transform: uppercase;
 
     &::after {
-      display: none;
+      content: "Сменить фото";
+      position: relative;
+      display: block;
+      background-image: none;
+      width: 170px;
+      height: 18px;
+      right: 0;
+      top: -1px;
+      letter-spacing: 0.09em;
+      font-weight: 500;
     }
   }
 
@@ -366,5 +386,111 @@
 
   .profile-form__text {
     margin-bottom: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .profile-form {
+    padding: 73px 0 45px 0;
+  }
+
+  .profile-form__wrapper {
+    width: 1256px;
+    position: relative;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+
+  .profile-form__picture {
+    width: 190px;
+    height: 190px;
+    position: absolute;
+    top: -263px;
+    right: 64px;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      border-radius: 7px 7px 0 0;
+    }
+  }
+
+  .profile-form__number,
+  .profile-form__text {
+    color: $white;
+  }
+
+  .profile-form__number {
+    margin-top: 5px;
+
+    &::after {
+      height: 2px;
+      width: 49px;
+      background-color: $white;
+    }
+  }
+
+  .profile-form__text {
+    margin-top: 1px;
+  }
+
+  .profile-form__level {
+    position: absolute;
+    top: -221px;
+    right: 298px;
+  }
+
+  .profile-form__change-photo {
+    position: absolute;
+    top: -120px;
+    right: 64px;
+    width: 190px;
+    height: 47px;
+    border-radius: 0 0 10px 10px;
+
+    &::after {
+      content: "Фото";
+      letter-spacing: 0;
+    }
+  }
+
+  .profile-form__transport-list {
+    width: 384px;
+    height: 94px;
+    margin-left: -1px;
+  }
+
+  .profile-form__transport {
+    margin: 0 -31px 0 0;
+    height: 105px;
+    order: 5;
+    position: relative;
+  }
+
+  .profile-form__textarea {
+    width: 732px;
+    height: 94.5px;
+    overflow: hidden;
+  }
+
+  .profile-form__tags {
+    height: 115px;
+    width: 732px;
+    margin: 0 0 0 31px;
+    position: relative;
+  }
+
+  .profile-form__header {
+    position: absolute;
+    letter-spacing: 0.07em;
+    left: 21px;
+    top: 84px;
+    width: 83px;
+
+    &--transport {
+      width: 154px;
+      top: 83px;
+      left: 114px;
+    }
   }
 }

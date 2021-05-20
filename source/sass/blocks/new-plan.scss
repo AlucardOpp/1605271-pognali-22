@@ -60,3 +60,24 @@
     margin-bottom: 59px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .new-plan {
+    padding: 52px 0 125px 0;
+    border-radius: 60px 60px 0 0;
+    margin-top: -50px;
+  }
+
+  .new-plan__list {
+    display: none;
+  }
+
+  .new-plan__wrapper {
+    width: 1320px;
+    margin: 0 auto;
+  }
+
+  .new-plan__steps {
+    margin: 0 0 57px 68px;
+  }
+}
