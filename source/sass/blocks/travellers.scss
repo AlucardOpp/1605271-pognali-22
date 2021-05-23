@@ -378,7 +378,7 @@
   width: 45px;
   height: 45px;
   background-repeat: no-repeat;
-  background-size: 45px 45px;
+  background-position: top 0 right 0;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -396,13 +396,10 @@
 
   &--50 {
     background-image: url("../img/travellers-50.svg");
-    background-position: top 0 right -8px;
   }
 
   &--25 {
     background-image: url("../img/travellers-25.svg");
-    background-size: 25px 45px;
-    background-position: top -10px right -1px;
   }
 }
 
