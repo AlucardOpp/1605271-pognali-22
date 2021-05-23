@@ -203,7 +203,7 @@
     background-image: url("../img/icon-plane-active.svg");
 
     &:hover {
-      opacity: 0.6;
+      opacity: 0.7;
     }
   }
 
@@ -219,7 +219,7 @@
     background-image: url("../img/icon-bus-active.svg");
 
     &:hover {
-      opacity: 0.6;
+      opacity: 0.7;
     }
   }
 
@@ -235,7 +235,7 @@
     background-image: url("../img/icon-bicycle-active.svg");
 
     &:hover {
-      opacity: 0.6;
+      opacity: 0.7;
     }
   }
 
@@ -252,7 +252,7 @@
     background-image: url("../img/icon-run-active.svg");
 
     &:hover {
-      opacity: 0.6;
+      opacity: 0.7;
     }
   }
 
@@ -275,7 +275,7 @@
     }
 
     &--opened {
-      padding-top: 207px;
+      padding-top: 416px;
     }
   }
 
@@ -391,7 +391,8 @@
 
 @media (min-width: $desktop-width) {
   .profile-form {
-    padding: 73px 0 45px 0;
+    padding: 73px 0 103px 0;
+    background-color: $form-page-background;
   }
 
   .profile-form__wrapper {

@@ -1,0 +1,405 @@
+.filter {
+  margin: 0 25px 28px 25px;
+  background-color: $yellow;
+  border-radius: 20px;
+  padding: 24px 0 22px 0;
+  z-index: 1;
+}
+
+.filter__wrapper {
+  margin: 0 20px;
+}
+
+.filter__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter__title {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  color: $light-blue;
+  margin: 0 0 24px 5px;
+  min-height: 66px;
+}
+
+.filter__entertainments {
+  list-style: none;
+  margin: 0 0 0 6px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.filter__entertainment {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: relative;
+  padding: 11px 0 16px 0;
+  border-bottom: 1px solid $filter-entartainment-border;
+
+  &:first-child {
+    border-top: 1px solid $filter-entartainment-border;
+  }
+
+  &--lvl {
+    border-bottom: none;
+  }
+}
+
+.filter__list {
+  list-style: none;
+  margin: 20px 0 2px 0;
+  padding: 0;
+  display: none;
+
+  &--transport {
+    flex-wrap: wrap;
+    margin: 22px 0 -1px 0;
+  }
+
+  &--lvl {
+    margin: 0 0 1px 0;
+  }
+
+  &--opened {
+    display: block;
+  }
+
+  &--opened.filter__list--transport {
+    display: flex;
+  }
+}
+
+.filter__toggle {
+  margin: 0;
+  font-weight: 700;
+  color: $light-blue;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  padding: 0;
+  border: none;
+  font-family: inherit;
+  background-color: transparent;
+  width: 20px;
+  height: 12px;
+  cursor: pointer;
+  right: 0;
+  top: 14px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    border: 5px solid transparent;
+    border-top: 5px solid $site-list-black;
+    right: 4px;
+    top: 18px;
+  }
+
+  &--opened {
+    &::after {
+      border-top: none;
+      border-bottom: 5px solid $site-list-black;
+    }
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.filter__label {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  color: $black;
+  position: relative;
+  margin-left: 26px;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: $white;
+    background-size: 13.5px 13px;
+    background-repeat: no-repeat;
+    background-image: none;
+    background-position: center;
+    left: -27px;
+  }
+
+  &:hover {
+    color: $black-60;
+  }
+
+  &:active {
+    color: $black;
+    opacity: 0.3;
+  }
+}
+
+.filter__checkbox {
+  &:checked + label::before {
+    background-image: url("../img/icon-check-mark.svg");
+  }
+}
+
+.filter__colon {
+  display: none;
+}
+
+.filter__item {
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--transport {
+    margin: 0 1px 0 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.filter__transbutton {
+  border: none;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: $white;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 17px 16px;
+  cursor: pointer;
+
+  &:hover {
+    filter: drop-shadow(0 2px 6px $profile-form-transport-button-shadow);
+  }
+
+  &:active {
+    filter: none;
+    background-color: $profile-form-transport-button-active;
+    opacity: 0.3;
+  }
+
+  &--plane {
+    background-image: url("../img/icon-plane-inactive.svg");
+
+    &:active {
+      background-image: url("../img/icon-plane-hover.svg");
+    }
+
+    &-active {
+      background-image: url("../img/icon-plane-active.svg");
+
+      &:active {
+        background-image: url("../img/icon-plane-active.svg");
+      }
+    }
+  }
+
+  &--bus {
+    background-image: url("../img/icon-bus-inactive.svg");
+
+    &:active {
+      background-image: url("../img/icon-bus-hover.svg");
+    }
+
+    &-active {
+      background-image: url("../img/icon-bus-active.svg");
+
+      &:active {
+        background-image: url("../img/icon-bus-active.svg");
+      }
+    }
+  }
+
+  &--bicycle {
+    background-image: url("../img/icon-bicycle-inactive.svg");
+
+    &:active {
+      background-image: url("../img/icon-bicycle-hover.svg");
+    }
+
+    &-active {
+      background-image: url("../img/icon-bicycle-active.svg");
+
+      &:active {
+        background-image: url("../img/icon-bicycle-active.svg");
+      }
+    }
+  }
+
+  &--run {
+    background-image: url("../img/icon-run-inactive.svg");
+
+    &:active {
+      background-image: url("../img/icon-run-hover.svg");
+    }
+
+    &-active {
+      background-image: url("../img/icon-run-active.svg");
+
+      &:active {
+        background-image: url("../img/icon-run-active.svg");
+      }
+    }
+  }
+}
+
+.filter__inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 18px 4px 24px 0;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 11px;
+    background-image: url("../img/filter-input-line.png");
+    background-size: 16px 1px;
+    background-repeat: no-repeat;
+    top: 12px;
+    background-color: white;
+    left: 50%;
+    margin-left: -9px;
+    background-position: center;
+    pointer-events: none;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/filter-input-line@2x.png");
+    }
+  }
+}
+
+.filter__input {
+  padding: 10px 43px 7px 42px;
+  min-height: 0;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: $white;
+  display: block;
+  text-align: center;
+  margin: 0;
+  color: $light-blue;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 13px;
+  letter-spacing: 0.07em;
+  font-family: inherit;
+  border: 1px solid $profile-form-border;
+  outline: none;
+
+  &--min {
+    border-radius: 4px 0 0 4px;
+  }
+
+  &--max {
+    border-radius: 0 4px 4px 0;
+    border-left: none;
+  }
+
+  &:hover {
+    border-color: $stay-dates-checkbox-hover;
+  }
+
+  &:focus {
+    border-color: $dark-blue;
+  }
+}
+
+.filter__range-controls {
+  position: relative;
+  height: 10px;
+  margin-right: 4px;
+}
+
+.filter__scale {
+  height: 2px;
+  background-color: $light-blue-20;
+}
+
+.filter__bar {
+  width: 70%;
+  height: 2px;
+  background-color: $light-blue;
+  margin-left: 30%;
+}
+
+.filter__range-toggle {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  cursor: pointer;
+  background-color: $light-blue;
+  border-radius: 50%;
+  top: -4px;
+
+  &--min {
+    left: 30%;
+
+    &:hover {
+      margin-left: -3px;
+    }
+  }
+
+  &--max {
+    left: 100%;
+    margin-left: -10px;
+
+    &:hover {
+      margin-left: -13px;
+    }
+  }
+
+  &:hover {
+    width: 16px;
+    height: 16px;
+    top: -7px;
+  }
+
+  &:active {
+    box-shadow: 0 3px 7px $filter-range-toggle-shadow;
+  }
+}
+
+.filter__submit {
+  border: none;
+  background-color: $white;
+  border-radius: 25px;
+  color: $dark-blue;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 17px;
+  text-transform: uppercase;
+  font-family: inherit;
+  cursor: pointer;
+  height: 41px;
+
+  &:hover {
+    filter: drop-shadow(0 3px 6px $filter-submit-shadow);
+  }
+
+  &:active {
+    background-color: $filter-entartainment-border;
+    color: $light-blue-30;
+  }
+}

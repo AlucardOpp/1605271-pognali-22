@@ -13,4 +13,14 @@
   &--form {
     background-color: $form-page-background;
   }
+
+  &--catalog {
+    background-color: $directions-white;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page__body--form {
+    background-color: $page-header-tablet;
+  }
 }

@@ -15,6 +15,13 @@
     padding-top: 20px;
   }
 
+  &--catalog {
+    padding-top: 20px;
+    background-color: $page-header-tablet;
+    border-radius: 0 0 20px 20px;
+    position: relative;
+  }
+
   &--opened,
   &--nojs {
     background-color: $white;
@@ -151,6 +158,10 @@
   &--scrolled {
     color: $dark-blue;
   }
+}
+
+.page-header__title--catalog.page-header__title--closed {
+  margin-bottom: 15px;
 }
 
 @media (min-width: $tablet-width) {
@@ -311,6 +322,7 @@
       position: absolute;
       top: -871px;
       left: 0;
+      color: $white;
     }
   }
 }
