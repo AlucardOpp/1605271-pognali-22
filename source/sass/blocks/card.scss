@@ -210,7 +210,7 @@
   line-height: 18px;
   font-weight: 400;
   color: $special-grey;
-  margin: 0 36px 17px 46px;
+  margin: 0 42px 17px 42px;
   min-height: 36px;
 }
 
@@ -220,7 +220,7 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  width: 120px;
+  width: 119px;
   height: 25px;
 }
 
@@ -315,7 +315,7 @@
   }
 
   .card__image {
-    height: 285px;
+    height: 287px;
     z-index: 0;
     border-radius: 20px 20px 0 0;
     margin-bottom: -2px;
@@ -323,7 +323,7 @@
 
   .card__picture {
     width: 285px;
-    height: 285px;
+    height: 287px;
   }
 
   .card__information {
@@ -334,28 +334,32 @@
     font-size: 24px;
     line-height: 22px;
     margin-bottom: 24px;
-    margin-top: 2px;
+    margin-top: 0;
 
     &--offline {
       &::before {
-        width: 8px;
-        height: 8px;
+        width: 9px;
+        height: 9px;
         background-image: url("../img/user-offline.svg");
-        background-size: 8px 8px;
-        left: -21px;
-        top: 8px;
+        background-size: 9px 9px;
+        left: -23px;
+        top: 9px;
       }
     }
 
     &--online {
       &::before {
-        width: 8px;
-        height: 8px;
+        width: 9px;
+        height: 9px;
         background-image: url("../img/user-online.svg");
-        background-size: 8px 8px;
-        left: -21px;
-        top: 8px;
+        background-size: 9px 9px;
+        left: -22px;
+        top: 9px;
       }
+    }
+
+    &--demin {
+      margin-left: 68px;
     }
   }
 
@@ -396,11 +400,16 @@
 
   .card__means-of-transport {
     padding-bottom: 26px;
+    width: 120px;
   }
 
   .card__level {
     left: 22px;
     top: 20px;
+  }
+
+  .card__flags {
+    top: -13px;
   }
 }
 

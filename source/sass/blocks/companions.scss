@@ -4,7 +4,7 @@
   background-color: $site-list-black;
   background-position: 0 49px;
   background-size: 297px 344px;
-  padding-bottom: 30px;
+  padding-bottom: 31px;
   border-radius: 0 0 30px 30px;
   margin-bottom: -25px;
   position: relative;
@@ -66,6 +66,7 @@
 
 .companions__button {
   z-index: 0;
+  height: 61px;
 }
 
 @media (min-width: $tablet-width) {
@@ -133,6 +134,7 @@
     padding-left: 32px;
     margin-left: 34px;
     margin-right: 4px;
+    height: 80px;
   }
 }
 

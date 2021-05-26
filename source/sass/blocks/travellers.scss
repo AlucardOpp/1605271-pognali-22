@@ -19,6 +19,10 @@
   transition: 0.5s;
 }
 
+.travellers__span {
+  display: none;
+}
+
 .travellers__list {
   list-style: none;
   margin: 0 0 18px 0;
@@ -262,7 +266,7 @@
 
 .travellers__transport-list {
   list-style: none;
-  margin: 0 0 0 1px;
+  margin: 0 0 8px 1px;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
@@ -352,10 +356,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 14px;
+  margin-bottom: 13px;
 
   &--two-flags {
-    margin-bottom: 13px;
+    margin-bottom: 12px;
   }
 }
 
@@ -464,11 +468,11 @@
   &::before {
     content: "";
     position: absolute;
-    width: 17px;
-    height: 17px;
+    width: 18px;
+    height: 18px;
     top: 15px;
-    left: -33px;
-    border-left: 1px solid $light-blue;
+    left: -34px;
+    border-left: 2px solid $light-blue;
     transform: rotate(90deg);
   }
 
@@ -494,7 +498,7 @@
   }
 }
 
-.travellers__pagination {
+.travellers__pag-buttons {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 51px;
@@ -547,5 +551,548 @@
       left: 50%;
       margin-left: -6px;
     }
+  }
+}
+
+.travellers__pages {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .travellers__wrapper {
+    margin: 0 40px;
+  }
+
+  .travellers__item {
+    display: grid;
+    grid-template-columns: 190px 1fr 124px;
+    grid-template-rows: repeat(4, max-content);
+    column-gap: 31px;
+    padding: 31px 25px 26px 37px;
+    margin-bottom: 40px;
+  }
+
+  .travellers__image-link {
+    top: 35px;
+    left: 37px;
+    width: 190px;
+    height: 190px;
+    border-radius: 20px;
+  }
+
+  .travellers__profile-picture {
+    border-radius: 20px;
+  }
+
+  .travellers__profile-img {
+    border-radius: 20px;
+  }
+
+  .travellers__name,
+  .travellers__tags,
+  .travellers__want-visit,
+  .travellers__double {
+    margin: 0;
+  }
+
+  .travellers__line-block {
+    width: 100%;
+
+    &--lvl,
+    &--transport {
+      &::after {
+        display: none;
+      }
+    }
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      bottom: 76px;
+    }
+  }
+
+  .travellers__like-container {
+    position: static;
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    justify-self: end;
+  }
+
+  .travellers__name {
+    font-size: 30px;
+    line-height: 30px;
+    width: auto;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    position: relative;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .travellers__like-button {
+    width: 50px;
+    height: 50px;
+    margin-right: 6px;
+  }
+
+  .travellers__heart-fill,
+  .travellers__heart {
+    width: 20px;
+    height: 20px;
+  }
+
+  .travellers__link {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      top: 16px;
+      right: -36px;
+    }
+
+    &--offline {
+      &::after {
+        background-color: $travellers-offline;
+      }
+    }
+
+    &--online {
+      &::after {
+        background-color: $travellers-online;
+      }
+    }
+  }
+
+  .travellers__tags {
+    font-size: 20px;
+    line-height: 23px;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    margin: 10px 0 47px 3px;
+    min-height: 46px;
+  }
+
+  .travellers__transport-text,
+  .travellers__level {
+    display: none;
+  }
+
+  .travellers__like-count {
+    font-size: 20px;
+    line-height: 20px;
+    width: 49px;
+    margin-right: -2px;
+  }
+
+  .travellers__country-name {
+    font-size: 20px;
+    line-height: 20px;
+    margin: 1px -3px 0 12px;
+  }
+
+  .travellers__transport {
+    background-color: transparent;
+    margin-bottom: -1px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &--plane-active {
+      background-size: 24px 23px;
+    }
+
+    &--bus-inactive {
+      background-size: 19px 25px;
+      background-position: center;
+    }
+
+    &--bicycle-inactive {
+      background-size: 32px 30px;
+    }
+
+    &--run-inactive {
+      background-size: 24px 25px;
+    }
+
+    &--plane-inactive {
+      background-size: 24px 23px;
+    }
+
+    &--bus-active {
+      background-size: 19px 25px;
+      background-position: center;
+    }
+
+    &--bicycle-active {
+      background-size: 32px 30px;
+    }
+
+    &--run-active {
+      background-size: 24px 25px;
+    }
+  }
+
+  .travellers__container {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 4px;
+    align-items: center;
+
+    &--25 {
+      background-image: url("../../img/travellers-25-tablet.svg");
+    }
+
+    &--50 {
+      background-image: url("../../img/travellers-50-tablet.svg");
+    }
+
+    &--80 {
+      background-image: url("../../img/travellers-80-tablet.svg");
+    }
+
+    &--99 {
+      background-image: url("../../img/travellers-99-tablet.svg");
+    }
+  }
+
+  .travellers__want-visit {
+    grid-row: 4 / 5;
+    grid-column: 1 / -1;
+    margin-top: 22px;
+  }
+
+  .travellers__button {
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+    width: calc(100% - 100px);
+    height: 50px;
+    margin-left: -4px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .travellers__double {
+    top: 33px;
+    right: 22px;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .travellers__transport-list {
+    flex-direction: column;
+    margin-bottom: 7px;
+  }
+
+  .travellers__list {
+    margin-bottom: 49px;
+  }
+
+  .travellers__span {
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    color: $black;
+    opacity: 0.4;
+  }
+
+  .travellers__number {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 31px;
+      height: 1px;
+      background-color: $black;
+      opacity: 0.1;
+      bottom: 0;
+      left: -2px;
+    }
+  }
+
+  .travellers__countries {
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 0;
+  }
+
+  .travellers__flag {
+    width: 35px;
+    height: 24px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .travellers__country {
+    margin: 0 28px 0 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .travellers__visit-text {
+    margin-left: 36px;
+    margin-bottom: 20px;
+  }
+
+  .travellers__button-more {
+    font-size: 20px;
+    line-height: 20px;
+    margin: 0 0 54px 44px;
+
+    &::before {
+      width: 26px;
+      height: 26px;
+      top: 10px;
+      left: -52px;
+    }
+
+    &::after {
+
+      width: 26px;
+      height: 26px;
+      top: -4px;
+      left: -65px;
+    }
+  }
+
+  .travellers__pagination {
+    min-height: 100px;
+    margin-bottom: 117px;
+    background-color: $white;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 35px 0 28px;
+  }
+
+  .travellers__pag-buttons {
+    margin-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .travellers__pagination-button {
+    width: 20px;
+    height: 36px;
+    border: none;
+
+    &::before {
+      top: 8px;
+    }
+
+    &--previous {
+      margin-right: 15px;
+
+      &::before {
+        left: 6px;
+      }
+    }
+
+    &--next {
+      &::before {
+        left: 16px;
+      }
+    }
+  }
+
+  .travellers__pages {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .travellers__page {
+    font-weight: 700;
+    color: $light-blue;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+    &--current {
+      background-color: $yellow;
+    }
+
+    &:hover {
+      color: $light-blue-60;
+    }
+  }
+
+  .travellers__page-button {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    color: inherit;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .travellers {
+    order: 0;
+  }
+
+  .travellers__list {
+    margin-bottom: 64px;
+  }
+
+  .travellers__item {
+    padding: 44px 0 38px 0;
+    grid-template-columns: 285px 1fr 1fr;
+    grid-template-rows: repeat(3, max-content);
+    column-gap: 58px;
+    margin-bottom: 31px;
+  }
+
+  .travellers__wrapper {
+    margin: 0;
+  }
+
+  .travellers__profile-img,
+  .travellers__profile-picture,
+  .travellers__image-link {
+    border-radius: 20px 0 0 20px;
+  }
+
+  .travellers__image-link,
+  .travellers__profile-picture {
+    width: 285px;
+    height: 285px;
+  }
+
+  .travellers__image-link {
+    top: 0;
+    left: 2px;
+  }
+
+  .travellers__line-block {
+    &::after {
+      display: none;
+    }
+  }
+
+  .travellers__want-visit {
+    margin: 0;
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+  }
+
+  .travellers__visit-text {
+    display: none;
+  }
+
+  .travellers__countries {
+    flex-direction: column;
+    margin: 5px 0 0 0;
+  }
+
+  .travellers__button {
+    width: 150px;
+  }
+
+  .travellers__like-count {
+    margin-right: 23px;
+    margin-bottom: 2px;
+  }
+
+  .travellers__name {
+    margin-left: 4px;
+  }
+
+  .travellers__tags {
+    margin: 11px 0 46px 4px;
+    width: 259px;
+  }
+
+  .travellers__country-name {
+    margin-left: 17px;
+  }
+
+  .travellers__country {
+    margin-bottom: 13px;
+  }
+
+  .travellers__link {
+    &::after {
+      right: auto;
+      left: -26px;
+    }
+  }
+
+  .travellers__double {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+    flex-direction: row;
+    position: static;
+    justify-content: start;
+    margin: -5px 0 0 -6px;
+  }
+
+  .travellers__transport-list {
+    margin: 0;
+    flex-direction: row;
+  }
+
+  .travellers__transport-container {
+    margin-right: 43px;
+  }
+
+  .travellers__like-container {
+    margin-bottom: 10px;
+  }
+
+  .travellers__container {
+    padding-top: 0;
+  }
+
+  .travellers__button-more {
+    margin: 0 0 75px -23px;
+
+    &::before {
+      top: 11px;
+      left: -51px;
+    }
+
+    &::after {
+      top: -3px;
+      left: -64px;
+    }
+  }
+
+  .travellers__pagination {
+    padding-right: 42px;
+    margin-bottom: 132px;
   }
 }

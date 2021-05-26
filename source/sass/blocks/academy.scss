@@ -35,6 +35,10 @@
   .academy {
     padding: 0;
     border: none;
+
+    &--catalog {
+      padding-bottom: 5px;
+    }
   }
 
   .academy__link {

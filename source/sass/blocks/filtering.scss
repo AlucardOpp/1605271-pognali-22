@@ -5,7 +5,12 @@
   border-radius: 0 0 20px 20px;
   position: relative;
 
-  &--opened {
+  &--closed {
+    padding-top: 36px;
+  }
+
+  &--opened,
+  &--nojs {
     padding-top: 179px;
   }
 }
@@ -150,6 +155,7 @@
   left: 0;
   background-color: $filtering-background;
   z-index: 3;
+  padding-bottom: 14px;
 
   &--opened {
     display: flex;
@@ -162,7 +168,7 @@
   grid-template-rows: 40px repeat(4, 41px);
   padding: 153px 0 0 0;
   list-style: none;
-  margin: 0 50px;
+  margin: 0 50px 284px 50px;
 }
 
 .filtering__letter {
@@ -188,6 +194,10 @@
   &:hover {
     border-color: $stay-dates-checkbox-hover;
   }
+
+  &:not(:first-child) .filtering__countries {
+    display: none;
+  }
 }
 
 .filtering__letter-button {
@@ -212,10 +222,13 @@
 }
 
 .filtering__countries {
-  padding: 13px 51px 14px 51px;
-  margin: 0 0 15px -1px;
-  border-radius: 0 0 4px 4px;
+  padding: 0;
+  margin: 0;
+  min-width: 137px;
   list-style: none;
+  position: absolute;
+  top: 218px;
+  left: 0;
 }
 
 .filtering__country {
@@ -224,13 +237,15 @@
   line-height: 22px;
 }
 
-.filtering__country-button {
+.filtering__country-link {
+  text-decoration: none;
   background-color: transparent;
   border: none;
   font: inherit;
   padding: 0;
   cursor: pointer;
   color: $special-grey;
+  text-transform: none;
 
   &:hover {
     color: $light-blue;
@@ -291,5 +306,482 @@
     transform: rotate(-45deg);
     top: -4px;
     left: -21px;
+  }
+}
+
+.filtering__toggle-span-close,
+.filtering__toggle-span-show {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .filtering {
+    padding: 76px 0 49px 0;
+    border-radius: 0 0 55px 55px;
+    margin-bottom: 43px;
+
+    &--closed {
+      padding-top: 55px;
+    }
+
+    &--opened,
+    &--nojs {
+      padding-top: 405px;
+    }
+  }
+
+  .filtering__wrapper {
+    margin: 0 72px;
+  }
+
+  .filtering__toggle {
+    font-family: inherit;
+    background-size: 30px 6px;
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    margin: -7px 1px 0 0;
+
+    &--opened {
+      z-index: 4;
+      margin: -5px -3px 0 0;
+    }
+
+    &::after,
+    &::before {
+      height: 26px;
+    }
+
+    &::after {
+      left: 13px;
+      top: 1px;
+    }
+
+    &::before {
+      top: 2px;
+      left: 13px;
+    }
+  }
+
+  .filtering__toggle-span-show {
+    display: block;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    color: $site-list-black;
+    text-transform: uppercase;
+    position: relative;
+    left: -158px;
+    width: 135px;
+
+    &--opened {
+      display: none;
+    }
+  }
+
+  .filtering__toggle-span-close {
+    display: none;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    color: $site-list-black;
+    text-transform: uppercase;
+    position: relative;
+    left: -171px;
+    width: 135px;
+
+    &--opened {
+      display: block;
+    }
+  }
+
+  .filtering__continents {
+    display: flex;
+    flex-wrap: wrap;
+    position: static;
+    z-index: 1;
+
+    &--opened {
+      z-index: 4;
+    }
+  }
+
+  .filtering__item {
+    margin-right: 28px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .filtering__continent {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .filtering__title {
+    display: none;
+  }
+
+  .filtering__letters {
+    padding-top: 103px;
+    margin: 0 72px;
+    grid-template-columns: repeat(5, 44px);
+    column-gap: 32px;
+    grid-template-rows: 50px 44px 46px 47px 48px;
+    row-gap: 36px;
+  }
+
+  .filtering__letter {
+    border: none;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 60px;
+    text-transform: uppercase;
+    color: $site-list-black;
+    opacity: 0.3;
+
+    &--active {
+      opacity: 1;
+    }
+  }
+
+  .filtering__letter-button {
+    background-color: transparent;
+
+    &--active {
+      color: $site-list-black;
+    }
+  }
+
+  .filtering__dropdown {
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-radius: 0 0 60px 60px;
+    padding-bottom: 46px;
+  }
+
+  .filtering__dropdown-button {
+    width: 100%;
+    margin: 45px 77px 0 76px;
+    height: 100px;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 0 232px 0 274px;
+    letter-spacing: 0;
+  }
+
+  .filtering__span {
+    &::before {
+      width: 22px;
+      height: 24px;
+      top: 7px;
+      left: -35px;
+      border-width: 3px;
+    }
+
+    &::after {
+      width: 22px;
+      height: 24px;
+      top: -8px;
+      left: -35px;
+      border-width: 3px;
+    }
+  }
+
+  .filtering__countries {
+    top: -3px;
+    right: -556px;
+    left: auto;
+  }
+
+  .filtering__country {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .filtering {
+    padding: 71px 0 55px 0;
+    background-color: $directions-white;
+
+    &--closed {
+      padding-top: 71px;
+    }
+  }
+
+  .filtering__title {
+    display: block;
+    font-size: 20px;
+    line-height: 20px;
+    margin: 0 30px 0 65px;
+
+    &::before {
+      width: 23px;
+      height: 15px;
+      background-size: 23px 15px;
+      left: -45px;
+      top: 2px;
+    }
+  }
+
+  .filtering__wrapper {
+    width: 1320px;
+    margin: 0 auto;
+    justify-content: start;
+  }
+
+  .filtering__dropdown {
+    position: static;
+    background-color: $directions-white;
+    padding-bottom: 53px;
+  }
+
+  .filtering__item {
+    margin-bottom: 0;
+    margin-right: 33px;
+  }
+
+  .filtering__continents {
+    margin-right: 506px;
+  }
+
+  .filtering__toggle {
+    margin: -2px 0 0 0;
+
+    &--opened {
+      visibility: hidden;
+    }
+  }
+
+  .filtering__toggle-span-close,
+  .filtering__toggle-span-show {
+    top: -1px;
+  }
+
+  .filtering__toggle-span-close {
+    display: none;
+  }
+
+  .filtering__countries {
+    position: static;
+    min-width: 0;
+    margin-left: -1px;
+
+    &--s {
+      margin-left: 3px;
+    }
+
+    &--ch {
+      margin-left: 1px;
+    }
+  }
+
+  .filtering__letter {
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0;
+    min-width: 254px;
+    align-items: flex-start;
+
+    &:not(:first-child) .filtering__countries {
+      display: block;
+    }
+
+    &--v,
+    &--b,
+    &--n,
+    &--s,
+    &--t,
+    &--ch,
+    &--sh {
+      margin-left: -1px;
+    }
+
+    &--g,
+    &--i,
+    &--y {
+      margin-left: -3px;
+    }
+
+    &--d {
+      margin-left: -13px;
+    }
+
+    &--e {
+      margin: 2px 0 0 1px;
+    }
+
+    &--k {
+      margin-left: -5px;
+      margin-bottom: -5px;
+    }
+
+    &--l,
+    &--r {
+      margin-left: -8px;
+    }
+
+    &--o,
+    &--ee,
+    &--yy {
+      margin-left: -2px;
+    }
+
+    &--p {
+      margin-left: -4px;
+    }
+
+    &--m {
+      margin-bottom: 34px;
+    }
+
+    &--f {
+      margin-left: -5px;
+    }
+
+    &--h {
+      margin-left: -5px;
+    }
+
+    &--s {
+      margin-bottom: -7px;
+    }
+
+    &--ya {
+      margin-left: -6px;
+    }
+  }
+
+  .filtering__letter-button {
+    width: auto;
+    height: auto;
+    margin-bottom: 31px;
+    margin-left: 1px;
+    cursor: default;
+
+    &--b {
+      margin-left: -2px;
+    }
+
+    &--d {
+      margin-left: 2px;
+    }
+
+    &--v {
+      margin-left: -6px;
+    }
+
+    &--g {
+      margin-left: -7px;
+    }
+
+    &--e {
+      margin: -2px 0 32px -1px;
+    }
+
+    &--z {
+      margin: 0 0 29px -3px;
+    }
+
+    &--i {
+      margin: 0 0 30px -4px;
+    }
+
+    &--k,
+    &--p {
+      margin: 0 0 32px -4px;
+    }
+
+    &--l,
+    &--r {
+      margin: 0 0 33px -5px;
+    }
+
+    &--l {
+      margin-left: -6px;
+    }
+
+    &--m {
+      margin-bottom: 36px;
+    }
+
+    &--n {
+      margin: 0 0 33px -2px;
+    }
+
+    &--o {
+      margin: 0 0 35px -3px;
+    }
+
+    &--s {
+      margin-bottom: 32px;
+    }
+
+    &--t {
+      margin: 0 0 32px -2px;
+    }
+
+    &--y,
+    &--f {
+      margin: 0 0 32px -3px;
+    }
+
+    &--h {
+      margin: 0 0 33px -8px;
+    }
+
+    &--ch {
+      margin: 0 0 39px 0;
+    }
+
+    &--sh {
+      margin: 0 0 39px -3px;
+    }
+
+    &--ee {
+      margin: 0 0 42px -5px;
+    }
+
+    &--yy {
+      margin: 0 0 40px -7px;
+    }
+
+    &--ya {
+      margin: 0 0 39px -8px;
+    }
+
+    &:active {
+      background-color: transparent;
+      color: $dark-blue;
+    }
+  }
+
+  .filtering__letters {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, max-content);
+    align-items: start;
+    padding-top: 69px;
+    column-gap: 0;
+    row-gap: 50px;
+    margin: 0 27px 0 36px;
+  }
+
+  .filtering__dropdown-button {
+    margin: 61px 0 0 0;
+    padding: 0 236px 0 272px;
+  }
+
+  .filtering__span {
+    position: relative;
+
+    &::before,
+    &::after {
+      left: -34px;
+    }
   }
 }

@@ -274,7 +274,8 @@
       padding-top: 66px;
     }
 
-    &--opened {
+    &--opened,
+    &--nojs {
       padding-top: 416px;
     }
   }
@@ -391,7 +392,7 @@
 
 @media (min-width: $desktop-width) {
   .profile-form {
-    padding: 73px 0 103px 0;
+    padding: 73px 0 102px 0;
     background-color: $form-page-background;
   }
 
@@ -407,7 +408,7 @@
     height: 190px;
     position: absolute;
     top: -263px;
-    right: 64px;
+    right: 63px;
 
     & img {
       width: 100%;
@@ -419,6 +420,10 @@
   .profile-form__number,
   .profile-form__text {
     color: $white;
+
+    &--scrolled {
+      color: $dark-blue;
+    }
   }
 
   .profile-form__number {
@@ -428,6 +433,12 @@
       height: 2px;
       width: 49px;
       background-color: $white;
+    }
+
+    &--scrolled {
+      &::after {
+        background-color: $dark-blue;
+      }
     }
   }
 
@@ -444,7 +455,7 @@
   .profile-form__change-photo {
     position: absolute;
     top: -120px;
-    right: 64px;
+    right: 63px;
     width: 190px;
     height: 47px;
     border-radius: 0 0 10px 10px;

@@ -42,6 +42,11 @@ let filterTransbutton = document.querySelectorAll(".filter__transbutton");
 let filterSubmit = document.querySelector(".filter__submit");
 let travellersImageLink = document.querySelectorAll(".travellers__image-link");
 let travellersLink = document.querySelectorAll(".travellers__link");
+let filteringToggleSpanShow = document.querySelector(".filtering__toggle-span-show");
+let filteringToggleSpanClose = document.querySelector(".filtering__toggle-span-close");
+let pageHeaderToMain = document.querySelector(".page-header__to-main");
+let profileFormNumber = document.querySelector(".profile-form__number");
+let profileFormText = document.querySelector(".profile-form__text");
 
 pageHeader.classList.remove("page-header--nojs");
 pageHeaderContainer.classList.remove("page-header__container--nojs");
@@ -116,30 +121,43 @@ if (pageBody.classList.contains("page__body--main")) {
   });
 }
 
-window.onscroll = function() {
-  sTop = (this.pageYOffset || document.documentElement) - (document.documentElement.clientTop || 0);
-  if (sTop > 70 && !pageHeader.classList.contains("page-header--opened") && !pageHeader.classList.contains("page-header--nojs")) {
-    pageHeader.classList.add("page-header--scrolled");
-    pageHeaderContainer.classList.add("page-header__container--scrolled");
-    pageHeaderLogo.classList.add("page-header__logo--scrolled");
-    pageHeaderToggle.classList.add("page-header__toggle--scrolled");
-    for (let i = 0; i < siteListLink.length; i++) {
-      siteListLink[i].classList.add("site-list__link--scrolled");
-    }
-    if (pageBody.classList.contains("page__body--form") || pageBody.classList.contains("page__body--catalog"))
-      pageHeaderTitle.classList.add("page-header__title--scrolled");
-  } else {
-    pageHeader.classList.remove("page-header--scrolled");
-    pageHeaderContainer.classList.remove("page-header__container--scrolled");
-    pageHeaderLogo.classList.remove("page-header__logo--scrolled");
-    pageHeaderToggle.classList.remove("page-header__toggle--scrolled");
-    for (let i = 0; i < siteListLink.length; i++) {
-      siteListLink[i].classList.remove("site-list__link--scrolled");
-    }
-    if (pageBody.classList.contains("page__body--form") || pageBody.classList.contains("page__body--catalog"))
-      pageHeaderTitle.classList.remove("page-header__title--scrolled");
-  }
-};
+// Проверка на работу скролла
+// window.onscroll = function() {
+//   sTop = (this.pageYOffset || document.documentElement) - (document.documentElement.clientTop || 0);
+//   if (sTop > 70 && !pageHeader.classList.contains("page-header--opened") && !pageHeader.classList.contains("page-header--nojs")) {
+//     pageHeader.classList.add("page-header--scrolled");
+//     pageHeaderContainer.classList.add("page-header__container--scrolled");
+//     pageHeaderLogo.classList.add("page-header__logo--scrolled");
+//     pageHeaderToggle.classList.add("page-header__toggle--scrolled");
+//     for (let i = 0; i < siteListLink.length; i++) {
+//       siteListLink[i].classList.add("site-list__link--scrolled");
+//     }
+//     if (pageBody.classList.contains("page__body--form") || pageBody.classList.contains("page__body--catalog"))
+//       pageHeaderTitle.classList.add("page-header__title--scrolled");
+//     if (pageBody.classList.contains("page__body--catalog"))
+//       pageHeaderToMain.classList.add("page-header__to-main--scrolled");
+//     if (pageBody.classList.contains("page__body--form")) {
+//       profileFormNumber.classList.add("profile-form__number--scrolled");
+//       profileFormText.classList.add("profile-form__text--scrolled");
+//     }
+//   } else {
+//     pageHeader.classList.remove("page-header--scrolled");
+//     pageHeaderContainer.classList.remove("page-header__container--scrolled");
+//     pageHeaderLogo.classList.remove("page-header__logo--scrolled");
+//     pageHeaderToggle.classList.remove("page-header__toggle--scrolled");
+//     for (let i = 0; i < siteListLink.length; i++) {
+//       siteListLink[i].classList.remove("site-list__link--scrolled");
+//     }
+//     if (pageBody.classList.contains("page__body--form") || pageBody.classList.contains("page__body--catalog"))
+//       pageHeaderTitle.classList.remove("page-header__title--scrolled");
+//     if (pageBody.classList.contains("page__body--catalog"))
+//       pageHeaderToMain.classList.remove("page-header__to-main--scrolled");
+//     if (pageBody.classList.contains("page__body--form")) {
+//       profileFormNumber.classList.remove("profile-form__number--scrolled");
+//       profileFormText.classList.remove("profile-form__text--scrolled");
+//     }
+//   }
+// };
 
 
 if (pageBody.classList.contains("page__body--main")) {
@@ -208,11 +226,15 @@ if (pageBody.classList.contains("page__body--catalog")) {
     filteringToggle.classList.toggle("filtering__toggle--opened");
     filteringDropdown.classList.toggle("filtering__dropdown--opened");
     filteringContinents.classList.toggle("filtering__continents--opened");
+    filteringToggleSpanShow.classList.toggle("filtering__toggle-span-show--opened");
+    filteringToggleSpanClose.classList.toggle("filtering__toggle-span-close--opened");
   });
   filteringDropdownButton.addEventListener("click", function() {
     filteringToggle.classList.toggle("filtering__toggle--opened");
     filteringDropdown.classList.toggle("filtering__dropdown--opened");
     filteringContinents.classList.toggle("filtering__continents--opened");
+    filteringToggleSpanShow.classList.toggle("filtering__toggle-span-show--opened");
+    filteringToggleSpanClose.classList.toggle("filtering__toggle-span-close--opened");
   });
   filtering.classList.remove("filtering--nojs");
   for (let i = 0; i < filterToggle.length; i++) {
@@ -245,5 +267,11 @@ if (pageBody.classList.contains("page__body--catalog")) {
     travellersLink[i].addEventListener("click", function(evt) {
       evt.preventDefault();
     });
+  }
+  if (window.matchMedia('(min-width: 1380px)').matches) {
+    filteringDropdown.classList.add("filtering__dropdown--opened");
+    filteringToggle.classList.add("filtering__toggle--opened");
+    filteringToggleSpanShow.classList.toggle("filtering__toggle-span-show--opened");
+    filteringToggleSpanClose.classList.toggle("filtering__toggle-span-close--opened");
   }
 }

@@ -1,0 +1,9 @@
+@media (min-width: $desktop-width) {
+  .page-main__container {
+    width: 1320px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 949px 1fr;
+    column-gap: 86px;
+  }
+}

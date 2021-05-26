@@ -95,7 +95,7 @@
       display: block;
       animation: bounce-table 0.5s;
       z-index: 3;
-      top: 42px;
+      top: 43px;
     }
   }
 
@@ -210,13 +210,13 @@
   }
 
   100% {
-    top: 42px;
+    top: 43px;
   }
 }
 
 @keyframes unbounce-table {
   0% {
-    top: 42px;
+    top: 43px;
   }
 
   100% {

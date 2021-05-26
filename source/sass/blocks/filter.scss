@@ -403,3 +403,272 @@
     color: $light-blue-30;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .filter {
+    margin: 0 40px 41px 40px;
+    padding-bottom: 37px;
+  }
+
+  .filter__wrapper {
+    margin: 0 35px;
+  }
+
+  .filter__title {
+    font-size: 30px;
+    line-height: 30px;
+    margin: 11px 0 3px -1px;
+    letter-spacing: 0;
+  }
+
+  .filter__entertainments {
+    margin-left: 0;
+  }
+
+  .filter__entertainment {
+    border-bottom: none;
+    padding: 9px 0;
+    display: grid;
+    grid-template-columns: 128px 1fr;
+    align-items: center;
+
+    &:first-child {
+      padding-top: 26px;
+    }
+
+    &:last-child {
+      border-bottom: 1px solid #f3c72b;
+    }
+
+    &--transport {
+      padding: 5px 0 0 0;
+    }
+
+    &--lvl {
+      padding: 0 0 35px 0;
+      margin-bottom: 36px;
+    }
+  }
+
+  .filter__colon {
+    display: inline;
+  }
+
+  .filter__toggle {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .filter__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 11px 0 0 0;
+    column-gap: 20px;
+
+    &--transport {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 0;
+      margin: 10px 0 0 -7px;
+    }
+
+    &--lvl {
+      grid-template-columns: 2fr 1fr;
+      align-items: center;
+      margin-top: 10px;
+    }
+  }
+
+  .filter__range-controls {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    margin-top: 4px;
+    margin-right: 36px;
+  }
+
+  .filter__inputs {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    margin: 0 0 0 8px;
+
+    &::after {
+      width: 21px;
+      height: 15px;
+      background-size: 21px 1px;
+      top: 15px;
+      margin-left: -11px;
+    }
+  }
+
+  .filter__item {
+    margin: 0;
+
+    &--transport {
+      margin-right: 2px;
+    }
+  }
+
+  .filter__label {
+    font-size: 20px;
+    margin-left: 34px;
+
+    &::before {
+      width: 24px;
+      height: 24px;
+      background-size: 18px 17px;
+      left: -36px;
+      top: -1px;
+    }
+  }
+
+  .filter__transbutton {
+    width: 43px;
+    height: 43px;
+    background-size: 23px 22px;
+  }
+
+  .filter__input {
+    padding: 10px 19px 11px 19px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .filter__scale {
+    height: 3px;
+  }
+
+  .filter__range-toggle {
+    width: 13px;
+    height: 13px;
+    top: -5px;
+
+    &--min {
+      left: 35%;
+    }
+  }
+
+  .filter__bar {
+    width: 65%;
+    margin-left: 35%;
+  }
+
+  .filter__submit {
+    height: 50px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .filter {
+    order: 1;
+    width: 285px;
+    margin: 0;
+    padding: 33px 0 37px 0;
+    height: 744px;
+  }
+
+  .filter__wrapper {
+    margin: 0 46px 0 48px;
+  }
+
+  .filter__title {
+    margin-bottom: 35px;
+  }
+
+  .filter__toggle {
+    &::after {
+      display: block;
+      top: 7px;
+      right: 0;
+    }
+  }
+
+  .filter__list {
+    display: none;
+    margin: 37px 0 4px 0;
+
+    &--opened {
+      display: block;
+    }
+
+    &--transport {
+      margin: 29px 0 2px 0;
+    }
+
+    &--lvl {
+      margin: 28px 0 3px 0;
+    }
+  }
+
+  .filter__item {
+    margin: 0 0 19px 0;
+
+    &--transport {
+      margin: 0 1px 0 0;
+    }
+  }
+
+  .filter__label {
+    margin-left: 36px;
+  }
+
+  .filter__inputs {
+    margin: 0 0 35px 0;
+  }
+
+  .filter__input--min::-webkit-outer-spin-button,
+  .filter__input--min::-webkit-inner-spin-button,
+  .filter__input--max::-webkit-outer-spin-button,
+  .filter__input--max::-webkit-inner-spin-button {
+    display: none;
+  }
+
+  .filter__input {
+    &--min {
+      padding: 10px 22px 11px 27px;
+    }
+
+    &--max {
+      padding: 10px 31px 11px 28px;
+    }
+  }
+
+  .filter__entertainment {
+    display: flex;
+    align-items: flex-start;
+    border-top: none;
+    padding: 0;
+    margin: 14px 0;
+
+    &:first-child {
+      padding-top: 0;
+      border-top: none;
+      margin-top: 0;
+    }
+
+    &:last-child {
+      border-bottom: none;
+      margin-bottom: 33px;
+    }
+  }
+
+  .filter__range-controls {
+    margin: 0;
+  }
+
+  .filter__range-toggle {
+    &--min {
+      left: 31%;
+    }
+
+    &--max {
+      margin-left: -12px;
+    }
+  }
+}
