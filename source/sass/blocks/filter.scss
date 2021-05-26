@@ -566,11 +566,12 @@
 
 @media (min-width: $desktop-width) {
   .filter {
-    order: 1;
     width: 285px;
     margin: 0;
     padding: 33px 0 37px 0;
-    height: 744px;
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    justify-self: start;
   }
 
   .filter__wrapper {
