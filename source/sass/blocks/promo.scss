@@ -3,6 +3,7 @@
   background-position: 80px 131px, 0 -91px;
   background-repeat: no-repeat;
   background-size: 192px 255px, contain;
+  background-color: $dark-blue;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/traveller-illustration-mobile@2x.png"), url("../img/promo-background-mobile@2x.png");
