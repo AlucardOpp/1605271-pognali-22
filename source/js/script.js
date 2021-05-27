@@ -47,7 +47,7 @@ let filteringToggleSpanClose = document.querySelector(".filtering__toggle-span-c
 let pageHeaderToMain = document.querySelector(".page-header__to-main");
 let profileFormNumber = document.querySelector(".profile-form__number");
 let profileFormText = document.querySelector(".profile-form__text");
-let registrationAuthorize = document.querySelector("registration__authorize");
+let registrationAuthorize = document.querySelector(".registration__authorize");
 
 pageHeader.classList.remove("page-header--nojs");
 pageHeaderContainer.classList.remove("page-header__container--nojs");
