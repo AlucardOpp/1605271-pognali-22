@@ -47,6 +47,7 @@ let filteringToggleSpanClose = document.querySelector(".filtering__toggle-span-c
 let pageHeaderToMain = document.querySelector(".page-header__to-main");
 let profileFormNumber = document.querySelector(".profile-form__number");
 let profileFormText = document.querySelector(".profile-form__text");
+let registrationAuthorize = document.querySelector("registration__authorize");
 
 pageHeader.classList.remove("page-header--nojs");
 pageHeaderContainer.classList.remove("page-header__container--nojs");
@@ -109,6 +110,10 @@ pageHeaderToggle.addEventListener("click", function() {
   }
 });
 
+userLinkAuth.addEventListener("click", function(evt) {
+  evt.preventDefault();
+});
+
 if (pageBody.classList.contains("page__body--main")) {
   newProfileButton.addEventListener("click", function(evt) {
     evt.preventDefault();
@@ -118,6 +123,9 @@ if (pageBody.classList.contains("page__body--main")) {
   tariffsButton.addEventListener("click", function() {
     tariffs.classList.toggle("tariffs--closed");
     tariffs.classList.toggle("tariffs--opened");
+  });
+  registrationAuthorize.addEventListener("click", function(evt) {
+    evt.preventDefault();
   });
 }
 

@@ -549,6 +549,16 @@
 
     &--min {
       left: 35%;
+
+      &:hover {
+        margin-left: -1.5px;
+      }
+    }
+
+    &--max {
+      &:hover {
+        margin-left: -11px;
+      }
     }
   }
 
@@ -673,6 +683,10 @@
 
     &--max {
       margin-left: -12px;
+
+      &:hover {
+        margin-left: -13px;
+      }
     }
   }
 }
